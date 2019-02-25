@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def index
-  end
+    @sessions = Session.All
+    @courses = Course.find(params session.id)
 
   def show
   end
