@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
   def index
     @sessions = Session.All
     @courses = Course.find(params session.id)
-  end
 
   def show
   end
