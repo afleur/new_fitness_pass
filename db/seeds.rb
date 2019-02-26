@@ -128,6 +128,39 @@ puts 'Creating courses...'
   course_five.remote_photo_url = url_five
   course_five.save!
 
+puts 'Creating sessions...'
+
+  session_one = Session.new(
+    start_time: DateTime.new(2019,3,1,17),
+    course_id:  rand(1..5),
+  )
+  session_one.save!
+
+  session_two = Session.new(
+    start_time: DateTime.new(2019,3,1,17),
+    course_id:  rand(1..5),
+  )
+  session_two.save!
+
+  session_three = Session.new(
+    start_time: DateTime.new(2019,3,1,18),
+    course_id:  rand(1..5),
+  )
+  session_three.save!
+
+  session_four = Session.new(
+    start_time: DateTime.new(2019,3,1,18),
+    course_id:  rand(1..5),
+  )
+  session_four.save!
+
+  session_five = Session.new(
+    start_time: DateTime.new(2019,3,1,18),
+    course_id:  rand(1..5),
+  )
+  session_five.save!
+
+
 
 # puts 'Creating reviews...'
 
