@@ -1,7 +1,42 @@
 
 Liste des cours
 
-<% @sessions.each do |session| %>
-<li> <%= session.start_time.strftime("%m/%d/%Y")%> à <%= session.start_time.strftime("%H:%M")%> |<%= session.course.name %> au <%= session.course.studio %> <%= link_to 'Show', course_path(session.course_id) %></li>
-<% end %>
-
+<div class="container">
+  <div class="row">
+    <%@sessions.each do |session|%>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card">
+          <div class="card-hour">
+            <div class="start-session">
+            <%= session.start_time.strftime("%H:%M")%></div>
+            <div class="end-session">
+            <%= (session.start_time + (session.course.duration * 60)).strftime("%H:%M") %>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="course-name">
+              <%= link_to session.course.name.upcase, course_path(session.course_id) %>
+            </div>
+            <div class="course-studio">
+              <%= session.course.studio %>
+            </div>
+            <div class="course-address">
+              <%= session.course.address %>
+            </div>
+          </div>
+          <div class="card-icon">
+            <div class="heart">
+              <i class="fas fa-heart"></i> <%= session.course.likes %>
+            </div>
+            <div class="wallet">
+              <i class="fas fa-coins"></i> <%= session.course.credits_cost %>
+            </div>
+            <div class="location">
+              <i class="fas fa-map-marker-alt">200m</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
