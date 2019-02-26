@@ -12,6 +12,8 @@ puts 'cleaning DB'
 Order.destroy_all
 Review.destroy_all
 User.destroy_all
+Session.destroy_all
+Course.destroy_all
 
 puts 'Creating orders...'
 
@@ -37,7 +39,7 @@ puts 'Creating users...'
     NPA:             Faker::Address.postcode,
     city:            Faker::Address.city,
     birth_date:      Faker::Date.birthday(18, 65),
-    order_id:        rand(1..10),
+    order_id:        Order.all.sample,
     credits_amount:  rand(1..100)
   )
   user.save!
@@ -160,6 +162,35 @@ puts 'Creating sessions...'
   )
   session_five.save!
 
+  session_six = Session.new(
+    start_time: DateTime.new(2019,3,1,18),
+    course_id:  rand(1..5),
+  )
+  session_six.save!
+
+  session_seven = Session.new(
+    start_time: DateTime.new(2019,3,1,19.5),
+    course_id:  rand(1..5),
+  )
+  session_seven.save!
+
+  session_eight = Session.new(
+    start_time: DateTime.new(2019,3,1,19),
+    course_id:  rand(1..5),
+  )
+  session_eight.save!
+
+  session_nine = Session.new(
+    start_time: DateTime.new(2019,3,1,19),
+    course_id:  rand(1..5),
+  )
+  session_nine.save!
+
+  session_ten = Session.new(
+    start_time: DateTime.new(2019,3,1,19),
+    course_id:  rand(1..5),
+  )
+  session_ten.save!
 
 
 # puts 'Creating reviews...'
