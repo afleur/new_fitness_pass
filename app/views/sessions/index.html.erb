@@ -1,7 +1,15 @@
 
 Liste des cours
 
-<% @sessions.each do |session| %>
-<li> <%= session.start_time.strftime("%m/%d/%Y")%> à <%= session.start_time.strftime("%H:%M")%> |<%= session.course.name %> au <%= session.course.studio %> <%= link_to 'Show', course_path(session.course_id) %></li>
-<% end %>
-
+<div class="container">
+  <div class="row">
+    <%@sessions.each do |session|%>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card">
+          <%= session.start_time.strftime("%H:%M")%> | <%= session.course.duration %> min
+          <%= link_to session.course.name, course_path(session.course_id) %> au <%= session.course.studio%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
