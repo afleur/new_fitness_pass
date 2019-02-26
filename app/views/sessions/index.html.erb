@@ -1,9 +1,8 @@
 
 Liste des cours
 
-x
-x
-x
-
+<% @sessions.each do |session| %>
+<li> <%= session.start_time.strftime("%m/%d/%Y")%> à <%= session.start_time.strftime("%H:%M")%> |<%= session.course.name %> au <%= session.course.studio %> </li>
+<% end %>
 
 <%= link_to 'Show', session_path(session) %>
