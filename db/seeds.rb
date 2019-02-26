@@ -45,21 +45,22 @@ end
 
 puts 'Creating courses...'
 
-10.times do
-  course = Course.new(
-    name:          rand('Sprint', 'Fat Burner', 'Total Fit', 'Brain Muscle', 'Conditioning', 'Combat Yoga', 'Iron But', 'Step By Step', 'Sprint', 'Body Talk'),
-    category:      rand('Cardio', 'Tonification', 'Renforcement', 'Balance', 'Cross Training'),
-    description:   Faker::Lorem.paragraphs(1),
-    coach:         Faker::Name.first_name,
+    # name:          rand('Sprint', 'Fat Burner', 'Total Fit', 'Brain Muscle', 'Conditioning', 'Combat Yoga', 'Iron But', 'Step By Step', 'Sprint', 'Body Talk'),
+    # category:      rand('Cardio', 'Tonification', 'Renforcement', 'Balance', 'Cross Training'),
+
+  course_one = Course.new(
+    name:          "Hatha Yoga"
+    description:   "Cours facilitant instantanément la détente mentale et musculaire. A moyen terme, il développe la souplesse et favorise une meilleure santé générale de chacun.",
+    coach:         "Sophie",
     address:       Faker::Address.street_address,
-    likes:         rand(55..999),
-    kcal:          rand(200..350),
-    duration:      rand(30..90),
-    credits_cost:  rand(15..25),
+    likes:         150,
+    kcal:          200,
+    duration:      60,
+    credits_cost:  3,
 
 
   )
-  review.save!
+  course.save!
 end
 
 puts 'Creating reviews...'
