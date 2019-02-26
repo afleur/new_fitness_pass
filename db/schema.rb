@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2019_02_26_090204) do
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
-    t.string "studio"
     t.string "category"
     t.text "description"
     t.string "coach"
@@ -37,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_02_26_090204) do
     t.integer "credits_cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "studio"
   end
 
   create_table "invitations", force: :cascade do |t|
