@@ -7,7 +7,7 @@ Liste des cours
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card">
           <div class="category">
-            <div class="<%=((session.course.category).delete(" "))%>">
+            <div class="category-<%=((session.course.category.downcase).delete(" "))%>">
             <%= session.course.category.upcase %></div>
           </div>
           <div class="card-hour">
