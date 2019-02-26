@@ -48,30 +48,101 @@ puts 'Creating courses...'
     # name:          rand('Sprint', 'Fat Burner', 'Total Fit', 'Brain Muscle', 'Conditioning', 'Combat Yoga', 'Iron But', 'Step By Step', 'Sprint', 'Body Talk'),
     # category:      rand('Cardio', 'Tonification', 'Renforcement', 'Balance', 'Cross Training'),
 
+  url_one = "https://static1.squarespace.com/static/578a2a71bebafb8c813f4a4f/t/57aa297af7e0ab798376a44c/1470769545579/nr-69.jpg?format=1500w"
   course_one = Course.new(
-    name:          "Hatha Yoga"
+    name:          "Hatha Yoga",
+    studio:        "Feel Good Yoga",
+    category:      "Souplesse"
     description:   "Cours facilitant instantanément la détente mentale et musculaire. A moyen terme, il développe la souplesse et favorise une meilleure santé générale de chacun.",
     coach:         "Sophie",
-    address:       Faker::Address.street_address,
+    address:       "Rue Chaucrau 3-5, 1003 Lausanne",
     likes:         150,
     kcal:          200,
     duration:      60,
     credits_cost:  3,
-
-
   )
+  course_one.remote_photo_url = url_one
+  course_one.save!
   course.save!
-end
 
-puts 'Creating reviews...'
-
-20.times do
-  review = Review.new(
-    content:        Faker::Lorem.paragraphs(1),
-    # user_id:        rand(1..4),
-    # course_id:      rand(1..10)
+  url_two = "https://www.crossfit-lausanne.ch/wp-content/uploads/2015/05/la-box-arriere.jpg"
+  course_two = Course.new(
+    name:          "CrossFit",
+    studio:        "CrossFit Lausanne",
+    category:      "Cardio"
+    description:   "CrossFit est un terme désignant une méthode de conditionnement physique, appelé ainsi parce qu’il mélange différentes activités physiques et sportives préexistantes. Son fonctionnement est axé autour de dix compétences athlétiques : endurance cardiovasculaire et respiratoire, endurance musculaire, force, souplesse, puissance, vitesse, agilité, psychomotricité, équilibre et précision. Ceci afin de répliquer des mouvements fonctionnels du quotidien. La définition du CrossFit peut se résumer en 3 points : des exercices constamment variés, des mouvement fonctionnels et pratiqué à haute intensité. Jette un coup d’oeil à la vidéo ci-dessous qui t’en dira plus, non seulement sur la manière de s’entraîner, mais également sur l’ambiance qui entoure le CrossFit.",
+    coach:         "Franck",
+    address:       "Chemin d'Entre-Bois 21, 1018 Lausanne",
+    likes:         250,
+    kcal:          600,
+    duration:      55,
+    credits_cost:  5,
   )
-  review.save!
-end
+  course_two.remote_photo_url = url_two
+  course_two.save!
+  course.save!
+
+  url_three = "https://static1.squarespace.com/static/578a2a71bebafb8c813f4a4f/t/57aa297af7e0ab798376a44c/1470769545579/nr-69.jpg?format=1500w"
+  course_three = Course.new(
+    name:          "Kick Boxing",
+    studio:        "Lausanne Wushu",
+    category:      "Arts Martiaux"
+    description:   "Le seul club lausannois à combiner autant d'arts martiaux et sports de combat. Depuis 1978, le National Sporting Club est LA référence. Avec une salle de musculation en complément puissance et cardio, et un ring de 5x5m, le NSC reste le 'Fight Club' romand le plus complet. En pratique douce comme en compétition extrême.",
+    coach:         "David",
+    address:       "Rue du Grand Pré 4, 1007 Lausanne",
+    likes:         50,
+    kcal:          600,
+    duration:      75,
+    credits_cost:  3,
+  )
+  course_three.remote_photo_url = url_three
+  course_three.save!
+  course.save!
+
+  url_four = "https://lemag.nikonclub.fr/wp-content/uploads/2017/05/Hard-Fight-3.jpg"
+  course_four = Course.new(
+    name:          "Hatha Yoga",
+    studio:        "NSC Warriors",
+    category:      "Arts Martiaux"
+    description:   "Le seul club lausannois à combiner autant d'arts martiaux et sports de combat. Depuis 1978, le National Sporting Club est LA référence. Avec une salle de musculation en complément puissance et cardio, et un ring de 5x5m, le NSC reste le 'Fight Club' romand le plus complet. En pratique douce comme en compétition extrême.",
+    coach:         "Sophie",
+    address:       "Rue Chaucrau 3-5, 1003 Lausanne",
+    likes:         150,
+    kcal:          500,
+    duration:      60,
+    credits_cost:  4,
+  )
+  course_four.remote_photo_url = url_four
+  course_four.save!
+  course.save!
+
+  url_five = "http://www.deekaydanceschool.ch/site/_lib/_cache/img/thumbs/940x0-119529674638129337895069134363618431603606o.jpg"
+  course_five = Course.new(
+    name:          "Hip-Hop ",
+    studio:        "Deekay Dance School",
+    category:      "Danse"
+    description:   "Peu importe vos envies, les professeurs s'adaptent et sauront vous pousser pour faire des concours, des battles ou tout simplement progresser personnellement. Nous sommes également très intéressés à l'histoire des danses que nous enseignons, c'est pourquoi les élèves peuvent aussi nous poser des questions s'ils veulent aller plus loin dans le développement de leur activité ou passion.",
+    coach:         "Sofia",
+    address:       "Avenue Tivoli 60, 1007 Lausanne",
+    likes:         121,
+    kcal:          300,
+    duration:      60,
+    credits_cost:  2,
+  )
+  course_five.remote_photo_url = url_five
+  course_five.save!
+  course.save!
+
+
+# puts 'Creating reviews...'
+
+# 20.times do
+#   review = Review.new(
+#     content:        Faker::Lorem.paragraphs(1),
+#     # user_id:        rand(1..4),
+#     # course_id:      rand(1..10)
+#   )
+#   review.save!
+# end
 
 puts 'Finished!'
