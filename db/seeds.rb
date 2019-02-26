@@ -142,61 +142,61 @@ puts 'Creating sessions...'
 
   session_one = Session.new(
     start_time: DateTime.new(2019,3,1,17),
-    course_id:  rand(Course.count),
+    course_id:  (Course.all.sample).id,
   )
   session_one.save!
 
   session_two = Session.new(
     start_time: DateTime.new(2019,3,1,17),
-    course_id:  rand(Course.count),
+    course_id:  (Course.all.sample).id,
   )
   session_two.save!
 
   session_three = Session.new(
     start_time: DateTime.new(2019,3,1,18),
-    course_id:  rand(Course.count),
+    course_id:  (Course.all.sample).id,
   )
   session_three.save!
 
   session_four = Session.new(
     start_time: DateTime.new(2019,3,1,18),
-    course_id:  rand(Course.count),
+    course_id:  (Course.all.sample).id,
   )
   session_four.save!
 
   session_five = Session.new(
     start_time: DateTime.new(2019,3,1,18),
-    course_id:  rand(Course.count),
+    course_id:  (Course.all.sample).id,
   )
   session_five.save!
 
   session_six = Session.new(
     start_time: DateTime.new(2019,3,1,18),
-    course_id:  rand(Course.count),
+    course_id:  (Course.all.sample).id,
   )
   session_six.save!
 
   session_seven = Session.new(
     start_time: DateTime.new(2019,3,1,19.5),
-    course_id:  rand(Course.count),
+    course_id:  (Course.all.sample).id,
   )
   session_seven.save!
 
   session_eight = Session.new(
     start_time: DateTime.new(2019,3,1,19),
-    course_id:  rand(Course.count),
+    course_id:  (Course.all.sample).id,
   )
   session_eight.save!
 
   session_nine = Session.new(
     start_time: DateTime.new(2019,3,1,19),
-    course_id:  rand(Course.count),
+    course_id:  (Course.all.sample).id,
   )
   session_nine.save!
 
   session_ten = Session.new(
     start_time: DateTime.new(2019,3,1,19),
-    course_id:  rand(Course.count),
+    course_id:  (Course.all.sample).id,
   )
   session_ten.save!
 
