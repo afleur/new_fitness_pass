@@ -22,4 +22,5 @@ class SessionsController < ApplicationController
 
   def edit
   end
+
 end
