@@ -1,0 +1,113 @@
+.card {
+  display :flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  color: #727272;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.card-hour {
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+
+.start-session {
+  padding: 6px 0;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.end-session{
+  padding: 6px 0;
+  padding-bottom: 2px;
+  color: #C4C4C4;
+}
+
+.course-name {
+  font-family: 'Expletus Sans', cursive;
+  font-weight: bold;
+}
+
+.course-name a {
+  text-decoration: none;
+  color: #727272;
+  // color: #5C0B8D;
+}
+
+.course-name a:hover {
+  text-decoration: none;
+  color: #8D0B88;
+}
+
+.course-studio {
+  font-size: 16px;
+  padding-bottom: 3px;
+}
+
+.course-address {
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.card-icon {
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+  color: #C4C4C4;
+  font-weight: lighter;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.heart {
+  font-size: 15px;
+  padding: 1px 0;
+  color: #9D9D9D;
+}
+
+.wallet {
+  font-size: 15px;
+  padding: 4px 0;
+  color: #9D9D9D;
+}
+
+.location {
+  font-size: 15px;
+  padding: 1px 0;
+  color: #9D9D9D;
+}
+
+.font-location {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.category {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  font-size: 10px;
+}
+
+.category-cardio {
+  background-color: red;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
+.category-danse {
+  background-color: lightblue;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
+.category-artsmartiaux {
+  background-color: orange;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
+
+
