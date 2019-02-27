@@ -1,46 +1,51 @@
+<ul class="tab-group">
+        <li class="tab active"><a href="#list">Liste</a></li>
+        <li class="tab"><a href="#map">Map</a></li>
+      </ul>
 
-Liste des cours
 
-<div class="container">
-  <div class="row">
-    <%@sessions.each do |session|%>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card">
-          <div class="category">
-            <div class="category-<%=((session.course.category.downcase).delete(" "))%>">
-            <%= session.course.category.upcase %></div>
-          </div>
-          <div class="card-hour">
-            <div class="start-session">
-            <%= session.start_time.strftime("%H:%M")%></div>
-            <div class="end-session">
-            <%= (session.start_time + (session.course.duration * 60)).strftime("%H:%M") %>
+  <div class="tab-content">
+    <div class="container">
+      <div class="row">
+        <%@sessions.each do |session|%>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="category">
+                <div class="category-<%=((session.course.category.downcase).delete(" "))%>"><i class="fas fa-tag">  </i>
+                <%= session.course.category.upcase %></div>
+              </div>
+              <div class="card-hour">
+                <div class="start-session">
+                <%= session.start_time.strftime("%H:%M")%></div>
+                <div class="end-session">
+                <%= (session.start_time + (session.course.duration * 60)).strftime("%H:%M") %>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="course-name">
+                  <%= link_to session.course.name.upcase, course_path(session.course_id) %>
+                </div>
+                <div class="course-studio">
+                  <%= session.course.studio %>
+                </div>
+                <div class="course-address">
+                  <%= session.course.NPA %> <%= session.course.city %>
+                </div>
+              </div>
+              <div class="card-icon">
+                <div class="heart">
+                  <i class="far fa-heart"></i> <%= session.course.likes %>
+                </div>
+                <div class="wallet">
+                  <i class="fas fa-coins"></i></i> <%= session.course.credits_cost %>
+                </div>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>  200m
+                </div>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <div class="course-name">
-              <%= link_to session.course.name.upcase, course_path(session.course_id) %>
-            </div>
-            <div class="course-studio">
-              <%= session.course.studio %>
-            </div>
-            <div class="course-address">
-              <%= session.course.NPA %> <%= session.course.city %>
-            </div>
-          </div>
-          <div class="card-icon">
-            <div class="heart">
-              <i class="far fa-heart"></i> <%= session.course.likes %>
-            </div>
-            <div class="wallet">
-              <i class="fas fa-coins"></i></i> <%= session.course.credits_cost %>
-            </div>
-            <div class="location">
-              <i class="fas fa-map-marker-alt"></i>  200m
-            </div>
-          </div>
-        </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
-</div>
