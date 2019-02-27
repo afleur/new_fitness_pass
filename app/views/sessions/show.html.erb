@@ -8,7 +8,7 @@
     <% end %>
     <h1> <%= @session.course.name %> </h1>
     <p><%= @session.course.studio %> </p>
-    <p><%= @session.start_time.strftime("%a, %e %B") %> <%=@session.start_time.strftime("%H:%M")%> - <%= (@session.start_time + (@session.course.duration * 60)).strftime("%H:%M") %> </p>
+    <p><i class="far fa-calendar"></i>  <%= @session.start_time.strftime("%a, %e %B") %> <%=@session.start_time.strftime("%H:%M")%> - <%= (@session.start_time + (@session.course.duration * 60)).strftime("%H:%M") %> </p>
     <p>Coach: <%= @session.course.coach %></p>
   </div>
 </div>
@@ -24,7 +24,7 @@
   <div
     id="map"
     style="width: 100%;
-    height: 600px;"
+    height: 200px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
