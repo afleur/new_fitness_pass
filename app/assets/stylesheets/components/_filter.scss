@@ -1,11 +1,10 @@
 #home-filter {
-  height: 100vh;
+  height: calc(100vh - 70px);
   text-align: center;
   color: $black;
   font-family: 'Fira Sans', 'Helvetica', sans-serif;
   font-size: 25px;
   background-color: transparent;
-  position: absolute;
   select {
     font-decoration: none;
   }
