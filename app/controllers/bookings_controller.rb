@@ -1,4 +1,6 @@
 class BookingsController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def index
     @booking = Booking.find(params[:id])
   end

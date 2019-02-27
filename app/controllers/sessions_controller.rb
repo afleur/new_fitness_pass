@@ -6,6 +6,13 @@ class SessionsController < ApplicationController
   end
 
   def show
+    @session = Session.find(params[:id])
+    @course = @session.course
+    @markers =
+      [{
+        lng: @course.longitude,
+        lat: @course.latitude
+      }]
   end
 
   def create
@@ -22,5 +29,4 @@ class SessionsController < ApplicationController
 
   def edit
   end
-
 end

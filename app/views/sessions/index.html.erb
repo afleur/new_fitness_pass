@@ -23,7 +23,7 @@
               </div>
               <div class="card-body">
                 <div class="course-name">
-                  <%= link_to session.course.name.upcase, course_path(session.course_id) %>
+                  <%= link_to session.course.name.upcase, session_path(session) %>
                 </div>
                 <div class="course-studio">
                   <%= session.course.studio %>

@@ -1,6 +1,5 @@
 <div class="container">
-
-  <div class="center">
+  <div class="row">
     <% unless @course.photo_url.nil? %>
       <%= cl_image_tag @course.photo, height: 250, width: 360, crop: :fill %>
     <% end %>
@@ -8,7 +7,7 @@
     <p><%= @course.studio %> </p>
     <p>Coach: <%= @course.coach %></p>
   </div>
-
+</div>
 
 
   <%= @course.full_address %>
