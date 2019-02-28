@@ -1,3 +1,8 @@
+<%= form_tag sessions_path, method: :get do %>
+  <%= select_tag(:category, options_for_select([['Cardio', 'Cardio'], ['Danse', 'Danse']])) %>
+  <%= button_tag %>
+<% end %>
+
 <form id="home-filter">
 
   <div>
