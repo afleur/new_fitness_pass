@@ -1,6 +1,27 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
-
-<%= @booking.user_id %>
-
-<%= link_to 'Back', sessions_path%>
+<div class="bottom-padding">
+  <div class="confirmation">
+    <div class="confirmation-back">
+    <%= link_to 'x', session_path(@booking.session_id)%>
+    </div>
+    <div class="confirmation-text">
+    Je réserve
+    </div>
+    <div class="confirmation-course-name">
+    un cours de <strong><%= @booking.session.course.name %></strong></div>
+    <div class="confirmation-course-studio">
+     au <strong><%= @booking.session.course.studio %></strong>
+    </div>
+    <div class="confirmation-date">
+    <strong><%= l(@booking.session.start_time, :format =>'%A %e %B') %></strong>
+    </div>
+    <div class="confirmation-hour">
+    à <strong><%= @booking.session.start_time.strftime("%H:%M") %></strong>
+    </div>
+    <div class="confirmation-credits">
+    💰 <%= @booking.session.course.credits_cost%> crédits
+    </div>
+    <div class="confirmation-ok action-button">
+    <%= link_to "Je confirme", session_bookings_path, method: :post %>
+    </div>
+  </div>
+</div>

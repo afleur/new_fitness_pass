@@ -1,0 +1,32 @@
+<div class="bottom-padding">
+  <div class="confirmation-booking">
+    <div class="confirmation-booking-back">
+    <%= link_to 'x', sessions_path%>
+    </div>
+    <div class="top-padding">
+    Réservation confirmée !
+    </div>
+
+    <div class="confirmation-date-info">
+      <p><%= l(@booking.session.start_time, :format =>'%A %e %B') %></p>
+       <p><%= @booking.session.start_time.strftime("%H:%M") %> - <%= (@booking.session.start_time + (@booking.session.course.duration * 60)).strftime("%H:%M") %></p>
+    </div>
+
+    <div class="confirmation-location-info top-padding">
+      <%= @booking.session.course.name.upcase  %> <br>
+      <%= @booking.session.course.studio.upcase  %><br><br>
+      <i class="fas fa-map-marker-alt"></i> <%= @booking.session.course.street%>, <%= @booking.session.course.npa  %> <%= @booking.session.course.city  %>
+    </div>
+
+    <div id="cont" data-pct="<%= @booking.user.credits_amount %> crédits restants">
+      <svg id="svg" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+        <circle id="bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+      </svg>
+    </div>
+    <div class="confirmation-user-info">
+    <%= @booking.user.first_name.capitalize %> <%= @booking.user.last_name.capitalize %>
+    </div>
+
+  </div>
+</div>
