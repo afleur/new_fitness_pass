@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
 
   def index
     if params[:category].present?
-
       @sessions = Session.joins(:course).where("courses.category = ?", params[:category])
     else
       @sessions = Session.all

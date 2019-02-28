@@ -1,17 +1,15 @@
-<form id="home-filter">
-  <p>Je recherche</p>
-  <%= form_tag sessions_path, method: :get do %>
-    <%= select_tag(:category, options_for_select([
-      ['toutes les activités', ''],
-      ['du cardio', 'Cardio'],
-      ['du renforcement', 'Renforcement'],
-      ['des arts martiaux', 'Arts Martiaux'],
-      ['Mind & Body', 'Mind & Body'],
-      ['de la danse', 'Danse']
-    ])) %>
+<p>Je recherche</p>
+<%= form_tag sessions_path, id: "home-filter", method: :get do %>
+  <%= select_tag(:category, options_for_select([
+    ['toutes les activités', ''],
+    ['du cardio', 'Cardio'],
+    ['du renforcement', 'Renforcement'],
+    ['des arts martiaux', 'Arts Martiaux'],
+    ['Mind & Body', 'Mind & Body'],
+    ['de la danse', 'Danse']
+  ])) %>
 
-    <div class="btn-filter fixed-bottom">
-      <%= button_tag %>
-    </div>
-  <% end %>
-</form>
+  <div class="btn-filter fixed-bottom">
+    <%= button_tag "voir les résultats" %>
+  </div>
+<% end %>
