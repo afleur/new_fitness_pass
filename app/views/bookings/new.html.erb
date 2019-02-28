@@ -21,9 +21,7 @@
     💰 <%= @booking.session.course.credits_cost%> crédits
     </div>
     <div class="confirmation-ok action-button">
-    <%= link_to sessions_path do %>
-    Je confirme
-    <% end %>
+    <%= link_to "Je confirme", session_bookings_path, method: :post %>
     </div>
   </div>
 </div>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :courses, only: [:show]
   resources :sessions, only: [:show, :index] do
     resources :bookings, only: [:show, :index, :new, :create]
+      get '/sessions/:session_id/bookings/confirmation', to: 'bookings#confirmation', as: :confirmation
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

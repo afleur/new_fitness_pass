@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  skip_before_action :authenticate_user!
+  # skip_before_action :authenticate_user!
 
   def index
     @bookings = Booking.all
@@ -22,9 +22,9 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.session = @session
     if @booking.save
-      redirect_to session_booking_path(@session, @booking), notice: 'Votre session est réservée.'
+      redirect_to session_confirmation_path(@session, @booking), notice: 'Votre session est réservée.'
     else
-      render :new
+      render :new, alert: "Votre session n'a pas pu être réservée."
     end
   end
 
@@ -37,8 +37,12 @@ class BookingsController < ApplicationController
   def destroy
   end
 
+  def confirmation
+  end
+
   private
 
   def booking_params
+    params.require(:booking).permit(:user, :session)
   end
 end
