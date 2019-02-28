@@ -1,18 +1,21 @@
-<div class="confirmation">
-  <div class="confirmation-text">
-  Je réserve un cours de
+<div class="top-bottom-padding">
+  <div class="confirmation">
+    <div class="confirmation-text">
+    Je réserve un cours de
+    </div>
+    <div class="confirmation-course-name">
+    <%= @booking.session.course.name %></div>
+    <div class="confirmation-course-studio">
+     au <strong><%= @booking.session.course.studio %></strong>
+    </div>
+    <div class="confirmation-date">
+    <%= l(@booking.session.start_time, :format =>'%A %e %B') %>
+    </div>
+    <div class="confirmation-hour">
+    à <%= @booking.session.start_time.strftime("%H:%M") %>
+    </div>
+    <div class="confirmation-back">
+    <%= link_to 'x', session_path(@booking.session_id)%>
+    </div>
   </div>
-  <div class="confirmation-course-name">
-  <%= @booking.session.course.name %></div>
-  <div class="confirmation-course-studio">
-   au <%= @booking.session.course.studio %>
-  </div>
-  <div class="confirmation-date">
-  <%= @booking.session.start_time.strftime("%A %e %B") %>
-  </div>
-  <div class="confirmation-hour">
-  à <%= @booking.session.start_time.strftime("%H:%M") %>
-  </div>
-
-  <%= link_to 'Back', session_path(session)%>
 </div>

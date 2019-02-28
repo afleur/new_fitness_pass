@@ -7,4 +7,23 @@
   flex-flow: column;
   align-items: center;
   justify-content: space-around;
+  position: relative;
+}
+
+.confirmation-back {
+  color: #ECECEC;
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-weight: 540;
+  font-size: 20px;
+}
+
+.confirmation-back a {
+  text-decoration: none;
+  color: #ECECEC;
+}
+
+.confirmation-course-studio {
+
 }
