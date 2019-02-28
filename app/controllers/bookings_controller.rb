@@ -17,14 +17,14 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @booking = Booking.new
     @session = Session.find(params[:session_id])
-    @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.session = @session
     if @booking.save
-      redirect_to session_confirmation_path(@session, @booking), notice: 'Votre session est réservée.'
+      redirect_to confirmation_path(@booking)
     else
-      render :new, alert: "Votre session n'a pas pu être réservée."
+      render :new
     end
   end
 
@@ -38,11 +38,6 @@ class BookingsController < ApplicationController
   end
 
   def confirmation
-  end
-
-  private
-
-  def booking_params
-    params.require(:booking).permit(:user, :session)
+    @booking = Booking.find(params[:booking_id])
   end
 end
