@@ -5,12 +5,9 @@
   font-family: 'Fira Sans', 'Helvetica', sans-serif;
   font-size: 25px;
   background-color: transparent;
-  select {
-    font-decoration: none;
-  }
-  option {
-    font-weight: 600;
-    color: $primary-purple;
+  options_for_select {
+    text-decoration: none;
+    color: $secondary-purple;;
   }
 }
 
@@ -32,9 +29,9 @@
     width: 100%;
     margin-top: 70px;
     font-size: 25px;
-    font-weight: lighter;
     color: $off-white;
     text-decoration: none;
+    border: none;
     background-color: $secondary-purple;
   }
 }

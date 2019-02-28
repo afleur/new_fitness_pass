@@ -2,7 +2,11 @@ class SessionsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @sessions = Session.all
+    if params[:category].present?
+      @sessions = Session.joins(:course).where("courses.category = ?", params[:category])
+    else
+      @sessions = Session.all
+    end
   end
 
   def show
