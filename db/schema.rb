@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_26_145210) do
+ActiveRecord::Schema.define(version: 2019_02_27_143657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,7 +39,9 @@ ActiveRecord::Schema.define(version: 2019_02_26_145210) do
     t.string "studio"
     t.string "photo"
     t.string "street"
-    t.integer "NPA"
+    t.integer "npa"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "invitations", force: :cascade do |t|

@@ -92,22 +92,25 @@
 }
 
 .category-cardio {
-  background-color: red;
+  background-color: $secondary-active-category;
   padding: 1px 3px;
   border-radius: 3px;
 }
 
 .category-danse {
-  background-color: lightblue;
+  background-color: $secondary-calm-category;
   padding: 1px 3px;
   border-radius: 3px;
 }
 
 .category-artsmartiaux {
-  background-color: orange;
+  background-color: $secondary-purple;
   padding: 1px 3px;
   border-radius: 3px;
 }
 
-
-
+.category-souplesse {
+  background-color: $primary-calm-category;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
