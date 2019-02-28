@@ -1,0 +1,28 @@
+#home-filter {
+  height: calc(100vh - 70px);
+  text-align: center;
+  color: $black;
+  font-family: 'Fira Sans', 'Helvetica', sans-serif;
+  font-size: 25px;
+  background-color: transparent;
+  select {
+    font-decoration: none;
+  }
+  option {
+    font-weight: 600;
+    color: $primary-purple;
+  }
+}
+
+.btn-filter {
+  button {
+    height: 70px;
+    width: 100%;
+    margin-top: 70px;
+    font-size: 25px;
+    font-weight: lighter;
+    color: $off-white;
+    text-decoration: none;
+    background-color: $secondary-purple;
+  }
+}
