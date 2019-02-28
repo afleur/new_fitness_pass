@@ -1,0 +1,5 @@
+
+fr:
+  # hello: "Hello world"
+  date:
+    day_names: [Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi]
