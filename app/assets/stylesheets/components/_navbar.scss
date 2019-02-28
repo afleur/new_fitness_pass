@@ -2,18 +2,19 @@
 .navbar {
   background: $primary-purple;
   transition: all 0.3s ease;
-  height: 70px;
-  padding: 0px 15px;
+  height: 30px;
+  padding: 0px 10px;
   display: flex;
   width: 100%;
-  align-items: center;
   justify-content: space-between;
-  margin: 0 0 0 0;
+  span {
+    color: $primary-calm-category;
+  }
 }
 
 /* Logo */
 .navbar-brand img {
-  height: 18px;
+  height: 16px;
 }
 
 /* Right section */
@@ -37,4 +38,5 @@
 .navbar-link:hover {
   color: $off-white;
   text-decoration: none;
+  font-weight: bolder;
 }
