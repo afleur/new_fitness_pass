@@ -1,58 +1,17 @@
-<%= form_tag sessions_path, method: :get do %>
-  <%= select_tag(:category, options_for_select([['Cardio', 'Cardio'], ['Danse', 'Danse']])) %>
-  <%= button_tag %>
-<% end %>
-
 <form id="home-filter">
+  <p>Je recherche</p>
+  <%= form_tag sessions_path, method: :get do %>
+    <%= select_tag(:category, options_for_select([
+      ['toutes les activités', ''],
+      ['du cardio', 'Cardio'],
+      ['du renforcement', 'Renforcement'],
+      ['des arts martiaux', 'Arts Martiaux'],
+      ['Mind & Body', 'Mind & Body'],
+      ['de la danse', 'Danse']
+    ])) %>
 
-  <div>
-    <p>Je recherche</p>
-    <select>
-      <option selected>
-        toutes les activités
-      </option>
-      <option value="cardio">
-        du cardio
-      </option>
-      <option value="renforcement">
-        du reforcement
-      </option>
-      <option value="artsmartiaux">
-        des arts martiaux
-      </option>
-      <option value="mind&boby">
-        du Mind & Body
-      </option>
-      <option value="dance">
-        de la dance
-      </option>
-    </select>
-  </div>
-
-  <div>
-    <select>
-      <option selected>
-        aujourd'hui
-      </option>
-    </select>
-  </div>
-
-  <div>
-    <p>dans les environs de</p>
-    <select>
-      <option  selected></option>
-      <option value="Lausanne">Lausane</option>
-    </select>
-  </div>
-
-  <div>
-    <p>à partir de</p>
-    <select>
-      <option selected>maintenant</option>
-    </select>
-  </div>
-  <div class="btn-filter">
-    <button type="submit">voir les résultats</button>
-  </div>
-
+    <div class="btn-filter fixed-bottom">
+      <%= button_tag %>
+    </div>
+  <% end %>
 </form>
