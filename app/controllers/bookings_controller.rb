@@ -24,7 +24,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to session_booking_path(@session, @booking), notice: 'Votre session est réservée.'
     else
-      redirect_to session_path(@session), alert: 'Pb'
+      render :new
     end
   end
 

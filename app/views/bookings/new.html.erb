@@ -1,21 +1,29 @@
 <div class="top-bottom-padding">
   <div class="confirmation">
+    <div class="confirmation-back">
+    <%= link_to 'x', session_path(@booking.session_id)%>
+    </div>
     <div class="confirmation-text">
-    Je réserve un cours de
+    Je réserve
     </div>
     <div class="confirmation-course-name">
-    <%= @booking.session.course.name %></div>
+    un cours de <strong><%= @booking.session.course.name %></strong></div>
     <div class="confirmation-course-studio">
      au <strong><%= @booking.session.course.studio %></strong>
     </div>
     <div class="confirmation-date">
-    <%= l(@booking.session.start_time, :format =>'%A %e %B') %>
+    <strong><%= l(@booking.session.start_time, :format =>'%A %e %B') %></strong>
     </div>
     <div class="confirmation-hour">
-    à <%= @booking.session.start_time.strftime("%H:%M") %>
+    à <strong><%= @booking.session.start_time.strftime("%H:%M") %></strong>
     </div>
-    <div class="confirmation-back">
-    <%= link_to 'x', session_path(@booking.session_id)%>
+    <div class="confirmation-credits">
+    💰 <%= @booking.session.course.credits_cost%> crédits
+    </div>
+    <div class="confirmation-ok action-button">
+    <%= link_to sessions_path do %>
+    Je confirme
+    <% end %>
     </div>
   </div>
 </div>
