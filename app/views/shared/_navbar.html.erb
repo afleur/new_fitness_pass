@@ -10,9 +10,9 @@
 
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-      <%= link_to "BOOKING", "#", class: "navbar-item navbar-link" %>
-      <%= link_to "CREDITS", "#", class: "navbar-item navbar-link" %>
-      <%= link_to "ME", "#", class: "navbar-item navbar-link" %>
+      <%= link_to "Booking", "#", class: "navbar-item navbar-link" %>
+      <%= link_to "Credits", "#", class: "navbar-item navbar-link" %>
+      <%= link_to "Me", "#", class: "navbar-item navbar-link" %>
       <%= link_to destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" do %>
       Sign out
       <% end %>
