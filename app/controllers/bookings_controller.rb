@@ -6,21 +6,21 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find(params[:booking_id])
   end
 
   def new
-    @session = Session.find(params[:session_id])
+    @activity = Activity.find(params[:activity_id])
     @booking = Booking.new
-    @booking.session = @session
+    @booking.activity = @activity
     @booking.user = current_user
   end
 
   def create
     @booking = Booking.new
-    @session = Session.find(params[:session_id])
+    @activity = Activity.find(params[:activity_id])
     @booking.user = current_user
-    @booking.session = @session
+    @booking.activity = @activity
     if @booking.save
       redirect_to confirmation_path(@booking)
     else

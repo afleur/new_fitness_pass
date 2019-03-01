@@ -1,2 +1,41 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
+<h1>Mes réservations</h1>
+
+<div class="small-padding">
+</div>
+
+<div class="container">
+  <div class="row">
+    <%   @bookings.each do |booking|%>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card-booking">
+          <div class="card-date-booking">
+            <p><%= booking.activity.start_time.strftime("%A %e %B %Y") %></p>
+          </div>
+          <div class="card-hour-booking">
+            <div class="start-activity">
+            <%= booking.activity.start_time.strftime("%H:%M")%></div>
+            <div class="end-activity">
+            <%= (booking.activity.start_time + (booking.activity.course.duration * 60)).strftime("%H:%M") %>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="course-name">
+              <%= booking.activity.course.name.upcase %>
+            </div>
+            <div class="course-studio">
+              <%= booking.activity.course.studio %>
+            </div>
+            <div class="course-address-booking">
+              <i class="fas fa-map-marker-alt"></i> <%= booking.activity.course.street %>, <%= booking.activity.course.npa %> <%= booking.activity.course.city %>
+            </div>
+          </div>
+          <div class="card-booking-validation">
+            <%= link_to 'Voir', bookingshow_path(booking.user, booking), class:'btn btn-primary'  %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+

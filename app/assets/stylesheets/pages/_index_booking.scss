@@ -1,0 +1,38 @@
+.card-booking {
+  display :flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  color: #727272;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding: 15px 0;
+}
+
+.card-hour-booking {
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 0;
+}
+
+.course-address-booking {
+  font-weight: lighter;
+  font-size: 10px;
+}
+
+.card-date-booking{
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $off-white;
+  border-radius: 5px;
+  padding: 0px 8px;
+  font-size: 10px;
+  width: 30%;
+  margin-top: 3px;
+}

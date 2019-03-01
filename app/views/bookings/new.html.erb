@@ -1,27 +1,27 @@
 <div class="bottom-padding">
   <div class="confirmation">
     <div class="confirmation-back">
-    <%= link_to 'x', session_path(@booking.session_id)%>
+    <%= link_to 'x', activity_path(@booking.activity_id)%>
     </div>
     <div class="confirmation-text">
     Je réserve
     </div>
     <div class="confirmation-course-name">
-    un cours de <strong><%= @booking.session.course.name %></strong></div>
+    un cours de <strong><%= @booking.activity.course.name %></strong></div>
     <div class="confirmation-course-studio">
-     au <strong><%= @booking.session.course.studio %></strong>
+     au <strong><%= @booking.activity.course.studio %></strong>
     </div>
     <div class="confirmation-date">
-    <strong><%= I18n.localize(@booking.session.start_time, :format =>"%A %e %B") %></strong>
+    <strong><%= I18n.localize(@booking.activity.start_time, :format =>"%A %e %B") %></strong>
     </div>
     <div class="confirmation-hour">
-    à <strong><%= @booking.session.start_time.strftime("%H:%M") %></strong>
+    à <strong><%= @booking.activity.start_time.strftime("%H:%M") %></strong>
     </div>
     <div class="confirmation-credits">
-    💰 <%= @booking.session.course.credits_cost%> crédits
+    💰 <%= @booking.activity.course.credits_cost%> crédits
     </div>
     <div class="confirmation-ok action-button">
-    <%= link_to "Je confirme", session_bookings_path, method: :post %>
+    <%= link_to "Je confirme", activity_bookings_path, method: :post %>
     </div>
   </div>
 </div>

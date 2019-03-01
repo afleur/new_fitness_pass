@@ -1,21 +1,21 @@
 <div class="bottom-padding">
   <div class="confirmation-booking">
     <div class="confirmation-booking-back">
-    <%= link_to 'x', sessions_path%>
+    <%= link_to 'x', activities_path%>
     </div>
     <div class="top-padding">
     Réservation confirmée !
     </div>
 
     <div class="confirmation-date-info">
-      <p><%= l(@booking.session.start_time, :format =>'%A %e %B') %></p>
-       <p><%= @booking.session.start_time.strftime("%H:%M") %> - <%= (@booking.session.start_time + (@booking.session.course.duration * 60)).strftime("%H:%M") %></p>
+      <p><%= l(@booking.activity.start_time, :format =>'%A %e %B') %></p>
+       <p><%= @booking.activity.start_time.strftime("%H:%M") %> - <%= (@booking.activity.start_time + (@booking.activity.course.duration * 60)).strftime("%H:%M") %></p>
     </div>
 
     <div class="confirmation-location-info top-padding">
-      <%= @booking.session.course.name.upcase  %> <br>
-      <%= @booking.session.course.studio.upcase  %><br><br>
-      <i class="fas fa-map-marker-alt"></i> <%= @booking.session.course.street%>, <%= @booking.session.course.npa  %> <%= @booking.session.course.city  %>
+      <%= @booking.activity.course.name.upcase  %> <br>
+      <%= @booking.activity.course.studio.upcase  %><br><br>
+      <i class="fas fa-map-marker-alt"></i> <%= @booking.activity.course.street%>, <%= @booking.activity.course.npa  %> <%= @booking.activity.course.city  %>
     </div>
 
     <div id="cont" data-pct="<%= @booking.user.credits_amount %> crédits restants">
