@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: $body-font;
   color: #727272;
   border-top: 0.5px solid rgba(0, 0, 0, 0.3);
   position: relative;
@@ -28,7 +28,7 @@
 }
 
 .course-name {
-  font-family: 'Expletus Sans', cursive;
+  font-family: $headers-font;
   font-weight: bold;
 }
 
