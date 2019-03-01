@@ -9,11 +9,12 @@ require 'faker'
 
 puts 'cleaning DB'
 
+Course.destroy_all
 Order.destroy_all
 Review.destroy_all
+Booking.destroy_all
 User.destroy_all
 Activity.destroy_all
-Course.destroy_all
 
 puts 'Creating orders...'
 
