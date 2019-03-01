@@ -3,7 +3,7 @@
 </div>
 <div class="home-filter">
   <p>Je recherche</p>
-  <%= form_tag sessions_path, method: :get do %>
+  <%= form_tag activities_path, method: :get do %>
     <%= select_tag(:category, options_for_select([
       ['toutes les activités', ''],
       ['du cardio', 'Cardio'],
