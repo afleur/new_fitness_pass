@@ -1,5 +1,6 @@
 .card-course {
   position:relative;
+  color: #606060;
 }
 
 .card-course-head{
@@ -15,6 +16,12 @@
   color: white;
 }
 
+.card-course-category{
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
 .card-course-hour {
   display:flex;
   justify-content: space-between;
@@ -24,7 +31,7 @@
 
 .card-course-infos {
   text-align: justify;
-  background-color: lightgrey;
+  background-color: #E0E0E0;
   border-radius: 5px;
   margin: 10px 0;
   padding: 10px 10px;
