@@ -45,6 +45,21 @@ puts 'Creating users...'
   user.save!
 end
 
+clara = User.new(
+    email:           'clara@gmail.com',
+    password:        'clara123',
+    first_name:      'Clara',
+    last_name:       'Chapuis',
+    street:          'Rue Pichard 20',
+    NPA:              1003,
+    city:            'Lausanne',
+    birth_date:      "Mar, 28 Mar 1986",
+    order_id:        Order.all.sample,
+    credits_amount:  25,
+  )
+  clara.save!
+
+
 puts 'Creating courses...'
 
     # name:          rand('Sprint', 'Fat Burner', 'Total Fit', 'Brain Muscle', 'Conditioning', 'Combat Yoga', 'Iron But', 'Step By Step', 'Sprint', 'Body Talk'),
@@ -94,6 +109,7 @@ puts 'Creating courses...'
     studio:        "Lausanne Wushu",
     category:      "Arts Martiaux",
     description:   "Le seul club lausannois à combiner autant d'arts martiaux et sports de combat. Depuis 1978, le National Sporting Club est LA référence. Avec une salle de musculation en complément puissance et cardio, et un ring de 5x5m, le NSC reste le 'Fight Club' romand le plus complet. En pratique douce comme en compétition extrême.",
+    infos:         "- Prévoir un cadenas pour les casiers \n -Douche et vestiaire",
     coach:         "David",
     street:        "Rue du Grand Pré 4",
     npa:           "1007",
@@ -108,12 +124,13 @@ puts 'Creating courses...'
 
   url_four = "https://lemag.nikonclub.fr/wp-content/uploads/2017/05/Hard-Fight-3.jpg"
   course_four = Course.new(
-    name:          "Hatha Yoga",
+    name:          "Boxe anglaise",
     studio:        "NSC Warriors",
     category:      "Arts Martiaux",
     description:   "Le seul club lausannois à combiner autant d'arts martiaux et sports de combat. Depuis 1978, le National Sporting Club est LA référence. Avec une salle de musculation en complément puissance et cardio, et un ring de 5x5m, le NSC reste le 'Fight Club' romand le plus complet. En pratique douce comme en compétition extrême.",
-    coach:         "Sophie",
+    coach:         "Franck",
     street:        "Rue Chaucrau 3-5",
+    infos:         "Prévoir un cadenas, location éventuelle sur place \n Location éventuelle de serviettes sur place \n Possibilité d'acheter une bouteille d'eau sur place",
     npa:           "1003",
     city:          "Lausanne",
     likes:         150,
@@ -130,6 +147,7 @@ puts 'Creating courses...'
     studio:        "Deekay Dance School",
     category:      "Danse",
     description:   "Peu importe vos envies, les professeurs s'adaptent et sauront vous pousser pour faire des concours, des battles ou tout simplement progresser personnellement. Nous sommes également très intéressés à l'histoire des danses que nous enseignons, c'est pourquoi les élèves peuvent aussi nous poser des questions s'ils veulent aller plus loin dans le développement de leur activité ou passion.",
+    infos:         "Prévoir un cadenas, location éventuelle sur place \n Location éventuelle de serviettes sur place \n Possibilité d'acheter une bouteille d'eau sur place",
     coach:         "Sofia",
     street:        "Chemin de Boissonnet 79",
     npa:           "1010",
@@ -157,7 +175,7 @@ puts 'Creating sessions...'
   session_two.save!
 
   session_three = Session.new(
-    start_time: DateTime.new(2019,3,1,18),
+    start_time: DateTime.new(2019,4,1,18),
     course_id:  (Course.all.sample).id,
   )
   session_three.save!
@@ -181,7 +199,7 @@ puts 'Creating sessions...'
   session_six.save!
 
   session_seven = Session.new(
-    start_time: DateTime.new(2019,3,1,19.5),
+    start_time: DateTime.new(2019,4,1,19.5),
     course_id:  (Course.all.sample).id,
   )
   session_seven.save!
@@ -193,7 +211,7 @@ puts 'Creating sessions...'
   session_eight.save!
 
   session_nine = Session.new(
-    start_time: DateTime.new(2019,3,1,19),
+    start_time: DateTime.new(2019,5,1,19),
     course_id:  (Course.all.sample).id,
   )
   session_nine.save!
