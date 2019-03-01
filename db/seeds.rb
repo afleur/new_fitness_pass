@@ -12,7 +12,7 @@ puts 'cleaning DB'
 Order.destroy_all
 Review.destroy_all
 User.destroy_all
-Session.destroy_all
+Activity.destroy_all
 Course.destroy_all
 
 puts 'Creating orders...'
@@ -160,67 +160,67 @@ puts 'Creating courses...'
   course_five.remote_photo_url = url_five
   course_five.save!
 
-puts 'Creating sessions...'
+puts 'Creating activities...'
 
-  session_one = Session.new(
+  activity_one = Activity.new(
     start_time: DateTime.new(2019,3,1,17),
     course_id:  (Course.all.sample).id,
   )
-  session_one.save!
+  activity_one.save!
 
-  session_two = Session.new(
+  activity_two = Activity.new(
     start_time: DateTime.new(2019,3,1,17),
     course_id:  (Course.all.sample).id,
   )
-  session_two.save!
+  activity_two.save!
 
-  session_three = Session.new(
+  activity_three = Activity.new(
     start_time: DateTime.new(2019,4,1,18),
     course_id:  (Course.all.sample).id,
   )
-  session_three.save!
+  activity_three.save!
 
-  session_four = Session.new(
+  activity_four = Activity.new(
     start_time: DateTime.new(2019,3,1,18),
     course_id:  (Course.all.sample).id,
   )
-  session_four.save!
+  activity_four.save!
 
-  session_five = Session.new(
+  activity_five = Activity.new(
     start_time: DateTime.new(2019,3,1,18),
     course_id:  (Course.all.sample).id,
   )
-  session_five.save!
+  activity_five.save!
 
-  session_six = Session.new(
+  activity_six = Activity.new(
     start_time: DateTime.new(2019,3,1,18),
     course_id:  (Course.all.sample).id,
   )
-  session_six.save!
+  activity_six.save!
 
-  session_seven = Session.new(
+  activity_seven = Activity.new(
     start_time: DateTime.new(2019,4,1,19.5),
     course_id:  (Course.all.sample).id,
   )
-  session_seven.save!
+  activity_seven.save!
 
-  session_eight = Session.new(
+  activity_eight = Activity.new(
     start_time: DateTime.new(2019,3,1,19),
     course_id:  (Course.all.sample).id,
   )
-  session_eight.save!
+  activity_eight.save!
 
-  session_nine = Session.new(
+  activity_nine = Activity.new(
     start_time: DateTime.new(2019,5,1,19),
     course_id:  (Course.all.sample).id,
   )
-  session_nine.save!
+  activity_nine.save!
 
-  session_ten = Session.new(
+  activity_ten = Activity.new(
     start_time: DateTime.new(2019,3,1,19),
     course_id:  (Course.all.sample).id,
   )
-  session_ten.save!
+  activity_ten.save!
 
 
 # puts 'Creating reviews...'

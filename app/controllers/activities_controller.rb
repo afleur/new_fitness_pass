@@ -1,17 +1,17 @@
-class SessionsController < ApplicationController
+class ActivitiesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
     if params[:category].present?
-      @sessions = Session.joins(:course).where("courses.category = ?", params[:category])
+      @activities = Activity.joins(:course).where("courses.category = ?", params[:category])
     else
-      @sessions = Session.all
+      @activities = Activity.all
     end
   end
 
   def show
-    @session = Session.find(params[:id])
-    @course = @session.course
+    @activity = Activity.find(params[:id])
+    @course = @activity.course
     @markers =
       [{
         lng: @course.longitude,

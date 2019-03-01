@@ -1,5 +1,5 @@
 class Course < ApplicationRecord
-  has_many :sessions, dependent: :destroy
+  has_many :activities, dependent: :destroy
   mount_uploader :photo, PhotoUploader
   geocoded_by :full_address
   after_validation :geocode, if: :will_save_change_to_city?
