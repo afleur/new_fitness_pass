@@ -12,7 +12,7 @@ puts 'cleaning DB'
 Order.destroy_all
 Review.destroy_all
 User.destroy_all
-Session.destroy_all
+Activity.destroy_all
 Course.destroy_all
 
 puts 'Creating orders...'
@@ -44,6 +44,21 @@ puts 'Creating users...'
   )
   user.save!
 end
+
+clara = User.new(
+    email:           'clara@gmail.com',
+    password:        'clara123',
+    first_name:      'Clara',
+    last_name:       'Chapuis',
+    street:          'Rue Pichard 20',
+    NPA:              1003,
+    city:            'Lausanne',
+    birth_date:      "Mar, 28 Mar 1986",
+    order_id:        Order.all.sample,
+    credits_amount:  25,
+  )
+  clara.save!
+
 
 puts 'Creating courses...'
 
@@ -94,6 +109,7 @@ puts 'Creating courses...'
     studio:        "Lausanne Wushu",
     category:      "Arts Martiaux",
     description:   "Le seul club lausannois à combiner autant d'arts martiaux et sports de combat. Depuis 1978, le National Sporting Club est LA référence. Avec une salle de musculation en complément puissance et cardio, et un ring de 5x5m, le NSC reste le 'Fight Club' romand le plus complet. En pratique douce comme en compétition extrême.",
+    infos:         "- Prévoir un cadenas pour les casiers \n -Douche et vestiaire",
     coach:         "David",
     street:        "Rue du Grand Pré 4",
     npa:           "1007",
@@ -108,12 +124,13 @@ puts 'Creating courses...'
 
   url_four = "https://lemag.nikonclub.fr/wp-content/uploads/2017/05/Hard-Fight-3.jpg"
   course_four = Course.new(
-    name:          "Hatha Yoga",
+    name:          "Boxe anglaise",
     studio:        "NSC Warriors",
     category:      "Arts Martiaux",
     description:   "Le seul club lausannois à combiner autant d'arts martiaux et sports de combat. Depuis 1978, le National Sporting Club est LA référence. Avec une salle de musculation en complément puissance et cardio, et un ring de 5x5m, le NSC reste le 'Fight Club' romand le plus complet. En pratique douce comme en compétition extrême.",
-    coach:         "Sophie",
+    coach:         "Franck",
     street:        "Rue Chaucrau 3-5",
+    infos:         "Prévoir un cadenas, location éventuelle sur place \n Location éventuelle de serviettes sur place \n Possibilité d'acheter une bouteille d'eau sur place",
     npa:           "1003",
     city:          "Lausanne",
     likes:         150,
@@ -130,6 +147,7 @@ puts 'Creating courses...'
     studio:        "Deekay Dance School",
     category:      "Danse",
     description:   "Peu importe vos envies, les professeurs s'adaptent et sauront vous pousser pour faire des concours, des battles ou tout simplement progresser personnellement. Nous sommes également très intéressés à l'histoire des danses que nous enseignons, c'est pourquoi les élèves peuvent aussi nous poser des questions s'ils veulent aller plus loin dans le développement de leur activité ou passion.",
+    infos:         "Prévoir un cadenas, location éventuelle sur place \n Location éventuelle de serviettes sur place \n Possibilité d'acheter une bouteille d'eau sur place",
     coach:         "Sofia",
     street:        "Chemin de Boissonnet 79",
     npa:           "1010",
@@ -142,67 +160,67 @@ puts 'Creating courses...'
   course_five.remote_photo_url = url_five
   course_five.save!
 
-puts 'Creating sessions...'
+puts 'Creating activities...'
 
-  session_one = Session.new(
+  activity_one = Activity.new(
     start_time: DateTime.new(2019,3,1,17),
     course_id:  (Course.all.sample).id,
   )
-  session_one.save!
+  activity_one.save!
 
-  session_two = Session.new(
+  activity_two = Activity.new(
     start_time: DateTime.new(2019,3,1,17),
     course_id:  (Course.all.sample).id,
   )
-  session_two.save!
+  activity_two.save!
 
-  session_three = Session.new(
+  activity_three = Activity.new(
+    start_time: DateTime.new(2019,4,1,18),
+    course_id:  (Course.all.sample).id,
+  )
+  activity_three.save!
+
+  activity_four = Activity.new(
     start_time: DateTime.new(2019,3,1,18),
     course_id:  (Course.all.sample).id,
   )
-  session_three.save!
+  activity_four.save!
 
-  session_four = Session.new(
+  activity_five = Activity.new(
     start_time: DateTime.new(2019,3,1,18),
     course_id:  (Course.all.sample).id,
   )
-  session_four.save!
+  activity_five.save!
 
-  session_five = Session.new(
+  activity_six = Activity.new(
     start_time: DateTime.new(2019,3,1,18),
     course_id:  (Course.all.sample).id,
   )
-  session_five.save!
+  activity_six.save!
 
-  session_six = Session.new(
-    start_time: DateTime.new(2019,3,1,18),
+  activity_seven = Activity.new(
+    start_time: DateTime.new(2019,4,1,19.5),
     course_id:  (Course.all.sample).id,
   )
-  session_six.save!
+  activity_seven.save!
 
-  session_seven = Session.new(
-    start_time: DateTime.new(2019,3,1,19.5),
-    course_id:  (Course.all.sample).id,
-  )
-  session_seven.save!
-
-  session_eight = Session.new(
+  activity_eight = Activity.new(
     start_time: DateTime.new(2019,3,1,19),
     course_id:  (Course.all.sample).id,
   )
-  session_eight.save!
+  activity_eight.save!
 
-  session_nine = Session.new(
+  activity_nine = Activity.new(
+    start_time: DateTime.new(2019,5,1,19),
+    course_id:  (Course.all.sample).id,
+  )
+  activity_nine.save!
+
+  activity_ten = Activity.new(
     start_time: DateTime.new(2019,3,1,19),
     course_id:  (Course.all.sample).id,
   )
-  session_nine.save!
-
-  session_ten = Session.new(
-    start_time: DateTime.new(2019,3,1,19),
-    course_id:  (Course.all.sample).id,
-  )
-  session_ten.save!
+  activity_ten.save!
 
 
 # puts 'Creating reviews...'
