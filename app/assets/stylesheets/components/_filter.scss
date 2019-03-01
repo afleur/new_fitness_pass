@@ -1,17 +1,18 @@
+.illustration {
+  text-align: center;
+}
+
 .home-filter {
   height: calc(100vh - 70px);
   text-align: center;
-  color: $medium-grey;
   font-family: 'Fira Sans', 'Helvetica', sans-serif;
   font-size: 25px;
   background-color: transparent;
-  options_for_select {
-    text-decoration: none;
-    color: $secondary-purple;;
+  color: $secondary-purple;
+  p {
+    color: $medium-grey;
+    margin-top:50px;
   }
-}
-
-.categories-filter {
 }
 
 .date-filter {

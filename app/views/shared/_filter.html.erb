@@ -1,16 +1,21 @@
+<div class="illustration">
+  <%= image_tag "home-fitness.png", width: 400 %>
+</div>
 
-<p>Je recherche</p>
-<%= form_tag sessions_path, id: "home-filter", method: :get do %>
-  <%= select_tag(:category, options_for_select([
-    ['toutes les activités', ''],
-    ['du cardio', 'Cardio'],
-    ['du renforcement', 'Renforcement'],
-    ['des arts martiaux', 'Arts Martiaux'],
-    ['Mind & Body', 'Mind & Body'],
-    ['de la danse', 'Danse']
-  ])) %>
+<div class="home-filter">
+  <p>Je recherche</p>
+  <%= form_tag sessions_path, method: :get do %>
+    <%= select_tag(:category, options_for_select([
+      ['toutes les activités', ''],
+      ['du cardio', 'Cardio'],
+      ['du renforcement', 'Renforcement'],
+      ['des arts martiaux', 'Arts Martiaux'],
+      ['Mind & Body', 'Mind & Body'],
+      ['de la danse', 'Danse']
+    ])) %>
 
-  <div class="btn-filter fixed-bottom">
-    <%= button_tag "voir les résultats" %>
-  </div>
-<% end %>
+    <div class="btn-filter fixed-bottom">
+      <%= button_tag "voir les résultats" %>
+    </div>
+  <% end %>
+</div>
