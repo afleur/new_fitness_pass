@@ -7,3 +7,13 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
+
+import { initialMouse, slideMovementTotal, mouseIsDown, slider, currentMouse, relativeMouse, slidePercent } from './swipebooking';
+
+initialMouse();
+slideMovementTotal();
+mouseIsDown();
+slider();
+currentMouse();
+relativeMouse();
+slidePercent();
