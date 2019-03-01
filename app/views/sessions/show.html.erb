@@ -1,49 +1,52 @@
 
-<%= link_to 'Book', new_session_booking_path(@session) %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="card-course">
-        <div class="card-course-head">
-          <% unless @session.course.photo_url.nil? %>
-          <%= cl_image_tag @session.course.photo, height: 250, width: 390, crop: :fill %>
-          <% end %>
-          <h1><%= @session.course.name %></h1>
-          <p><%= @session.course.studio %></p>
-          <div class="card-course-icon">
-            <p><i class="far fa-heart"></i> <%= @session.course.likes %> likes</p>
-            <p><i class="fas fa-coins"></i> <%= @session.course.credits_cost %> crédits</p>
+
+<div class="bottom-padding-show">
+  <div class="show-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card-course">
+            <div class="card-course-head">
+              <% unless @session.course.photo_url.nil? %>
+              <%= cl_image_tag @session.course.photo, height: 250, width: 390, crop: :fill %>
+              <% end %>
+              <h1><%= @session.course.name %></h1>
+              <p><%= @session.course.studio %></p>
+              <p><i class="fas fa-tag"></i> <%= @session.course.category %></p>
+              <%= link_to 'Réserver', new_session_booking_path(@session), class: "btn btn-primary"%>
+              <div class="card-course-icon">
+                <p><i class="far fa-heart"></i> <%= @session.course.likes %> likes</p>
+                <p><i class="fas fa-coins"></i> <%= @session.course.credits_cost %> crédits</p>
+              </div>
+            </div>
+            <div class="card-course-coach">
+            <p><i class="far fa-user"></i> <%= @session.course.coach %></p>
+            </div>
+            <div class="card-course-hour">
+            <p><i class="far fa-calendar"></i> <%= @session.start_time.strftime("%A %e %B") %></p>
+            <p><%=@session.start_time.strftime("%H:%M")%> - <%= (@session.start_time + (@session.course.duration * 60)).strftime("%H:%M") %>
+            </p>
+            </div>
+            <div class="card-course-infos"><div class="small-padding"><strong><i class="fas fa-info-circle"></i> INFOS PRATIQUES</strong></div>
+              <%= @session.course.infos %>
+            </div>
+            <div class="card-course-desc">
+              <div class="small-padding"><strong><i class="far fa-comment-dots"></i> A PROPOS</strong></div>
+              <%= @session.course.description %>
+            </div>
+          <div class="card-course-location">
+            <i class="fas fa-map-marker-alt"></i> <strong>LIEU</strong> <br> <%= @session.course.full_address %>
           </div>
-        </div>
-        <div class="card-course-coach">
-        <p><i class="far fa-user"></i> <%= @session.course.coach %></p>
-        </div>
-        <div class="card-course-hour">
-        <p><i class="far fa-calendar"></i> <%= @session.start_time.strftime("%a, %e %B") %></p>
-        <p><%=@session.start_time.strftime("%H:%M")%> - <%= (@session.start_time + (@session.course.duration * 60)).strftime("%H:%M") %>
-        </p>
-        </div>
-        <div class="card-course-desc"> DETAILS:
-          <%= @session.course.description %>
-        </div>
-        <div class="card-course-bas"> INFOS PRATIQUES:
-          <%= @session.course.description %>
+          <div
+            id="map"
+            style="width: 100%;
+            height: 200px;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+          ></div>
         </div>
       </div>
-
-
-  <hr>
-  <i class="fas fa-map-marker-alt"></i> LIEU <%= @session.course.full_address %>
-
-
-
-  <div
-    id="map"
-    style="width: 100%;
-    height: 200px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
-</div>
+    </div>
+  </div>
 </div>

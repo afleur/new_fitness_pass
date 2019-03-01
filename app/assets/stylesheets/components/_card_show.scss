@@ -1,7 +1,7 @@
 .card-course {
   position:relative;
+  color: #606060;
 }
-
 
 .card-course-head{
   text-align: center;
@@ -16,6 +16,12 @@
   color: white;
 }
 
+.card-course-category{
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
 .card-course-hour {
   display:flex;
   justify-content: space-between;
@@ -23,10 +29,30 @@
   margin-bottom: 10px;
 }
 
+.card-course-infos {
+  text-align: justify;
+  background-color: #E0E0E0;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px 10px;
+}
+
 .card-course-desc {
   text-align: justify;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 10px;
 }
 
 .card-course-bas {
   text-align: justify;
+}
+.card-course-icon {
+  display:flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.card-course-location{
+
+  padding: 10px 10px;
 }
