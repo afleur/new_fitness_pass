@@ -194,7 +194,7 @@ puts 'Creating activities...'
   activity_five.save!
 
   activity_six = Activity.new(
-    start_time: DateTime.new(2019,3,1,18),
+    start_time: DateTime.new(2019,2,1,18),
     course_id:  (Course.all.sample).id,
   )
   activity_six.save!
@@ -212,13 +212,13 @@ puts 'Creating activities...'
   activity_eight.save!
 
   activity_nine = Activity.new(
-    start_time: DateTime.new(2019,5,1,19),
+    start_time: DateTime.new(2019,2,5,19),
     course_id:  (Course.all.sample).id,
   )
   activity_nine.save!
 
   activity_ten = Activity.new(
-    start_time: DateTime.new(2019,3,1,19),
+    start_time: DateTime.new(2019,2,11,19),
     course_id:  (Course.all.sample).id,
   )
   activity_ten.save!

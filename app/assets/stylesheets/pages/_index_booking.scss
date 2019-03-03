@@ -1,4 +1,17 @@
-.card-booking {
+.card-booking-coming {
+  display :flex;
+  align-items: left;
+  justify-content: space-around;
+  text-align: left;
+  font-family: $body-font;
+  color: #727272;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding: 25px 0;
+  margin: 5px;
+}
+
+.card-booking-past {
   display :flex;
   align-items: center;
   justify-content: space-around;
@@ -6,23 +19,39 @@
   font-family: $body-font;
   color: #727272;
   border-top: 0.5px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
   position: relative;
-  padding: 15px 0;
+  // padding: 15px 0;
+  background-color: rgba(211, 211, 211, 0.4);
+  margin: 5px;
+  height: 120px;
 }
 
-.card-hour-booking {
+.card-hour-booking-coming {
   flex-flow: column;
   align-items: center;
   justify-content: space-around;
-  padding: 5px 0;
+  padding: 2px 0;
 }
 
-.course-address-booking {
+.card-hour-booking-past {
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px 0;
+}
+
+.course-address-booking-coming {
   font-weight: lighter;
   font-size: 10px;
 }
 
-.card-date-booking{
+.course-address-booking-past {
+  font-weight: lighter;
+  font-size: 10px;
+}
+
+.card-date-booking-coming{
   position: absolute;
   top: -12px;
   left: 0;
@@ -31,8 +60,177 @@
   margin-right: auto;
   background-color: $off-white;
   border-radius: 5px;
-  padding: 0px 12px;
+  padding: 0px 2px;
   font-size: 10px;
-  width: 30%;
+  width: 50%;
   margin-top: 3px;
 }
+
+.card-body-past {
+  display :flex;
+  flex-direction:column;
+  align-items:left;
+  justify-content: space-around;
+  text-align: left;
+}
+.card-date-booking-past{
+  position: absolute;
+  background-color: $off-white;
+  border-radius: 5px;
+  padding: 0px 2px;
+  font-size: 10px;
+  width: 50%;
+  margin-top: 3px;
+}
+
+.center-bookings {
+  text-align:center;
+  margin-top: -50px;
+}
+
+.center-bookings h1 {
+  font-size: 22px;
+}
+
+// .start-date-activity{
+//   padding: -10px 0;
+// }
+
+$cyan: #00bcd4;
+$yellow: #ffeb3b;
+$grey: #9e9e9e;
+
+$num-of-tabs: 2;
+
+@mixin tabs {
+  @for $i from 1 through $num-of-tabs {
+    &:nth-of-type(#{$i}) {
+      &:checked {
+        ~ .slide {
+          left: calc((100% / #{$num-of-tabs}) * #{$i - 1});
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: 26px;
+  background: $off-white;
+  color: black;
+  padding: 40px 0 50px 20%;
+  margin-bottom: 50px;
+}
+
+label, p, a, h1, div {
+  color: black;
+}
+
+.tab-wrap {
+  width: 50%;
+  // margin-left: 20%;
+  position: relative;
+  display: flex;
+  top: -106px;
+}
+
+input[type="radio"][name="tabs"] {
+  position: absolute;
+  z-index: -1;
+  &:checked {
+    + .tab-label-content {
+      label {
+        color: black;
+      }
+      .tab-content {
+        display: block;
+      }
+    }
+  }
+  @include tabs;
+  &:first-of-type {
+    &:checked {
+      ~ .slide {
+        left: 0;
+      }
+    }
+  }
+}
+
+label {
+  cursor: pointer;
+  color: grey;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 56px;
+  transition: color 0.2s ease;
+  width: 100%;
+}
+
+.slide {
+  background: $secondary-purple;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  top: calc(100% - 4px);
+  transition: left 0.3s ease-out;
+}
+
+.tab-label-content {
+  width: 100%;
+  .tab-content {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    padding: 40px 0 90px 10%;
+  }
+  .tab-wrap {
+    width: 100%;
+    // margin-left: 10%;
+    // top: -106px;
+  }
+}
+
+//---------------------------------------------
+
+// .follow {
+//   width: 42px;
+//   height: 42px;
+//   border-radius: 50px;
+//   background: #03A9F4;
+//   display: block;
+//   margin: 300px auto 0;
+//   white-space: nowrap;
+//   padding: 13px;
+//   box-sizing: border-box;
+//   color: white;
+//   transition: all 0.2s ease;
+//   font-family: Roboto, sans-serif;
+//   text-decoration: none;
+//   box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
+//   i {
+//     margin-right: 20px;
+//     transition: margin-right 0.2s ease;
+//   }
+//   &:hover {
+//     width: 134px;
+//     i {
+//       margin-right: 10px;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 800px) {
+//   .follow {
+//     margin: 400px auto 0;
+//   }
+// }
