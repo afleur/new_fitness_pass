@@ -17,7 +17,7 @@
               <%= link_to 'Réserver', new_activity_booking_path(@activity), class: "btn btn-primary"%>
               <div class="card-course-icon">
                 <p><i class="far fa-heart"></i> <%= @activity.course.likes %> likes</p>
-                <p><i class="fas fa-coins"></i> <%= @activity.course.credits_cost %> crédits</p>
+                <p><i class="fas fa-coins"><%= image_tag ("coin.svg")</i> <%= @activity.course.credits_cost %> crédits</p>
               </div>
             </div>
             <div class="card-course-coach">
