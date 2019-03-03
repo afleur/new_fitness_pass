@@ -1,8 +1,18 @@
+require 'time'
+
 class BookingsController < ApplicationController
   # skip_before_action :authenticate_user!
 
   def index
+    @pastbookings = []
+    @comingbookings = []
     @bookings = Booking.all
+    @bookings.each do |booking|
+      if booking.activity.start_time > Time.now
+        @comingbookings << booking
+      else
+        @pastbookings << booking
+      end
   end
 
   def show
@@ -40,4 +50,5 @@ class BookingsController < ApplicationController
   def confirmation
     @booking = Booking.find(params[:booking_id])
   end
+end
 end

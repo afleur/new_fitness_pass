@@ -40,12 +40,11 @@
       </div>
       <input type="radio" name="tabs" id="tab2" checked>
       <div class="tab-label-content" id="tab2-content">
-        <label for="tab2">A venir (<%= @bookings.count%>)</label>
+        <label for="tab2">A venir</label> <div class="notification-box"><span class="notification-count"><%= @bookings.count > 0 ? @bookings.count : ""%> </span></div>
           <div class="tab-content">
             <div class="container">
               <div class="row">
-                <% @bookings.each do |booking|%>
-                  <% if booking.activity.start_time > Time.now %>
+                <% @comingbookings.each do |booking|%>
                   <div class="col-xs-12">
                     <div class="card-booking-coming">
                       <div class="card-date-booking-coming">
