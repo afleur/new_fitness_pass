@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :courses, only: [:show]
   resources :activities, only: [:show, :index] do
-    resources :bookings, only: [:show, :index, :new, :create]
+    resources :bookings, only: [:index, :show, :new, :create]
   end
   get '/bookings/:booking_id/confirmation', to: 'bookings#confirmation', as: :confirmation
   get '/users/:user_id/bookings', to: 'bookings#index', as: :mybookings

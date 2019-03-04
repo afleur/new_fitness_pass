@@ -1,28 +1,106 @@
-.card-booking {
+.backg {
+  color: $off-white;
+}
+
+.center-bookings {
+  text-align: center;
+  margin-bottom: 70px;
+  padding: 10px 10px;
+}
+
+.center-bookings h1 {
+  background: $off-white;
+  text-align: center;
+  padding: 10px 0 40px;
+  font-size: 22px;
+  color: #555555;
+}
+
+.container-booking {
+  margin: 0 auto;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.card-booking-coming {
+  display :flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: $body-font;
+  color: #727272;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding: 18px 0;
+  margin: 5px;
+}
+
+.card-hour-booking-coming {
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  padding: 2px 0;
+  width: 15%;
+}
+
+.start-activity-booking{
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-lenght: 1px;
+  font-size: 14px;
+  padding: 2px 0;
+}
+
+.end-activity-booking{
+  font-size: 14px;
+  padding: 3px 0;
+  color: rgba(149, 149, 149, 1);
+}
+
+.card-body-booking {
+  margin-left: 30px;
+  flex: auto;
+}
+
+.course-studio-booking {
+  font-size: 13px;
+  padding: 5px 0;
+}
+
+.card-booking-validation{
+  margin-right: 20px;
+}
+
+.card-date-booking-coming{
+  position: absolute;
+  top: -12px;
+  text-align: center;
+  background-color: $off-white;
+  padding: 0px 2px;
+  font-size: 10px;
+  width: 50%;
+  margin-top: 3px;
+}
+
+.course-address-booking-coming {
+  font-weight: lighter;
+  font-size: 10px;
+  padding-bottom: 3px;
+}
+
+.card-booking-past {
   display :flex;
   align-items: center;
   justify-content: space-around;
   text-align: center;
   font-family: $body-font;
   color: #727272;
-  border-top: 0.5px solid rgba(0, 0, 0, 0.3);
+  border-top: 0.5px solid rgba(131, 125, 255, 0.5);
+  background-color: rgba(211, 211, 211, 0.4);
+  margin: 3px;
+  height: 110px;
   position: relative;
-  padding: 15px 0;
 }
 
-.card-hour-booking {
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 5px 0;
-}
-
-.course-address-booking {
-  font-weight: lighter;
-  font-size: 10px;
-}
-
-.card-date-booking{
+.card-date-booking-past{
   position: absolute;
   top: -12px;
   left: 0;
@@ -33,6 +111,202 @@
   border-radius: 5px;
   padding: 0px 12px;
   font-size: 10px;
-  width: 30%;
+  width: 50%;
   margin-top: 3px;
 }
+
+.card-hour-booking-past {
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  padding: 2px 0;
+  width: 20%;
+}
+
+.course-address-booking-past {
+  font-weight: lighter;
+  font-size: 11px;
+}
+
+.card-body-past {
+  display :flex;
+  flex-direction:column;
+  align-items: left;
+  justify-content: space-around;
+  text-align: center;
+  flex: auto;
+  // margin-left: -50px;
+}
+
+.kcal-booking-past {
+  position: relative;
+  top: 40px;
+  right: 10px;
+  font-size: 11px;
+  font-weight: lighter;
+}
+
+/////
+
+.notification-box {
+  position: absolute;
+  z-index: 99;
+  top: -25px;
+  right: 43px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+
+}
+
+.notification-count {
+  position: absolute;
+  z-index: 1;
+  // top: 10px;
+  top: calc(50% + 1em);
+  right: calc(50%);
+  // right: 55px;
+  width: 20px;
+  height: 20px;
+  // line-height: 18px;
+  // line-width: 50px;
+  font-size: 11px;
+  border-radius: 50%;
+  background-color: $primary-purple;
+  color: $off-white;
+}
+
+$cyan: #00bcd4;
+$yellow: #ffeb3b;
+$grey: #9e9e9e;
+
+$num-of-tabs: 2;
+
+@mixin tabs {
+  @for $i from 1 through $num-of-tabs {
+    &:nth-of-type(#{$i}) {
+      &:checked {
+        ~ .slide {
+          left: calc((100% / #{$num-of-tabs}) * #{$i - 1});
+        }
+      }
+    }
+  }
+}
+
+
+label {
+  color: black;
+}
+
+.tab-wrap {
+  width: 100%;
+  // margin-left: 20%;
+  position: relative;
+  display: flex;
+  top: -106px;
+}
+
+input[type="radio"][name="tabs"] {
+  position: absolute;
+  z-index: -1;
+  display: none;
+  &:checked {
+    + .tab-label-content {
+      label {
+        color: black;
+      }
+      .tab-content {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  @include tabs;
+  &:first-of-type {
+    &:checked {
+      ~ .slide {
+        left: 0;
+      }
+    }
+  }
+}
+
+label {
+  cursor: pointer;
+  color: grey;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 56px;
+  transition: color 0.2s ease;
+  width: 100%;
+}
+
+.slide {
+  background: $secondary-purple;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  top: calc(100% - 4px);
+  transition: left 0.3s ease-out;
+}
+
+.tab-label-content {
+  width: 100%;
+  .tab-content {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    padding: 40px 0 90px 20%;
+  }
+  .tab-wrap {
+    width: 100%;
+    // margin-left: 10%;
+    // top: -106px;
+  }
+}
+
+//---------------------------------------------
+
+// .follow {
+//   width: 42px;
+//   height: 42px;
+//   border-radius: 50px;
+//   background: #03A9F4;
+//   display: block;
+//   margin: 300px auto 0;
+//   white-space: nowrap;
+//   padding: 13px;
+//   box-sizing: border-box;
+//   color: white;
+//   transition: all 0.2s ease;
+//   font-family: Roboto, sans-serif;
+//   text-decoration: none;
+//   box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
+//   i {
+//     margin-right: 20px;
+//     transition: margin-right 0.2s ease;
+//   }
+//   &:hover {
+//     width: 134px;
+//     i {
+//       margin-right: 10px;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 800px) {
+//   .follow {
+//     margin: 400px auto 0;
+//   }
+// }
