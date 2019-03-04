@@ -10,8 +10,10 @@ class BookingsController < ApplicationController
     @bookings.each do |booking|
       if booking.activity.start_time > Time.now
         @comingbookings << booking
+        @comingbookings = @comingbookings.sort_by { |booking| booking.activity.start_time }
       else
         @pastbookings << booking
+         @pastbookings = (@pastbookings.sort_by { |booking| booking.activity.start_time }).reverse
       end
   end
 

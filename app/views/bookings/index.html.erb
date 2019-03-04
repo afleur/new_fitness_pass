@@ -1,79 +1,39 @@
 
+
 <div class="center-bookings">
   <h1>Mes réservations</h1>
 </div>
-
-<div class="tab-wrap">
-  <input type="radio" name="tabs" id="tab1" checked>
-    <div class="tab-label-content" id="tab1-content">
-      <label for="tab1">Passées</label>
-        <div class="tab-content">
-          <div class="container-booking">
-            <div class="row">
-              <%   @bookings.each do |booking|%>
-                <div class="col-xs-12 md-6">
-                  <div class="card-booking-past">
-                    <div class="card-hour-booking-past">
-                      <div class="start-activity-booking">
-                      <%= booking.activity.start_time.strftime("%d.%m.%y")%></div>
-                      <div class="end-activity-booking">
-                      <%= booking.activity.start_time.strftime("%H:%M")%>
-                      </div>
-                    </div>
-                    <div class="card-body-past">
-                      <div class="course-name small-margin-top">
-                        <%= booking.activity.course.name.upcase %>
-                      </div>
-                      <div class="course-studio-booking">
-                        <%= booking.activity.course.studio %>
-                      </div>
-                      <div class="course-address-booking-past">
-                        <i class="fas fa-map-marker-alt"></i> <%= booking.activity.course.city %>
-                      </div>
-                    </div>
-                    <div class="kcal-booking-past">
-                        <i class="fas fa-fire"></i> <%= booking.activity.course.kcal %> kcal brulées
-                    </div>
-                  </div>
-                </div>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
-      <input type="radio" name="tabs" id="tab2" checked>
-      <div class="tab-label-content" id="tab2-content">
-        <label for="tab2">A venir</label> <div class="notification-box"><span class="notification-count"><%= @bookings.count > 0 ? @bookings.count : ""%> </span></div>
+<div class="large-bottom-padding">
+  <div class="tab-wrap">
+    <input type="radio" name="tabs" id="tab1" checked>
+      <div class="tab-label-content" id="tab1-content">
+        <label for="tab1">Passées</label>
           <div class="tab-content">
             <div class="container-booking">
               <div class="row">
-                <% @comingbookings.each do |booking|%>
-                  <div class="col-xs-12">
-                    <div class="card-booking-coming">
-                      <div class="card-hour-booking-coming">
-                         <div class="start-activity-booking">
-                        <%= booking.activity.start_time.strftime("%H:%M")%>
-                       </div>
+                <%   @pastbookings.each do |booking|%>
+                  <div class="col-xs-12 md-6">
+                    <div class="card-booking-past">
+                      <div class="card-hour-booking-past">
+                        <div class="start-activity-booking">
+                        <%= booking.activity.start_time.strftime("%d.%m.%y")%></div>
                         <div class="end-activity-booking">
-                        <%= (booking.activity.start_time + (booking.activity.course.duration * 60)).strftime("%H:%M") %>
+                        <%= booking.activity.start_time.strftime("%H:%M")%>
                         </div>
                       </div>
-                      <div class="card-body-booking">
-                        <div class="course-name">
+                      <div class="card-body-past">
+                        <div class="course-name small-margin-top">
                           <%= booking.activity.course.name.upcase %>
                         </div>
                         <div class="course-studio-booking">
                           <%= booking.activity.course.studio %>
                         </div>
-                        <div class="course-address-booking-coming">
-                          <i class="fas fa-map-marker-alt"></i> <%= booking.activity.course.street %>, <%= booking.activity.course.npa %> <%= booking.activity.course.city %>
+                        <div class="course-address-booking-past">
+                          <i class="fas fa-map-marker-alt"></i> <%= booking.activity.course.city %>
                         </div>
                       </div>
-                      <div class="card-booking-validation">
-                        <%= link_to 'Voir', bookingshow_path(booking.user, booking), class:'btn btn-primary'  %>
-                      </div>
-                      <div class="card-date-booking-coming">
-                        <%= booking.activity.start_time.strftime("%A %e %B %Y") %>
+                      <div class="kcal-booking-past">
+                          <i class="fas fa-fire"></i> <%= booking.activity.course.kcal %> kcal brulées
                       </div>
                     </div>
                   </div>
@@ -82,5 +42,47 @@
             </div>
           </div>
         </div>
-      <div class="slide"></div>
-    </div>
+        <input type="radio" name="tabs" id="tab2" checked>
+        <div class="tab-label-content" id="tab2-content">
+          <label for="tab2">A venir</label> <div class="notification-box"><span class="notification-count"><%= @comingbookings.count > 0 ? @comingbookings.count : ""%> </span></div>
+            <div class="tab-content">
+              <div class="container-booking">
+                <div class="row">
+                  <% @comingbookings.each do |booking|%>
+                    <div class="col-xs-12">
+                      <div class="card-booking-coming">
+                        <div class="card-hour-booking-coming">
+                           <div class="start-activity-booking">
+                          <%= booking.activity.start_time.strftime("%H:%M")%>
+                         </div>
+                          <div class="end-activity-booking">
+                          <%= (booking.activity.start_time + (booking.activity.course.duration * 60)).strftime("%H:%M") %>
+                          </div>
+                        </div>
+                        <div class="card-body-booking">
+                          <div class="course-name">
+                            <%= booking.activity.course.name.upcase %>
+                          </div>
+                          <div class="course-studio-booking">
+                            <%= booking.activity.course.studio %>
+                          </div>
+                          <div class="course-address-booking-coming">
+                            <i class="fas fa-map-marker-alt"></i> <%= booking.activity.course.street %>, <%= booking.activity.course.npa %> <%= booking.activity.course.city %>
+                          </div>
+                        </div>
+                        <div class="card-booking-validation">
+                          <%= link_to 'Voir', bookingshow_path(booking.user, booking), class:'btn btn-primary'  %>
+                        </div>
+                        <div class="card-date-booking-coming">
+                          <%= booking.activity.start_time.strftime("%A %e %B %Y") %>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="slide"></div>
+      </div>
+    <div class="large-bottom-padding backg">"</div>
