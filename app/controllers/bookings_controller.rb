@@ -15,10 +15,10 @@ class BookingsController < ApplicationController
         @pastbookings << booking
          @pastbookings = (@pastbookings.sort_by { |booking| booking.activity.start_time }).reverse
       end
+    end
   end
 
   def show
-    raise
     @booking = Booking.find(params[:booking_id])
   end
 
@@ -53,5 +53,4 @@ class BookingsController < ApplicationController
   def confirmation
     @booking = Booking.find(params[:booking_id])
   end
-end
 end

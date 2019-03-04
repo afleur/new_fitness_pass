@@ -13,10 +13,12 @@
   text-align: center;
   padding: 10px 0 40px;
   font-size: 22px;
+  color: #555555;
 }
 
 .container-booking {
   margin: 0 auto;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
 }
 
 .card-booking-coming {
@@ -26,7 +28,6 @@
   font-family: $body-font;
   color: #727272;
   border-top: 0.5px solid rgba(0, 0, 0, 0.3);
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
   position: relative;
   padding: 18px 0;
   margin: 5px;
@@ -191,7 +192,7 @@ $num-of-tabs: 2;
 }
 
 
-label, p, a, h1, div {
+label {
   color: black;
 }
 
