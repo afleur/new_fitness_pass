@@ -1,14 +1,71 @@
+.container-booking {
+  margin: 0 auto;
+}
+
 .card-booking-coming {
   display :flex;
-  align-items: left;
+  align-items: center;
   justify-content: space-around;
-  text-align: left;
   font-family: $body-font;
   color: #727272;
   border-top: 0.5px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
   position: relative;
-  padding: 25px 0;
+  padding: 18px 0;
   margin: 5px;
+}
+
+.card-hour-booking-coming {
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  padding: 2px 0;
+  width: 15%;
+}
+
+.start-activity-booking{
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-lenght: 1px;
+  font-size: 14px;
+  padding: 2px 0;
+}
+
+.end-activity-booking{
+  font-size: 14px;
+  padding: 3px 0;
+  color: rgba(149, 149, 149, 1);
+}
+
+.card-body-booking {
+  margin-left: 30px;
+  flex: auto;
+}
+
+.course-studio-booking {
+  font-size: 13px;
+  padding: 5px 0;
+}
+
+.card-booking-validation{
+  margin-right: 20px;
+}
+
+.card-date-booking-coming{
+  position: absolute;
+  top: -12px;
+  text-align: center;
+  background-color: $off-white;
+  padding: 0px 2px;
+  font-size: 10px;
+  width: 50%;
+  margin-top: 3px;
+}
+
+.course-address-booking-coming {
+  font-weight: lighter;
+  font-size: 10px;
+  padding-bottom: 3px;
 }
 
 .card-booking-past {
@@ -26,13 +83,6 @@
   height: 120px;
 }
 
-.card-hour-booking-coming {
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 2px 0;
-}
-
 .card-hour-booking-past {
   flex-flow: column;
   align-items: center;
@@ -40,29 +90,9 @@
   padding: 2px 0;
 }
 
-.course-address-booking-coming {
-  font-weight: lighter;
-  font-size: 10px;
-}
-
 .course-address-booking-past {
   font-weight: lighter;
   font-size: 10px;
-}
-
-.card-date-booking-coming{
-  position: absolute;
-  top: -12px;
-  // left: 0;
-  // right: 0;
-  // margin-left: auto;
-  // margin-right: auto;
-  background-color: $off-white;
-  border-radius: 5px;
-  padding: 0px 2px;
-  font-size: 10px;
-  width: 50%;
-  margin-top: 3px;
 }
 
 .card-body-past {
@@ -71,6 +101,7 @@
   align-items:left;
   justify-content: space-around;
   text-align: left;
+  flex: auto;
 }
 .card-date-booking-past{
   position: absolute;
@@ -83,12 +114,16 @@
 }
 
 .center-bookings {
-  text-align:center;
+  text-align: center;
   margin-top: -50px;
 }
 
 .center-bookings h1 {
   font-size: 22px;
+  background: $off-white;
+  color: black;
+  padding: 40px 0 50px 20%;
+  margin-bottom: 50px;
 }
 
 // .start-date-activity{
@@ -140,20 +175,13 @@ $num-of-tabs: 2;
   }
 }
 
-h1 {
-  font-size: 26px;
-  background: $off-white;
-  color: black;
-  padding: 40px 0 50px 20%;
-  margin-bottom: 50px;
-}
 
 label, p, a, h1, div {
   color: black;
 }
 
 .tab-wrap {
-  width: 50%;
+  width: 100%;
   // margin-left: 20%;
   position: relative;
   display: flex;
@@ -170,6 +198,7 @@ input[type="radio"][name="tabs"] {
       }
       .tab-content {
         display: block;
+        width: 100%;
       }
     }
   }
