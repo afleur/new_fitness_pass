@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: $body-font;
   color: #727272;
   border-top: 0.5px solid rgba(0, 0, 0, 0.3);
   position: relative;
@@ -31,7 +31,7 @@
   margin-right: auto;
   background-color: $off-white;
   border-radius: 5px;
-  padding: 0px 8px;
+  padding: 0px 12px;
   font-size: 10px;
   width: 30%;
   margin-top: 3px;

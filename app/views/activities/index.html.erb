@@ -1,27 +1,19 @@
-<!-- <ul class="tab-group">
-        <li class="tab active"><a href="#list">Liste</a></li>
-        <li class="tab"><a href="#map">Map</a></li>
-      </ul> -->
 
-
-<!--   <div class="tab-content"> -->
-    <div class="container">
+    <div class="container-index">
       <div class="row">
         <%@activities.each do |activity|%>
-          <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="col-xs-12">
             <div class="card">
-              <div class="category">
-                <div class="category-<%=((activity.course.category.downcase).delete(" "))%>"><i class="fas fa-tag">  </i>
-                <%= activity.course.category.upcase %></div>
-              </div>
-              <div class="card-hour">
-                <div class="start-activity">
-                <%= activity.start_time.strftime("%H:%M")%></div>
-                <div class="end-activity">
-                <%= (activity.start_time + (activity.course.duration * 60)).strftime("%H:%M") %>
-                </div>
+              <div class="photo">
+              <% unless activity.course.photo_url.nil? %>
+              <%= cl_image_tag activity.course.photo, height: 100, width: 100, crop: :fill%>
+              <% end %>
               </div>
               <div class="card-body">
+                <div class="start-activity">
+                <%= activity.start_time.strftime("%H:%M")%> -
+                <%= (activity.start_time + (activity.course.duration * 60)).strftime("%H:%M") %>
+                </div>
                 <div class="course-name">
                   <%= link_to activity.course.name.upcase, activity_path(activity) %>
                 </div>
@@ -29,23 +21,31 @@
                   <%= activity.course.studio %>
                 </div>
                 <div class="course-address">
-                  <%= activity.course.npa %> <%= activity.course.city %>
+                  <%= image_tag("pointer-icn.svg", height: 15, width: 15) %>
+                  <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
+                </div>
+                <div class="card-icon-bottom">
+                  <div class="heart padding-right">
+                    <%= image_tag("likes-icn.svg", height: 15, width: 15) %>
+                    <%= activity.course.likes %> likes
+                  </div>
+                  <div class="heart">
+                    <%= image_tag("kcal-icn.svg", height: 15, width: 15) %>
+                    <%= activity.course.kcal %>kcal
+                  </div>
                 </div>
               </div>
-              <div class="card-icon">
-                <div class="heart">
-                  <%= image_tag("likes-icn.svg", height: 15, width: 15) %> <%= activity.course.likes %>
-                </div>
-                <div class="wallet">
-                  <%= image_tag("coin-icn.svg", height: 15, width: 15) %> <%= activity.course.credits_cost %>
-                </div>
-                <div class="location">
-                  <%= image_tag("pointer-icn.svg", height: 15, width: 15) %>  200m
-                </div>
+            </div>
+            <div class="wallet">
+              <%= activity.course.credits_cost %>
+              <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+            </div>
+            <div class="category">
+              <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
+              <%= activity.course.category.upcase %>
               </div>
             </div>
           </div>
         <% end %>
       </div>
     </div>
-<!--   </div> -->
