@@ -21,23 +21,27 @@
                   <%= activity.course.studio %>
                 </div>
                 <div class="course-address">
-                  <i class="fas fa-map-marker-alt"></i> <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
+                  <%= image_tag("pointer-icn.svg", height: 15, width: 15) %>
+                  <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
                 </div>
                 <div class="card-icon-bottom">
                   <div class="heart padding-right">
-                   ♥️ <%= activity.course.likes %> likes
+                    <%= image_tag("likes-icn.svg", height: 15, width: 15) %>
+                    <%= activity.course.likes %> likes
                   </div>
                   <div class="heart">
-                     🔥<%= activity.course.kcal %>kcal
+                    <%= image_tag("kcal-icn.svg", height: 15, width: 15) %>
+                    <%= activity.course.kcal %>kcal
                   </div>
                 </div>
               </div>
             </div>
             <div class="wallet">
-              <%= activity.course.credits_cost %>💰
+              <%= activity.course.credits_cost %>
+              <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
             </div>
             <div class="category">
-              <div class="category-<%=((activity.course.category.downcase).delete(" "))%>"><i class="fas fa-tag"></i>
+              <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
               <%= activity.course.category.upcase %>
               </div>
             </div>
