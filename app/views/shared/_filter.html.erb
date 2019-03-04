@@ -13,6 +13,8 @@
       ['de la danse', 'Danse']
     ])) %>
 
+    <%= text_field_tag 'date', nil, class: 'flatpickr-input', placeholder: "#{Date.today}" %>
+
     <div class="btn-filter fixed-bottom">
       <%= button_tag "voir les résultats" %>
     </div>
