@@ -34,13 +34,13 @@
               </div>
               <div class="card-icon">
                 <div class="heart">
-                  <i class="far fa-heart"></i> <%= activity.course.likes %>
+                  <%= image_tag("likes-icn.svg", height: 15, width: 15) %> <%= activity.course.likes %>
                 </div>
                 <div class="wallet">
-                  <i class="fas fa-coins"></i></i> <%= activity.course.credits_cost %>
+                  <%= image_tag("coin-icn.svg", height: 15, width: 15) %> <%= activity.course.credits_cost %>
                 </div>
                 <div class="location">
-                  <i class="fas fa-map-marker-alt"></i>  200m
+                  <%= image_tag("pointer-icn.svg", height: 15, width: 15) %>  200m
                 </div>
               </div>
             </div>
