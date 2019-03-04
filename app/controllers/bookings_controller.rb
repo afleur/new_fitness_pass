@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
   end
 
   def show
+    raise
     @booking = Booking.find(params[:booking_id])
   end
 
