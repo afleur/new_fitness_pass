@@ -1,3 +1,16 @@
+.center-bookings {
+  text-align: center;
+  margin-bottom: 70px;
+  padding: 10px 10px;
+}
+
+.center-bookings h1 {
+  background: $off-white;
+  text-align: center;
+  padding: 10px 0 40px;
+  font-size: 22px;
+}
+
 .container-booking {
   margin: 0 auto;
 }
@@ -76,68 +89,66 @@
   font-family: $body-font;
   color: #727272;
   border-top: 0.5px solid rgba(131, 125, 255, 0.5);
-  position: relative;
-  // padding: 15px 0;
   background-color: rgba(211, 211, 211, 0.4);
-  margin: 5px;
-  height: 120px;
+  margin: 3px;
+  height: 110px;
+  position: relative;
 }
 
-.card-hour-booking-past {
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 2px 0;
-}
-
-.course-address-booking-past {
-  font-weight: lighter;
-  font-size: 10px;
-}
-
-.card-body-past {
-  display :flex;
-  flex-direction:column;
-  align-items:left;
-  justify-content: space-around;
-  text-align: left;
-  flex: auto;
-}
 .card-date-booking-past{
   position: absolute;
+  top: -12px;
+  text-align: center;
   background-color: $off-white;
-  border-radius: 5px;
   padding: 0px 2px;
   font-size: 10px;
   width: 50%;
   margin-top: 3px;
 }
 
-.center-bookings {
+.card-hour-booking-past {
+  flex-flow: column;
+  align-items: center;
   text-align: center;
-  margin-top: -50px;
+  justify-content: space-around;
+  padding: 2px 0;
+  width: 20%;
 }
 
-.center-bookings h1 {
-  font-size: 22px;
-  background: $off-white;
-  color: black;
-  padding: 40px 0 50px 20%;
-  margin-bottom: 50px;
+.course-address-booking-past {
+  font-weight: lighter;
+  font-size: 11px;
 }
 
-// .start-date-activity{
-//   padding: -10px 0;
-// }
+.card-body-past {
+  display :flex;
+  flex-direction:column;
+  align-items: left;
+  justify-content: space-around;
+  text-align: center;
+  flex: auto;
+  // margin-left: -50px;
+}
+
+.kcal-booking-past {
+  position: relative;
+  top: 40px;
+  right: 10px;
+  font-size: 11px;
+  font-weight: lighter;
+}
+
+/////
 
 .notification-box {
-  position: fixed;
+  position: absolute;
   z-index: 99;
-  top: 38px;
-  right: 28px;
+  top: -25px;
+  right: 43px;
   width: 50px;
   height: 50px;
   text-align: center;
+
 }
 
 .notification-count {
@@ -149,9 +160,9 @@
   // right: 55px;
   width: 20px;
   height: 20px;
-  line-height: 18px;
-  line-width: 50px;
-  font-size: 13px;
+  // line-height: 18px;
+  // line-width: 50px;
+  font-size: 11px;
   border-radius: 50%;
   background-color: $primary-purple;
   color: $off-white;
@@ -191,6 +202,7 @@ label, p, a, h1, div {
 input[type="radio"][name="tabs"] {
   position: absolute;
   z-index: -1;
+  display: none;
   &:checked {
     + .tab-label-content {
       label {
@@ -246,7 +258,7 @@ label {
 
 @media screen and (max-width: 800px) {
   h1 {
-    padding: 40px 0 90px 10%;
+    padding: 40px 0 90px 20%;
   }
   .tab-wrap {
     width: 100%;

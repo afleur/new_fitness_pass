@@ -14,9 +14,9 @@
                 <div class="col-xs-12 md-6">
                   <div class="card-booking-past">
                     <div class="card-hour-booking-past">
-                      <div class="start-date-activity">
+                      <div class="start-activity-booking">
                       <%= booking.activity.start_time.strftime("%d.%m.%y")%></div>
-                      <div class="end-activity">
+                      <div class="end-activity-booking">
                       <%= booking.activity.start_time.strftime("%H:%M")%>
                       </div>
                     </div>
@@ -24,12 +24,15 @@
                       <div class="course-name small-margin-top">
                         <%= booking.activity.course.name.upcase %>
                       </div>
-                      <div class="course-studio">
+                      <div class="course-studio-booking">
                         <%= booking.activity.course.studio %>
                       </div>
                       <div class="course-address-booking-past">
                         <i class="fas fa-map-marker-alt"></i> <%= booking.activity.course.city %>
                       </div>
+                    </div>
+                    <div class="kcal-booking-past">
+                        <i class="fas fa-fire"></i> <%= booking.activity.course.kcal %> kcal brulées
                     </div>
                   </div>
                 </div>
