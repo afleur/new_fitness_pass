@@ -1,73 +1,416 @@
-<div class="sub-header ">
-  <div class="swipe-tabs">
-    <div class="swipe-tab">One</div>
-    <div class="swipe-tab">Two</div>
-    <div class="swipe-tab">Three</div>
-    <div class="swipe-tab">Four</div>
-    <div class="swipe-tab">Five</div>
-  </div>
-</div>
-<div class="main-container">
-  <div class="swipe-tabs-container ">
-    <div class="swipe-tab-content">Tab 1</div>
-    <div class="swipe-tab-content">Tab 2</div>
-    <div class="swipe-tab-content">Tab 3</div>
-    <div class="swipe-tab-content">Tab 4</div>
-    <div class="swipe-tab-content">Tab 5</div>
-  </div>
+
+<div class="center-bookings">
+<h1>Liste des cours disponibles</h1>
 </div>
 
-
-
-
-
-    <div class="container-index">
-      <div class="row">
-        <%@activities.each do |activity|%>
-          <div class="col-xs-12">
-            <div class="card">
-              <div class="photo">
-              <% unless activity.course.photo_url.nil? %>
-              <%= cl_image_tag activity.course.photo, height: 100, width: 100, crop: :fill%>
-              <% end %>
-              </div>
-              <div class="card-body">
-                <div class="start-activity">
-                <%= activity.start_time.strftime("%H:%M")%> -
-                <%= (activity.start_time + (activity.course.duration * 60)).strftime("%H:%M") %>
+<div class="indextab-wrap">
+  <input type="radio" name="indextabs" id="indextab1" checked>
+  <div class="indextab-label-content" id="indextab1-content">
+  <label for="indextab1">
+    <p><%= Time.now.strftime("%a") %></p>
+    <p><%= Time.now.strftime("%d") %></p>
+     </label>
+    <div class="indextab-content">
+      <div class="container-index">
+        <div class="row">
+          <%@activitiesdayone.each do |activity|%>
+            <div class="col-xs-12">
+              <div class="card">
+                <div class="photo">
+                <% unless activity.course.photo_url.nil? %>
+                <%= cl_image_tag activity.course.photo, height: 100, width: 100, crop: :fill%>
+                <% end %>
                 </div>
-                <div class="course-name">
-                  <%= link_to activity.course.name.upcase, activity_path(activity) %>
-                </div>
-                <div class="course-studio">
-                  <%= activity.course.studio %>
-                </div>
-                <div class="course-address">
-                  <%= image_tag("pointer-icn.svg", height: 15, width: 15) %>
-                  <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
-                </div>
-                <div class="card-icon-bottom">
-                  <div class="heart padding-right">
-                    <%= image_tag("likes-icn.svg", height: 15, width: 15) %>
-                    <%= activity.course.likes %> likes
+                <div class="card-body">
+                  <div class="start-activity">
+                  <%= activity.start_time.strftime("%H:%M")%> -
+                  <%= (activity.start_time + (activity.course.duration * 60)).strftime("%H:%M") %>
                   </div>
-                  <div class="heart">
-                    <%= image_tag("kcal-icn.svg", height: 15, width: 15) %>
-                    <%= activity.course.kcal %>kcal
+                  <div class="course-name">
+                    <%= link_to activity.course.name.upcase, activity_path(activity) %>
+                  </div>
+                  <div class="course-studio">
+                    <%= activity.course.studio %>
+                  </div>
+                  <div class="course-address">
+                    <%= image_tag("pointer-icn.svg", height: 15, width: 15) %>
+                    <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
+                  </div>
+                  <div class="card-icon-bottom">
+                    <div class="heart padding-right">
+                      <%= image_tag("likes-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.likes %> likes
+                    </div>
+                    <div class="heart">
+                      <%= image_tag("kcal-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.kcal %>kcal
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="wallet">
-              <%= activity.course.credits_cost %>
-              <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
-            </div>
-            <div class="category">
-              <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
-              <%= activity.course.category.upcase %>
+              <div class="wallet">
+                <%= activity.course.credits_cost %>
+                <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
               </div>
-            </div>
-          </div>
-        <% end %>
+              <div class="category">
+                <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
+                <%= activity.course.category.upcase %>
+                </div>
+              </div>
+          <% end %>
+        </div>
       </div>
     </div>
+  </div>
+  <input type="radio" name="indextabs" id="indextab2" checked>
+  <div class="indextab-label-content" id="indextab2-content">
+  <label for="indextab2">
+    <p> <%=(Time.now + (60*60*24)).strftime("%a") %></p>
+    <p><%=(Time.now + (60*60*24)).strftime("%d") %></p>
+  </label>
+    <div class="indextab-content">
+      <div class="container-index">
+        <div class="row">
+          <%@activitiesdaytwo.each do |activity|%>
+            <div class="col-xs-12">
+              <div class="card">
+                <div class="photo">
+                <% unless activity.course.photo_url.nil? %>
+                <%= cl_image_tag activity.course.photo, height: 100, width: 100, crop: :fill%>
+                <% end %>
+                </div>
+                <div class="card-body">
+                  <div class="start-activity">
+                  <%= activity.start_time.strftime("%H:%M")%> -
+                  <%= (activity.start_time + (activity.course.duration * 60)).strftime("%H:%M") %>
+                  </div>
+                  <div class="course-name">
+                    <%= link_to activity.course.name.upcase, activity_path(activity) %>
+                  </div>
+                  <div class="course-studio">
+                    <%= activity.course.studio %>
+                  </div>
+                  <div class="course-address">
+                    <%= image_tag("pointer-icn.svg", height: 15, width: 15) %>
+                    <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
+                  </div>
+                  <div class="card-icon-bottom">
+                    <div class="heart padding-right">
+                      <%= image_tag("likes-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.likes %> likes
+                    </div>
+                    <div class="heart">
+                      <%= image_tag("kcal-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.kcal %>kcal
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wallet">
+                <%= activity.course.credits_cost %>
+                <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              </div>
+              <div class="category">
+                <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
+                <%= activity.course.category.upcase %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+  </div>
+    <input type="radio" name="indextabs" id="indextab3" checked>
+   <div class="indextab-label-content" id="indextab3-content">
+  <label for="indextab3"> <p> <%=(Time.now + (2*60*60*24)).strftime("%a") %></p><p><%=(Time.now + (2*60*60*24)).strftime("%d") %></p></label>
+    <div class="indextab-content">
+      <div class="container-index">
+        <div class="row">
+          <%@activitiesdaythree.each do |activity|%>
+            <div class="col-xs-12">
+              <div class="card">
+                <div class="photo">
+                <% unless activity.course.photo_url.nil? %>
+                <%= cl_image_tag activity.course.photo, height: 100, width: 100, crop: :fill%>
+                <% end %>
+                </div>
+                <div class="card-body">
+                  <div class="start-activity">
+                  <%= activity.start_time.strftime("%H:%M")%> -
+                  <%= (activity.start_time + (activity.course.duration * 60)).strftime("%H:%M") %>
+                  </div>
+                  <div class="course-name">
+                    <%= link_to activity.course.name.upcase, activity_path(activity) %>
+                  </div>
+                  <div class="course-studio">
+                    <%= activity.course.studio %>
+                  </div>
+                  <div class="course-address">
+                    <%= image_tag("pointer-icn.svg", height: 15, width: 15) %>
+                    <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
+                  </div>
+                  <div class="card-icon-bottom">
+                    <div class="heart padding-right">
+                      <%= image_tag("likes-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.likes %> likes
+                    </div>
+                    <div class="heart">
+                      <%= image_tag("kcal-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.kcal %>kcal
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wallet">
+                <%= activity.course.credits_cost %>
+                <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              </div>
+              <div class="category">
+                <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
+                <%= activity.course.category.upcase %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+  </div>
+    <input type="radio" name="indextabs" id="indextab4" checked>
+   <div class="indextab-label-content" id="indextab4-content">
+  <label for="indextab4">
+    <p><%=(Time.now + (3*60*60*24)).strftime("%a") %></p>
+    <p><%=(Time.now + (3*60*60*24)).strftime("%d") %></p>
+  </label>
+    <div class="indextab-content">
+      <div class="container-index">
+        <div class="row">
+          <%@activitiesdayfour.each do |activity|%>
+            <div class="col-xs-12">
+              <div class="card">
+                <div class="photo">
+                <% unless activity.course.photo_url.nil? %>
+                <%= cl_image_tag activity.course.photo, height: 100, width: 100, crop: :fill%>
+                <% end %>
+                </div>
+                <div class="card-body">
+                  <div class="start-activity">
+                  <%= activity.start_time.strftime("%H:%M")%> -
+                  <%= (activity.start_time + (activity.course.duration * 60)).strftime("%H:%M") %>
+                  </div>
+                  <div class="course-name">
+                    <%= link_to activity.course.name.upcase, activity_path(activity) %>
+                  </div>
+                  <div class="course-studio">
+                    <%= activity.course.studio %>
+                  </div>
+                  <div class="course-address">
+                    <%= image_tag("pointer-icn.svg", height: 15, width: 15) %>
+                    <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
+                  </div>
+                  <div class="card-icon-bottom">
+                    <div class="heart padding-right">
+                      <%= image_tag("likes-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.likes %> likes
+                    </div>
+                    <div class="heart">
+                      <%= image_tag("kcal-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.kcal %>kcal
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wallet">
+                <%= activity.course.credits_cost %>
+                <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              </div>
+              <div class="category">
+                <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
+                <%= activity.course.category.upcase %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+  </div>
+    <input type="radio" name="indextabs" id="indextab5" checked>
+   <div class="indextab-label-content" id="indextab5-content">
+  <label for="indextab5">
+    <p><%=(Time.now + (4*60*60*24)).strftime("%a") %></p>
+      <p><%=(Time.now + (4*60*60*24)).strftime("%d") %></p>
+
+    </label>
+    <div class="indextab-content">
+      <div class="container-index">
+        <div class="row">
+          <%@activitiesdayfive.each do |activity|%>
+            <div class="col-xs-12">
+              <div class="card">
+                <div class="photo">
+                <% unless activity.course.photo_url.nil? %>
+                <%= cl_image_tag activity.course.photo, height: 100, width: 100, crop: :fill%>
+                <% end %>
+                </div>
+                <div class="card-body">
+                  <div class="start-activity">
+                  <%= activity.start_time.strftime("%H:%M")%> -
+                  <%= (activity.start_time + (activity.course.duration * 60)).strftime("%H:%M") %>
+                  </div>
+                  <div class="course-name">
+                    <%= link_to activity.course.name.upcase, activity_path(activity) %>
+                  </div>
+                  <div class="course-studio">
+                    <%= activity.course.studio %>
+                  </div>
+                  <div class="course-address">
+                    <%= image_tag("pointer-icn.svg", height: 15, width: 15) %>
+                    <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
+                  </div>
+                  <div class="card-icon-bottom">
+                    <div class="heart padding-right">
+                      <%= image_tag("likes-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.likes %> likes
+                    </div>
+                    <div class="heart">
+                      <%= image_tag("kcal-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.kcal %>kcal
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wallet">
+                <%= activity.course.credits_cost %>
+                <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              </div>
+              <div class="category">
+                <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
+                <%= activity.course.category.upcase %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+    <input type="radio" name="indextabs" id="indextab6" checked>
+   <div class="indextab-label-content" id="indextab6-content">
+  <label for="indextab6">
+    <p> <%=(Time.now + (5*60*60*24)).strftime("%a") %></p>
+    <p><%=(Time.now + (5*60*60*24)).strftime("%d") %> </p>
+    </label>
+    <div class="indextab-content">
+      <div class="container-index">
+        <div class="row">
+          <%@activitiesdaysix.each do |activity|%>
+            <div class="col-xs-12">
+              <div class="card">
+                <div class="photo">
+                <% unless activity.course.photo_url.nil? %>
+                <%= cl_image_tag activity.course.photo, height: 100, width: 100, crop: :fill%>
+                <% end %>
+                </div>
+                <div class="card-body">
+                  <div class="start-activity">
+                  <%= activity.start_time.strftime("%H:%M")%> -
+                  <%= (activity.start_time + (activity.course.duration * 60)).strftime("%H:%M") %>
+                  </div>
+                  <div class="course-name">
+                    <%= link_to activity.course.name.upcase, activity_path(activity) %>
+                  </div>
+                  <div class="course-studio">
+                    <%= activity.course.studio %>
+                  </div>
+                  <div class="course-address">
+                    <%= image_tag("pointer-icn.svg", height: 15, width: 15) %>
+                    <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
+                  </div>
+                  <div class="card-icon-bottom">
+                    <div class="heart padding-right">
+                      <%= image_tag("likes-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.likes %> likes
+                    </div>
+                    <div class="heart">
+                      <%= image_tag("kcal-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.kcal %>kcal
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wallet">
+                <%= activity.course.credits_cost %>
+                <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              </div>
+              <div class="category">
+                <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
+                <%= activity.course.category.upcase %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="radio" name="indextabs" id="indextab7" checked>
+   <div class="indextab-label-content" id="indextab7-content">
+  <label for="indextab7">
+    <p> <%=(Time.now + (6*60*60*24)).strftime("%a") %></p>
+    <p> <%=(Time.now + (6*60*60*24)).strftime("%d") %></p>
+    </label>
+    <div class="indextab-content">
+      <div class="container-index">
+        <div class="row">
+          <%@activitiesdayseven.each do |activity|%>
+            <div class="col-xs-12">
+              <div class="card">
+                <div class="photo">
+                <% unless activity.course.photo_url.nil? %>
+                <%= cl_image_tag activity.course.photo, height: 100, width: 100, crop: :fill%>
+                <% end %>
+                </div>
+                <div class="card-body">
+                  <div class="start-activity">
+                  <%= activity.start_time.strftime("%H:%M")%> -
+                  <%= (activity.start_time + (activity.course.duration * 60)).strftime("%H:%M") %>
+                  </div>
+                  <div class="course-name">
+                    <%= link_to activity.course.name.upcase, activity_path(activity) %>
+                  </div>
+                  <div class="course-studio">
+                    <%= activity.course.studio %>
+                  </div>
+                  <div class="course-address">
+                    <%= image_tag("pointer-icn.svg", height: 15, width: 15) %>
+                    <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
+                  </div>
+                  <div class="card-icon-bottom">
+                    <div class="heart padding-right">
+                      <%= image_tag("likes-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.likes %> likes
+                    </div>
+                    <div class="heart">
+                      <%= image_tag("kcal-icn.svg", height: 15, width: 15) %>
+                      <%= activity.course.kcal %>kcal
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wallet">
+                <%= activity.course.credits_cost %>
+                <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              </div>
+              <div class="category">
+                <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
+                <%= activity.course.category.upcase %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
