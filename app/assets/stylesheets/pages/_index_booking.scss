@@ -187,7 +187,7 @@ $num-of-tabs: 2;
   @for $i from 1 through $num-of-tabs {
     &:nth-of-type(#{$i}) {
       &:checked {
-        ~ .slide {
+        ~ .slide-booking {
           left: calc((100% / #{$num-of-tabs}) * #{$i - 1});
         }
       }
@@ -233,7 +233,7 @@ input[type="radio"][name="tabs"] {
   }
 }
 
-label {
+.tab-label-content label {
   cursor: pointer;
   color: grey;
   box-sizing: border-box;
@@ -246,12 +246,12 @@ label {
   width: 100%;
 }
 
-.slide {
+.slide-booking {
   background: $secondary-purple;
   width: 50%;
   height: 2px;
   position: absolute;
-  top: calc(100% - 4px);
+  top: calc(100% - 10px);
   transition: left 0.3s ease-out;
 }
 
