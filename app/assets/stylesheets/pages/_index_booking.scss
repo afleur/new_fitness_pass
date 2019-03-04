@@ -18,8 +18,7 @@
   text-align: center;
   font-family: $body-font;
   color: #727272;
-  border-top: 0.5px solid rgba(0, 0, 0, 0.3);
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+  border-top: 0.5px solid rgba(131, 125, 255, 0.5);
   position: relative;
   // padding: 15px 0;
   background-color: rgba(211, 211, 211, 0.4);
@@ -54,10 +53,10 @@
 .card-date-booking-coming{
   position: absolute;
   top: -12px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  // left: 0;
+  // right: 0;
+  // margin-left: auto;
+  // margin-right: auto;
   background-color: $off-white;
   border-radius: 5px;
   padding: 0px 2px;
