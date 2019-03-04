@@ -17,7 +17,12 @@ class ActivitiesController < ApplicationController
     @activitiesdayfive = @activities.where(start_time: (today + 4).beginning_of_day..(today + 4).end_of_day)
     @activitiesdaysix = @activities.where(start_time: (today + 5).beginning_of_day..(today + 5).end_of_day)
     @activitiesdayseven = @activities.where(start_time: (today + 6).beginning_of_day..(today + 6).end_of_day)
-
+     @markers = @activities.map do |activity|
+      {
+        lng: activity.course.longitude,
+        lat: activity.course.latitude,
+      }
+    end
   end
 
   def show
