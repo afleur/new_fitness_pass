@@ -1,49 +1,60 @@
-<div class="bottom-padding-show">
-  <div class="show-container">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="card-course">
-            <div class="card-course-head">
-              <% unless @activity.course.photo_url.nil? %>
-              <%= cl_image_tag @activity.course.photo, height: 250, width: 390, crop: :fill %>
-              <% end %>
-              <h1><%= @activity.course.name %></h1>
-              <p><%= @activity.course.studio %></p>
-              <p><i class="fas fa-tag"></i> <%= @activity.course.category %></p>
-              <%= link_to 'Réserver', new_activity_booking_path(@activity), class: "btn btn-primary"%>
-              <div class="card-course-icon">
-                <p><i class="far fa-heart"></i> <%= @activity.course.likes %> likes</p>
-                <p><i class="fas fa-coins"></i></i><%= @activity.course.credits_cost %> crédits</p>
-              </div>
+<div class="card-course-head">
+  <% unless @activity.course.photo_url.nil? %>
+  <%= cl_image_tag(@activity.course.photo) %>
+  <% end %>
+  <div class="card-course-coach">
+    <p><i class="far fa-user"></i> <%= @activity.course.coach %></p>
+  </div>
+</div>
+<div class="container show-container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="card-course">
+          <div>
+            <h1><%= @activity.course.name %></h1>
+            <p><%= @activity.course.studio %></p>
+            <p><%= @activity.course.category %></p>
+            <%= link_to 'Réserver', new_activity_booking_path(@activity), class: "btn btn-primary"%>
+            <div class="card-course-icon">
+              <p> <%= image_tag("likes-icn.svg", height: 15, width: 15) %>
+              <%= @activity.course.likes %> likes</p>
+              <p><%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+                <%= @activity.course.credits_cost %> crédits</p>
             </div>
-            <div class="card-course-coach">
-            <p><i class="far fa-user"></i> <%= @activity.course.coach %></p>
-            </div>
-            <div class="card-course-hour">
-            <p><i class="far fa-calendar"></i> <%= @activity.start_time.strftime("%A %e %B") %></p>
-            <p><%=@activity.start_time.strftime("%H:%M")%> - <%= (@activity.start_time + (@activity.course.duration * 60)).strftime("%H:%M") %>
-            </p>
-            </div>
-            <div class="card-course-infos"><div class="small-padding"><strong><i class="fas fa-info-circle"></i> INFOS PRATIQUES</strong></div>
-              <%= @activity.course.infos %>
-            </div>
-            <div class="card-course-desc">
-              <div class="small-padding"><strong><i class="far fa-comment-dots"></i> A PROPOS</strong></div>
-              <%= @activity.course.description %>
-            </div>
-          <div class="card-course-location">
-            <i class="fas fa-map-marker-alt"></i> <strong>LIEU</strong> <br> <%= @activity.course.full_address %>
-          </div>
-          <div
-            id="map"
-            style="width: 100%;
-            height: 200px;"
-            data-markers="<%= @markers.to_json %>"
-            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-          ></div>
         </div>
+        <div class="card-course-hour">
+        <p><%= image_tag("calendar-icn.svg", height: 20, width: 20) %>
+          <%= @activity.start_time.strftime("%A %e %B") %></p>
+        <p><%=@activity.start_time.strftime("%H:%M")%> - <%= (@activity.start_time + (@activity.course.duration * 60)).strftime("%H:%M") %>
+        </p>
+        </div>
+          <div class="card-course-infos">
+            <div class="small-padding">
+              <%= image_tag("info-icn.svg", height: 18, width: 18) %>
+              INFOS PRATIQUES
+            </div>
+            <%= @activity.course.infos %>
+          </div>
+        <div class="card-course-desc">
+          <div class="small-padding">
+            <%= image_tag("comment-icn.svg", height: 20, width: 20) %>
+            A PROPOS
+          </div>
+           <p>
+            <%= @activity.course.description %>
+           </p>
+        </div>
+      <div class="card-course-location">
+        <%= image_tag("pointer-icn.svg", height: 20, width: 20) %>
+        LIEU <br> <%= @activity.course.full_address %>
       </div>
+      <div
+        id="map"
+        style="width: 100%;
+        height: 200px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
     </div>
   </div>
 </div>

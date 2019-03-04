@@ -1,5 +1,5 @@
 .backg {
-  color: $off-white;
+  color: $white;
 }
 
 .center-bookings {
@@ -9,7 +9,7 @@
 }
 
 .center-bookings h1 {
-  background: $off-white;
+  background: $white;
   text-align: center;
   padding: 10px 0 40px;
   font-size: 22px;
@@ -73,7 +73,7 @@
   position: absolute;
   top: -12px;
   text-align: center;
-  background-color: $off-white;
+  background-color: $white;
   padding: 0px 2px;
   font-size: 10px;
   width: 50%;
@@ -103,9 +103,13 @@
 .card-date-booking-past{
   position: absolute;
   top: -12px;
-  text-align: center;
-  background-color: $off-white;
-  padding: 0px 2px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $white;
+  border-radius: 5px;
+  padding: 0px 12px;
   font-size: 10px;
   width: 50%;
   margin-top: 3px;
@@ -170,7 +174,7 @@
   font-size: 11px;
   border-radius: 50%;
   background-color: $primary-purple;
-  color: $off-white;
+  color: $white;
 }
 
 $cyan: #00bcd4;
