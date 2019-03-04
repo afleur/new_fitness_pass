@@ -1,13 +1,11 @@
-<%= form_tag activities_path, method: :get do %>
+<div class="center-bookings">
+  <%= form_tag activities_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "🔍 Trouver un cours ou studio"
   %>
 <% end %>
-
-<div class="center-bookings">
-<h1>Liste des cours disponibles</h1>
 </div>
 
 <div class="indextab-wrap">
