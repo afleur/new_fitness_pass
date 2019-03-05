@@ -38,8 +38,8 @@ input[type="radio"][name="indextabs"] {
     + .indextab-label-content {
       label {
         color: black;
-        background-color: lightgrey;
-        border-radius: 3px;
+        background-color: $primary-purple;
+        // border-radius: 2px;
         // padding: 30px 10px;
         font-weight: bold;
       }
@@ -67,12 +67,13 @@ label {
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  height: 10px;
+  height: 3px;
   transition: color 0.2s ease;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 5px;
   font-weight: lighter;
   font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .slide {
