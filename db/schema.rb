@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_05_131925) do
+ActiveRecord::Schema.define(version: 2019_03_05_134527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,7 +59,9 @@ ActiveRecord::Schema.define(version: 2019_03_05_131925) do
     t.integer "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "order_id"
     t.index ["course_id"], name: "index_credits_on_course_id"
+    t.index ["order_id"], name: "index_credits_on_order_id"
     t.index ["user_id"], name: "index_credits_on_user_id"
   end
 
@@ -79,6 +81,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_131925) do
     t.integer "price_cents", default: 0, null: false
     t.string "state"
     t.jsonb "payment"
+    t.integer "amount_cents", default: 0, null: false
   end
 
   create_table "pg_search_documents", force: :cascade do |t|
@@ -122,6 +125,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_131925) do
   add_foreign_key "activities", "courses"
   add_foreign_key "bookings", "activities"
   add_foreign_key "bookings", "users"
+  add_foreign_key "credits", "orders"
   add_foreign_key "invitations", "bookings"
   add_foreign_key "invitations", "users"
   add_foreign_key "reviews", "courses"
