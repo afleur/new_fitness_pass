@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = current_user.orders.where(state: 'paid').find(params[:id])
+    @order = Order.find(params[:id])
   end
 
   def new

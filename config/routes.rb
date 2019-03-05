@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :courses, only: [:show]
   resources :activities, only: [:show, :index] do
-    resources :bookings, only: [:index, :show, :new, :create]
+    resources :bookings, only: [:new, :create]
   end
+  resources :bookings, only: [:index, :show]
   resources :orders, only: [:index, :show, :new, :create] do
     resources :payments, only: [:new, :create]
   end
