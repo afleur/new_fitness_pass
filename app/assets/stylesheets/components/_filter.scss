@@ -1,11 +1,8 @@
-.illustration {
-  text-align: center;
-}
-
 .home-filter {
   height: calc(100vh - 70px);
   text-align: center;
   font-family: 'Fira Sans', 'Helvetica', sans-serif;
+  font-weight: 300;
   font-size: 25px;
   background-color: transparent;
   color: $secondary-purple;
@@ -15,7 +12,7 @@
   }
 }
 
-.date-filter {
+.flatpickr-input {
 }
 
 .location-filter {
@@ -25,12 +22,13 @@
 }
 
 .btn-filter {
+  font-weight: 300;
   button {
     height: 50px;
     width: 100%;
     margin-top: 70px;
     font-size: 25px;
-    color: $white;
+    font-weight: 300;color: $white;
     text-decoration: none;
     border: none;
     background-color: $secondary-purple;

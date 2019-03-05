@@ -2,13 +2,13 @@ class ActivitiesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    if params[:query].blank?
-      @activities = Activity.all
-    elsif params[:category].present?
-      @activities = Activity.joins(:course).where("courses.category = ?", params[:category])
-      # @activities = Activity.joins(:course).where("courses.category = ?", params[:category])
-    else
+    if params[:query].present?
       @activities = Activity.global_search(params[:query])
+    elsif params[:category].present?
+      puts "<<<<<<<<<<<<<"
+      p @activities = Activity.joins(:course).where("courses.category = ? AND courses.city = ?", params[:category], params[:city])
+    else
+      @activities = Activity.joins(:course).where("courses.city = ?", params[:city])
     end
     today = Date.today-5
     @activitiesdayone   = @activities.where(start_time: today.beginning_of_day..today.end_of_day)
