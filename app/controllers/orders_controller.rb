@@ -8,12 +8,14 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @credit = Credit.new ()
+    @credit = Credit.new()
     @credit.save
   end
 
   def create
-    @order = Order.create!(amount: 200, state: 'pending')
+    raise
+    @amount
+    @order = Order.new(amount: 200, state: 'pending')
 
     redirect_to new_order_payment_path(@order)
   end

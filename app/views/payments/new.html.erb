@@ -1,18 +1,19 @@
-<h1><%#= @order.teddy_sku %></h1>
-<%= form_tag order_payments_path(@order) do %>
-  <article>
-    <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@order.amount) %></span>
-    </label>
-  </article>
+<div class="main-container">
+  <div class="container-stripe">
+    <p>Confirmation de paiement</p>
+    <%= form_tag order_payments_path(@order) do %>
+        <%= (@order.amount) %>
 
-
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="My Teddy"
-    data-email="<%= current_user.email %>"
-    data-description="Nombre de crédits <%= @value %>"
-    data-amount="<%= @order.amount_cents %>"
-    data-currency="<%= @order.amount.currency %>"></script>
-
-<% end %>
+        <label class="amount">
+          <span>Montant: <%= humanized_money_with_symbol(@order.amount) %></span>
+        </label>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-name="@order.cours"
+        data-email="<%= current_user.email %>"
+        data-description="Nombre de crédits <%= @value %>"
+        data-amount="<%= @order.amount_cents %>"
+        data-currency="<%= @order.amount.currency %>"></script>
+    <% end %>
+  </div>
+</div>
