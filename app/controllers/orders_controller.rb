@@ -19,4 +19,7 @@ class OrdersController < ApplicationController
 
   def destroy
   end
+
+  def credit
+  end
 end
