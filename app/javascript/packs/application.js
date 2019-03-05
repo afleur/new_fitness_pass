@@ -18,3 +18,6 @@ currentMouse();
 relativeMouse();
 slidePercent();
 
+// import { function, setTimeout } from './circle';
+
+// setTimeout();
