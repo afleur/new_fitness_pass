@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_153812) do
+ActiveRecord::Schema.define(version: 2019_03_05_134527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,18 @@ ActiveRecord::Schema.define(version: 2019_03_04_153812) do
     t.string "infos"
   end
 
+  create_table "credits", force: :cascade do |t|
+    t.bigint "course_id"
+    t.bigint "user_id"
+    t.integer "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "order_id"
+    t.index ["course_id"], name: "index_credits_on_course_id"
+    t.index ["order_id"], name: "index_credits_on_order_id"
+    t.index ["user_id"], name: "index_credits_on_user_id"
+  end
+
   create_table "invitations", force: :cascade do |t|
     t.bigint "user_id"
     t.string "friends_email"
@@ -64,11 +76,12 @@ ActiveRecord::Schema.define(version: 2019_03_04_153812) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.date "date"
-    t.integer "credits_value"
-    t.integer "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price_cents", default: 0, null: false
+    t.string "state"
+    t.jsonb "payment"
+    t.integer "amount_cents", default: 0, null: false
   end
 
   create_table "pg_search_documents", force: :cascade do |t|
@@ -104,19 +117,17 @@ ActiveRecord::Schema.define(version: 2019_03_04_153812) do
     t.integer "NPA"
     t.string "city"
     t.date "birth_date"
-    t.bigint "order_id"
     t.integer "credits_amount"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["order_id"], name: "index_users_on_order_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "activities", "courses"
   add_foreign_key "bookings", "activities"
   add_foreign_key "bookings", "users"
+  add_foreign_key "credits", "orders"
   add_foreign_key "invitations", "bookings"
   add_foreign_key "invitations", "users"
   add_foreign_key "reviews", "courses"
   add_foreign_key "reviews", "users"
-  add_foreign_key "users", "orders"
 end

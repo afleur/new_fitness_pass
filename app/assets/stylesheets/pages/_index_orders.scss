@@ -1,0 +1,60 @@
+.credits-cost {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.offer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: grey;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.alldesc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(10, 10, 10, 0.2);
+  padding: 6px 10px;
+  margin-right: 10px;
+  border-radius: 0% 5% 5% 0%;
+}
+
+.price-credits {
+  width: 35%;
+  text-align: center;
+  background-color: rgba(132, 129, 252, 0.2);
+  margin: 0 auto;
+  color: darkgrey;
+  padding: 13px;
+  margin-left: 10px;
+  border-radius: 10% 0% 0% 10%;
+}
+
+.price {
+  text-align: center;
+}
+
+.desc {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.offertitle {
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.details {
+  font-size: 12px;
+}
+
+.go-to-order {
+  width: 10%;
+}
