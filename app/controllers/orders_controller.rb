@@ -10,6 +10,10 @@ class OrdersController < ApplicationController
   end
 
   def create
+    @course = Course.find(params[:course_id])
+    @order = Order.create!(date: Time.now, course: @course.name, amount: @course.credits_cost, state: 'pending', user: current_user)
+
+    redirect_to new_order_payment_path(order)
   end
 
   def edit
