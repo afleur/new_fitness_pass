@@ -1,6 +1,7 @@
 <div class="illustration">
   <%= image_tag "home-fitness.png", width: 400 %>
 </div>
+
 <div class="home-filter">
   <p>Je recherche</p>
   <%= form_tag activities_path, method: :get do %>
@@ -13,7 +14,9 @@
       ['de la danse', 'Danse']
     ])) %>
 
-    <%= text_field_tag 'date', nil, class: 'flatpickr-input', placeholder: "#{Date.today}" %>
+    <%= text_field_tag 'date', nil, class: 'flatpickr-input', value: "#{Date.today}" %>
+
+    <%= text_field_tag :city, nil, class: 'location-filter', value: "Lausanne" %>
 
     <div class="btn-filter fixed-bottom">
       <%= button_tag "voir les résultats" %>
