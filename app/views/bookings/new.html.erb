@@ -17,7 +17,7 @@
     à <strong><%= @booking.activity.start_time.strftime("%H:%M") %></strong>
   </div>
   <div class="confirmation-credits">
-    <%= image_tag("coin-icn.svg", height: 15, width: 15) %> <%= @booking.activity.course.credits_cost%> crédits
+    <%= image_tag("menu-credits-icn.svg", height: 15, width: 15) %> <%= @booking.activity.course.credits_cost%> crédits
   </div>
   <div class="confirmation-ok action-button">
     <%= link_to "Je confirme", activity_bookings_path, method: :post %>

@@ -34,12 +34,16 @@ class BookingsController < ApplicationController
     @activity = Activity.find(params[:activity_id])
     @booking.user = current_user
     @booking.activity = @activity
-    if @booking.save
-      Credit.create!(value: - @activity.course.credits_cost, user: @booking.user, course: @activity.course)
-      current_user.credits_amount -= @activity.course.credits_cost
-      current_user.save
-      redirect_to confirmation_path(@booking)
+    if (current_user.credits_amount -= @activity.course.credits_cost) > 0
+      if @booking.save
+        Credit.create!(value: - @activity.course.credits_cost, user: @booking.user, course: @activity.course)
+        current_user.save
+        redirect_to confirmation_path(@booking)
+      else
+        render :new
+      end
     else
+      flash.now[:alert] = "Vous n'avez pas assez de crédits"
       render :new
     end
   end
