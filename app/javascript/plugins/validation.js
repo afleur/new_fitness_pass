@@ -11,10 +11,9 @@ const loadDynamicBannerText = () => {
   };
 };
 
-// const
-// setTimeout(function () {
-//         document.getElementById('foo').style.display='none';
-//     }, 10000);
+setTimeout(function () {
+        document.querySelector('.body-validation').style.display='none';
+    }, 10000);
 
 
-export { loadDynamicBannerText };
+export { loadDynamicBannerText, setTimeout };
