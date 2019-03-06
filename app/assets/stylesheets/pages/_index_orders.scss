@@ -85,6 +85,7 @@
   text-align: center;
   align-items: center;
   justify-content:center;
+  margin-bottom: 40px;
 }
 
 .order-list {
@@ -94,8 +95,15 @@
   border-bottom: 1px solid rgba(196, 196, 196, 0.4);
   display:flex;
   justify-content: space-between;
-  margin: 0 16px;
+  margin: 0 15px;
 }
 
-
+.order-list-purchase {
+  color: $dark-grey;
+  font-size: 14px;
+  padding: 8px 0px;
+  display:flex;
+  justify-content: space-between;
+  margin: 0 15px;
+}
 
