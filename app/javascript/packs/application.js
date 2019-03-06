@@ -7,11 +7,12 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 import { clickDateTab } from '../plugins/tabDate';
 
-initMapbox();
 
 import { initialMouse, slideMovementTotal, mouseIsDown, slider, currentMouse, relativeMouse, slidePercent } from './swipebooking';
 // import { function, setTimeout } from './circle';
 
+initMapbox();
+clickDateTab();
 initialMouse();
 slideMovementTotal();
 mouseIsDown();
@@ -19,6 +20,5 @@ slider();
 currentMouse();
 relativeMouse();
 slidePercent();
-clickDateTab();
 
 // setTimeout();
