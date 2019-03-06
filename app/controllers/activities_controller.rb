@@ -6,8 +6,10 @@ class ActivitiesController < ApplicationController
       @activities = Activity.global_search(params[:query])
     elsif params[:category].present?
       p @activities = Activity.joins(:course).where("courses.category = ? AND courses.city = ?", params[:category], params[:city])
-    else
+    elsif params[:city].present?
       @activities = Activity.joins(:course).where("courses.city = ?", params[:city])
+    else
+      @activities = Activity.all
     end
     today = Date.today
     @activitiesdayone   = @activities.where(start_time: today.beginning_of_day..today.end_of_day)
@@ -20,7 +22,7 @@ class ActivitiesController < ApplicationController
     @markers = @activities.map do |activity|
       {
         lng: activity.course.longitude,
-        lat: activity.course.latitude,
+        lat: activity.course.latitude
       }
     end
   end
