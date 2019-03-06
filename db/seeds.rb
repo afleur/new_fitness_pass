@@ -9,12 +9,18 @@ require 'faker'
 
 puts 'cleaning DB'
 
-Course.destroy_all
-Order.destroy_all
-Review.destroy_all
+puts "Destroy Booking"
 Booking.destroy_all
-User.destroy_all
+puts "Destroy Activity"
 Activity.destroy_all
+puts "Destroy Course"
+Course.destroy_all
+puts "Destroy order"
+Order.destroy_all
+puts "Destroy review"
+Review.destroy_all
+puts "Destroy User"
+User.destroy_all
 
 puts 'Creating orders...'
 
@@ -55,7 +61,6 @@ clara = User.new(
     NPA:              1003,
     city:            'Lausanne',
     birth_date:      "Mar, 28 Mar 1986",
-    order_id:        Order.all.sample,
     credits_amount:  25,
   )
   clara.save!
@@ -568,7 +573,7 @@ puts 'Creating activities...'
   Activity.create!(
     start_time: DateTime.new(2019,3,12,22),
     course_id:  (Course.all.sample).id,
-
+  )
 
 # puts 'Creating reviews...'
 
