@@ -1,6 +1,6 @@
 const removeNavbar = () => {
-  const navbar = document.querySelector(".navbar-fixed-bottom navbar");
-  if (window.location.pathname.includes("confirmation")){
+  const navbar = document.querySelector(".navbar-fixed-bottom");
+  if (window.location.pathname.includes("bookings/new")){
     navbar.classList.add("hidden")
    };
 };

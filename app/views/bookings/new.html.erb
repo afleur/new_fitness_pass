@@ -1,27 +1,26 @@
-<div class="bottom-padding">
-  <div class="confirmation">
-    <div class="confirmation-back">
+<div class="confirmation">
+  <div class="confirmation-back">
     <%= link_to 'x', activity_path(@booking.activity_id)%>
-    </div>
-    <div class="confirmation-text">
+  </div>
+  <div class="confirmation-text">
     Je réserve
-    </div>
-    <div class="confirmation-course-name">
+  </div>
+  <div class="confirmation-course-name">
     un cours de <strong><%= @booking.activity.course.name %></strong></div>
-    <div class="confirmation-course-studio">
+  <div class="confirmation-course-studio">
      au <strong><%= @booking.activity.course.studio %></strong>
-    </div>
-    <div class="confirmation-date">
+  </div>
+  <div class="confirmation-date">
     <strong><%= I18n.localize(@booking.activity.start_time, :format =>"%A %e %B") %></strong>
-    </div>
-    <div class="confirmation-hour">
+  </div>
+  <div class="confirmation-hour">
     à <strong><%= @booking.activity.start_time.strftime("%H:%M") %></strong>
-    </div>
-    <div class="confirmation-credits">
+  </div>
+  <div class="confirmation-credits">
     💰 <%= @booking.activity.course.credits_cost%> crédits
-    </div>
-    <div class="confirmation-ok action-button">
+  </div>
+  <div class="confirmation-ok action-button">
     <%= link_to "Je confirme", activity_bookings_path, method: :post %>
-    </div>
   </div>
 </div>
+

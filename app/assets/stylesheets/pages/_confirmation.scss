@@ -2,7 +2,7 @@
   background-color: black;
   color: white;
   width: 100%;
-  height: calc(100vh - 50px);
+  height: 100vh;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -66,6 +66,15 @@
   align-items: center;
   justify-content: space-around;
 }
+
+#cont {
+  text-decoration: none;
+}
+
+#cont:hover {
+  color: $secondary-purple;
+}
+
 
 
 // html {  height: 100%;}
