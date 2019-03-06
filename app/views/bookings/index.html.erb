@@ -71,7 +71,7 @@
                           </div>
                         </div>
                         <div class="card-booking-validation">
-                          <%= link_to 'Voir', booking_path(booking.user, booking), class:'btn btn-primary'  %>
+                          <%= link_to 'Voir', booking_path(booking), class:'btn btn-primary'  %>
                         </div>
                         <div class="card-date-booking-coming">
                           <%= booking.activity.start_time.strftime("%A %e %B %Y") %>

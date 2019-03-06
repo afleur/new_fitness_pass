@@ -11,14 +11,20 @@ import { clickDateTab } from '../plugins/tabDate';
 import { initialMouse, slideMovementTotal, mouseIsDown, slider, currentMouse, relativeMouse, slidePercent } from './swipebooking';
 // import { function, setTimeout } from './circle';
 
+const slide = document.querySelector(".slide-text")
+
+
 initMapbox();
 clickDateTab();
-initialMouse();
-slideMovementTotal();
-mouseIsDown();
-slider();
-currentMouse();
-relativeMouse();
-slidePercent();
+
+if (slide) {
+  initialMouse();
+  slideMovementTotal();
+  mouseIsDown();
+  slider();
+  currentMouse();
+  relativeMouse();
+  slidePercent();
+}
 
 // setTimeout();
