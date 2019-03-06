@@ -35,8 +35,8 @@ $(document.body, '#slider').on('mouseup touchend', function (event) {
       if (!slider.hasClass('unlocked'))
         return;
       slider.removeClass('unlocked');
+      window.location.href = '/validation'
       $('#locker').text('lock_outline');
-      window.location.href = '/'
       slider.off('click tap');
     });
   }, 0);
