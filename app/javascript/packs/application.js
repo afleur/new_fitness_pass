@@ -13,6 +13,7 @@ import { initialMouse, slideMovementTotal, mouseIsDown, slider, currentMouse, re
 import { loadDynamicBannerText } from '../plugins/validation';
 
 import { removeNavbar } from '../plugins/confirmation';
+import { bar, value, ProgressBar, line  } from '../plugins/circle-progress';
 
 const slide = document.querySelector(".slide-text")
 
@@ -20,6 +21,11 @@ removeNavbar();
 initMapbox();
 clickDateTab();
 loadDynamicBannerText();
+bar();
+value();
+ProgressBar();
+line();
+
 
 
 if (slide) {
