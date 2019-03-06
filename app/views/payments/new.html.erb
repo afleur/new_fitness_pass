@@ -2,7 +2,7 @@
   <div class="container-stripe">
     <p>Confirmation de paiement</p>
     <%= form_tag order_payments_path(@order) do %>
-        <%= (@order.amount) %>
+
 
         <label class="amount">
           <span>Montant: <%= humanized_money_with_symbol(@order.amount) %></span>

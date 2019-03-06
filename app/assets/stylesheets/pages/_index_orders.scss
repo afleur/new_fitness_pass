@@ -59,6 +59,13 @@
   width: 10%;
 }
 
+.invisibutton {
+    height: 1px;
+    width: 1px;
+    display: none;
+    vertical-align: text-bottom;
+}
+
 $circle-size: 120px;
 $circle-background: #D9D9D9;
 $circle-color: #1291D4;

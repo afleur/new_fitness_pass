@@ -2,7 +2,6 @@ class PaymentsController < ApplicationController
   before_action :set_order
 
   def new
-    @value = 20
   end
 
   def create
@@ -19,7 +18,17 @@ class PaymentsController < ApplicationController
   )
 
   @order.update(payment: charge.to_json, state: 'paid')
-  redirect_to orders_path
+
+  credits_value = {
+    10000 => 10,
+    20000 => 22,
+    30000 => 34
+  }
+
+  @credit = Credit.create(user: current_user, value: credits_value[@order.amount_cents], order_id: @order.id)
+  current_user.credits_amount += credits_value[@order.amount_cents]
+  current_user.save
+  redirect_to allorders_path
 
 rescue Stripe::CardError => e
   flash[:alert] = e.message

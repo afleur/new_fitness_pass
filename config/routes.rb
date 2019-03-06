@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'payments/new'
-  get 'payments/create'
+  post '/orders/:value', to: 'orders#create', as: :orders
+  get '/orders', to: 'orders#index', as: :allorders
   devise_for :users
   root to: 'pages#home'
   resources :courses, only: [:show]
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
   resources :bookings, only: [:index, :show]
-  resources :orders, only: [:index, :show, :new, :create] do
+  resources :orders, only: [:show, :new,] do
     resources :payments, only: [:new, :create]
   end
   get '/bookings/:booking_id/confirmation', to: 'bookings#confirmation', as: :confirmation
