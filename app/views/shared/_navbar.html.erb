@@ -10,8 +10,8 @@
 
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-      <%= link_to "Mes réservations", activity_bookings_path(current_user.id), class: "navbar-item navbar-link" %>
-      <%= link_to "Credits", orders_path, class: "navbar-item navbar-link" %>
+      <%= link_to "Mes réservations", bookings_path(current_user.id), class: "navbar-item navbar-link" %>
+      <%= link_to "Credits", allorders_path, class: "navbar-item navbar-link" %>
       <%= link_to "Me", "#", class: "navbar-item navbar-link" %>
       <%= link_to destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" do %>
       Sign out

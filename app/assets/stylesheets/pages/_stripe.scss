@@ -1,0 +1,23 @@
+.main-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+.container-stripe {
+  width: 40vh;
+  height: 50vh;
+  background-color: yellow;
+  text-align:center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 5px;
+}

@@ -10,6 +10,7 @@ import { clickDateTab } from '../plugins/tabDate';
 initMapbox();
 
 import { initialMouse, slideMovementTotal, mouseIsDown, slider, currentMouse, relativeMouse, slidePercent } from './swipebooking';
+// import { function, setTimeout } from './circle';
 
 initialMouse();
 slideMovementTotal();
@@ -19,3 +20,5 @@ currentMouse();
 relativeMouse();
 slidePercent();
 clickDateTab();
+
+// setTimeout();

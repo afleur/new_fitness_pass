@@ -4,16 +4,15 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = current_user.orders.where(state: 'paid').find(params[:id])
+    @order = Order.find(params[:id])
   end
 
   def new
   end
 
   def create
-    @order = Order.create!(amount: 200, state: 'pending')
-
-    redirect_to new_payment_path(@order.id)
+    @order = Order.create(amount_cents: params[:value], state: 'pending')
+    redirect_to new_order_payment_path(@order)
   end
 
   def edit

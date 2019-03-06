@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :invitations
   has_many :orders
+  has_many :credits, through: :bookings
 end
