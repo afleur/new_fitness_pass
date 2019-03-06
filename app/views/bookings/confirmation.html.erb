@@ -8,7 +8,7 @@
     </div>
 
     <div class="confirmation-date-info">
-      <p><%= l(@booking.activity.start_time, :format =>'%A %e %B') %></p>
+      <p><%= l(@booking.activity.start_time, format: "%A %e %B", locale: 'fr') %></p>
        <p><%= @booking.activity.start_time.strftime("%H:%M") %> - <%= (@booking.activity.start_time + (@booking.activity.course.duration * 60)).strftime("%H:%M") %></p>
     </div>
 

@@ -16,7 +16,7 @@
                     <div class="card-booking-past">
                       <div class="card-hour-booking-past">
                         <div class="start-activity-booking">
-                        <%= booking.activity.start_time.strftime("%d.%m.%y")%></div>
+                        <%= l(@booking.activity.start_time, format: "%A %e %B", locale: 'fr') %></div>
                         <div class="end-activity-booking">
                         <%= booking.activity.start_time.strftime("%H:%M")%>
                         </div>
@@ -74,7 +74,7 @@
                           <%= link_to 'Voir', booking_path(booking), class:'btn btn-primary'  %>
                         </div>
                         <div class="card-date-booking-coming">
-                          <%= booking.activity.start_time.strftime("%A %e %B %Y") %>
+                          <%= l(booking.activity.start_time, format: "%A %e %B %Y", locale: 'fr') %>
                         </div>
                       </div>
                     </div>

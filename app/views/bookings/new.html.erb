@@ -12,7 +12,7 @@
      au <strong><%= @booking.activity.course.studio %></strong>
     </div>
     <div class="confirmation-date">
-    <strong><%= I18n.localize(@booking.activity.start_time, :format =>"%A %e %B") %></strong>
+    <strong><%= l(@booking.activity.start_time, format: "%A %e %B", locale: 'fr') %></strong>
     </div>
     <div class="confirmation-hour">
     à <strong><%= @booking.activity.start_time.strftime("%H:%M") %></strong>
