@@ -1,12 +1,14 @@
 /* Main navbar */
 .navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   background: $primary-purple;
   transition: all 0.3s ease;
   height: 30px;
   padding: 0px 10px;
-  display: flex;
   width: 100%;
-  justify-content: space-between;
   span {
     color: $secondary-purple;
   }
@@ -14,15 +16,10 @@
 
 /* Logo */
 .navbar-brand img {
-  height: 16px;
+  height: 30px;
 }
 
 /* Right section */
-.navbar-right {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 /* Basic navbar item */
 .navbar-item {
