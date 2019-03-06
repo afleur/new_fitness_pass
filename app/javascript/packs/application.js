@@ -5,10 +5,12 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 // import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
 import { initMapbox } from '../plugins/init_mapbox';
+import { clickDateTab } from '../plugins/tabDate';
 
 initMapbox();
 
 import { initialMouse, slideMovementTotal, mouseIsDown, slider, currentMouse, relativeMouse, slidePercent } from './swipebooking';
+// import { function, setTimeout } from './circle';
 
 initialMouse();
 slideMovementTotal();
@@ -17,7 +19,6 @@ slider();
 currentMouse();
 relativeMouse();
 slidePercent();
-
-// import { function, setTimeout } from './circle';
+clickDateTab();
 
 // setTimeout();
