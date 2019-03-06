@@ -14,12 +14,13 @@
       ['de la danse', 'Danse']
     ])) %>
 
-    <%= text_field_tag 'date', nil, class: 'flatpickr-input', value: "#{Date.today}" %>
+    <%= text_field_tag 'date', nil, class: 'flatpickr-input text-center', value: l(Date.today, format: '%A %e %B', locale: 'fr') %>
 
-    <%= text_field_tag :city, nil, class: 'location-filter', value: "Lausanne" %>
+    <%= text_field_tag :city, nil, class: 'location-filter text-center', value: "Lausanne" %>
 
     <div class="btn-filter fixed-bottom">
       <%= button_tag "voir les résultats" %>
     </div>
   <% end %>
 </div>
+format: "%A %e %B", locale: 'fr'
