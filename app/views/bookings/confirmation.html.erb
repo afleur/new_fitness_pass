@@ -8,7 +8,7 @@
     </div>
 
     <div class="confirmation-date-info">
-      <p><%= l(@booking.activity.start_time, :format =>'%A %e %B') %></p>
+      <p><%= l(@booking.activity.start_time, format: "%A %e %B", locale: 'fr') %></p>
        <p><%= @booking.activity.start_time.strftime("%H:%M") %> - <%= (@booking.activity.start_time + (@booking.activity.course.duration * 60)).strftime("%H:%M") %></p>
     </div>
 
@@ -18,13 +18,14 @@
       <i class="fas fa-map-marker-alt"></i> <%= @booking.activity.course.street%>, <%= @booking.activity.course.npa  %> <%= @booking.activity.course.city  %>
     </div>
 
+    <%= link_to allorders_path do %>
     <div id="cont" data-pct="<%= @booking.user.credits_amount %> crédits restants">
       <svg id="svg" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
         <circle id="bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
       </svg>
     </div>
-
+    <% end %>
     <div class="confirmation-user-info">
     <%= @booking.user.first_name.capitalize %> <%= @booking.user.last_name.capitalize %>
     </div>

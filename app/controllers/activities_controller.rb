@@ -5,12 +5,11 @@ class ActivitiesController < ApplicationController
     if params[:query].present?
       @activities = Activity.global_search(params[:query])
     elsif params[:category].present?
-      puts "<<<<<<<<<<<<<"
       p @activities = Activity.joins(:course).where("courses.category = ? AND courses.city = ?", params[:category], params[:city])
     else
       @activities = Activity.joins(:course).where("courses.city = ?", params[:city])
     end
-    today = Date.today-5
+    today = Date.today
     @activitiesdayone   = @activities.where(start_time: today.beginning_of_day..today.end_of_day)
     @activitiesdaytwo   = @activities.where(start_time: (today + 1).beginning_of_day..(today + 1).end_of_day)
     @activitiesdaythree = @activities.where(start_time: (today + 2).beginning_of_day..(today + 2).end_of_day)
@@ -18,7 +17,7 @@ class ActivitiesController < ApplicationController
     @activitiesdayfive  = @activities.where(start_time: (today + 4).beginning_of_day..(today + 4).end_of_day)
     @activitiesdaysix   = @activities.where(start_time: (today + 5).beginning_of_day..(today + 5).end_of_day)
     @activitiesdayseven = @activities.where(start_time: (today + 6).beginning_of_day..(today + 6).end_of_day)
-     @markers = @activities.map do |activity|
+    @markers = @activities.map do |activity|
       {
         lng: activity.course.longitude,
         lat: activity.course.latitude,

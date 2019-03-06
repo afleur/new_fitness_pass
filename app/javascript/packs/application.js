@@ -7,18 +7,29 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 import { clickDateTab } from '../plugins/tabDate';
 
-
 import { initialMouse, slideMovementTotal, mouseIsDown, slider, currentMouse, relativeMouse, slidePercent } from './swipebooking';
 // import { function, setTimeout } from './circle';
 
+import { loadDynamicBannerText } from '../plugins/validation';
+
+import { removeNavbar } from '../plugins/confirmation';
+
+const slide = document.querySelector(".slide-text")
+
+removeNavbar();
 initMapbox();
 clickDateTab();
-initialMouse();
-slideMovementTotal();
-mouseIsDown();
-slider();
-currentMouse();
-relativeMouse();
-slidePercent();
+loadDynamicBannerText();
+
+
+if (slide) {
+  initialMouse();
+  slideMovementTotal();
+  mouseIsDown();
+  slider();
+  currentMouse();
+  relativeMouse();
+  slidePercent();
+}
 
 // setTimeout();
