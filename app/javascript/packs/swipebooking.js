@@ -3,7 +3,10 @@ var slideMovementTotal = 0;
 var mouseIsDown = false;
 var slider = $('#slider');
 
-https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js
+//  https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js
+
+
+
 
 slider.on('mousedown touchstart', function(event){
   mouseIsDown = true;
@@ -59,6 +62,8 @@ $(document.body).on('mousemove touchmove', function(event){
   }
   slider.css({'left': relativeMouse - 10});
 });
+
+
 
 export { initialMouse, slideMovementTotal, mouseIsDown, slider, currentMouse, relativeMouse, slidePercent };
 
