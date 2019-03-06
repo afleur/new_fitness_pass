@@ -11,13 +11,16 @@ import { initialMouse, slideMovementTotal, mouseIsDown, slider, currentMouse, re
 // import { function, setTimeout } from './circle';
 
 import { loadDynamicBannerText } from '../plugins/validation';
-loadDynamicBannerText();
+
+import { removeNavbar } from '../plugins/confirmation';
 
 const slide = document.querySelector(".slide-text")
 
-
+removeNavbar();
 initMapbox();
 clickDateTab();
+loadDynamicBannerText();
+
 
 if (slide) {
   initialMouse();

@@ -8,9 +8,10 @@ const loadDynamicBannerText = () => {
   });
 };
 
-setTimeout(function () {
-        document.getElementById('foo').style.display='none';
-    }, 10000);
+// const
+// setTimeout(function () {
+//         document.getElementById('foo').style.display='none';
+//     }, 10000);
 
 
 export { loadDynamicBannerText };
