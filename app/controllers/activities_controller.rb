@@ -11,7 +11,7 @@ class ActivitiesController < ApplicationController
     else
       @activities = Activity.all
     end
-    today = Date.today + 2
+    today = Date.today
     @activitiesdayone   = @activities.where(start_time: today.beginning_of_day..today.end_of_day)
     @activitiesdaytwo   = @activities.where(start_time: (today + 1).beginning_of_day..(today + 1).end_of_day)
     @activitiesdaythree = @activities.where(start_time: (today + 2).beginning_of_day..(today + 2).end_of_day)
