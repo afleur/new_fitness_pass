@@ -1,13 +1,13 @@
 .action-button {
-  background: #296038;
+  background: $secondary-purple;
   cursor: pointer;
   text-align: center;
   justify-content: center;
   width: 150px;
-  height: 50px;
-  border-radius: 3px;
+  height: 40px;
+  border-radius: 20px;
   padding: 10px 0 10px 0;
-  color: #ECECEC;
+  color: $white;
   font-weight: bold;
   padding-bottom: 5px;
 }
