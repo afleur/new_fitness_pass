@@ -261,7 +261,7 @@ Le port de bijoux est interdit",
     studio:        "Performa Training",
     category:      "Cardio",
     description:   "GRIT est un cours qui vous poussera jusqu'à l'extrême. Profitez d'une attention personnalisée dans un small group ou team training. Votre instructeur sera à vos côtés tout au long de l'entraînement afin de vous motiver, vous et votre équipe. Vous n'imaginez pas jusqu'où vous pourrez aller ! Obtenez enfin les résultats que vous cherchez ! Trois programmes uniques pour être en forme et perdre du poids rapidement. Un challenge intense de 30 minutes · Une musique explosive pour pousser votre énergie jusqu'à l'extrême · Des instructeurs inspirants qui vont motiver chaque individu, de manière individuelle tout en exploitant la force du travail en équipe.",
-    infos:         "- Prévoir un cadenas - Possibilité d'acheter une bouteille d'au et fontaines mises à disposition",
+    infos:         "- Prévoir un cadenas - Possibilité d'acheter une bouteille d'eau et fontaines mises à disposition",
     coach:         "David",
     street:        "Rue des Vollandes 19",
     npa:           "1207",
@@ -280,7 +280,7 @@ Le port de bijoux est interdit",
     studio:        "Centre de Qi Gong et Tai Chi",
     category:      "Balance",
     description:   "Dérivé des arts martiaux, le thai-chi est une discipline corporelle d’origine chinoise comportant un ensemble de mouvements continus et circulaires exécutés avec lenteur et précision dans un ordre préétabli. Il met aussi l’accent sur la maîtrise de la respiration. La pratique vise entre autres à améliorer la souplesse, à renforcer le système musculosquelettique et à maintenir une bonne santé physique, mentale et spirituelle. Grâce à son côté méditatif et à l’extrême précision des gestes, le thai-chi permet d’apaiser le mental et d’améliorer la concentration, la vivacité d’esprit et la mémoire. Il favorise aussi une meilleure prise de conscience de soi et de son environnement et contribue à harmoniser le Qi.",
-    infos:         "- Prévoir un cadenas - Possibilité d'acheter une bouteille d'au et fontaines mises à disposition",
+    infos:         "- Prévoir un cadenas - Possibilité d'acheter une bouteille d'eau et fontaines mises à disposition",
     coach:         "Catherine",
     street:        "Rue du Maupas 6",
     npa:           "1004",
@@ -621,14 +621,22 @@ puts 'Creating activities...'
   )
 
   Activity.create!(
-    start_time: DateTime.new(2019,3,7,18),
+    start_time: DateTime.new(2019,3,1,18),
     course_id:  (Course.all.sample).id,
   )
 
   Activity.create!(
-    start_time: DateTime.new(2019,3,7,18),
+    start_time: DateTime.new(2019,3,2,18),
     course_id:  (Course.all.sample).id,
   )
+
+puts 'Creating bookings...'
+
+  Booking.create!(
+    user: User.last,
+    activity: Activity.last,
+  )
+
 # puts 'Creating reviews...'
 
 # 20.times do
