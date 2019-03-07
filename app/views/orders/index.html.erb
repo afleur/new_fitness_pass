@@ -1,70 +1,67 @@
-<div class="ko-progress-circle" data-progress="0">
-<div class="text-center">
-<%= current_user.credits_amount %> crédits
-</div>
-    <div class="ko-circle">
-        <div class="full ko-progress-circle__slice">
-            <div class="ko-progress-circle__fill"></div>
-        </div>
-        <div class="ko-progress-circle__slice">
-            <div class="ko-progress-circle__fill"></div>
-            <div class="ko-progress-circle__fill ko-progress-circle__bar"></div>
-        </div>
-    </div>
-    <div class="ko-progress-circle__overlay"></div>
-</div>
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+<div id="container"></div>
+
+<div id="credits-user"> <div class="count"> <%= current_user.credits_amount %> </div> <div class="count-desc">crédits restants </div></div>
 
 
-<div class="small-padding"> Acheter des crédits </div>
+<div class="order-list-purchase"><div>Acheter des crédits</div><i class="fas fa-angle-down"></i></div>
 <div class="credits-cost">
   <div class="offer">
     <div class="price-credits">
       <div class="price">100 CHF</div>
-      <div class="credits">10 <%= image_tag("coin-icn.svg", height: 15, width: 15) %></div>
+      <div class="credits">10<%= image_tag("credits-icn.svg", height: 15, width: 15) %></div>
     </div>
     <div class="alldesc">
       <div class="desc">
-        <div class="offertitle"> Formule basique</div>
-        <div class="details">Vous bénéficiez de 10 crédits, soit l'équivalent de 3 à 6 cours</div>
-      </div>
       <%= link_to orders_path(value: 10000), method: :post do %>
-      <div class="go-to-order"><i class="far fa-arrow-alt-circle-right"></i>
+        <div class="offertitle">
+          Pass light
+        </div>
+        <div class="details">
+          Vous bénéficiez de <strong>10 crédits</strong>, soit l'équivalent de 3 à 6 cours
+        </div>
       </div>
+        <div class="go-to-order"><i class="far fa-arrow-alt-circle-right"></i>
+        </div>
       <% end %>
     </div>
   </div>
-  <div class="offer">
-    <div class="price-credits">
-      <div class="price">200 CHF</div>
-      <div class="credits">22 <%= image_tag("coin-icn.svg", height: 15, width: 15) %></div>
+<div class="offer">
+  <div class="price-credits">
+    <div class="price">200 CHF</div>
+    <div class="credits">22<%= image_tag("credits-icn.svg", height: 15, width: 15) %></div>
+  </div>
+  <div class="alldesc">
+    <div class="desc">
+      <%= link_to orders_path(value: 20000), method: :post do %>
+      <div class="offertitle"> Pass medium</div>
+      <div class="details">Vous bénéficiez de <strong>22 crédits</strong>, soit l'équivalent de 8 à 15 cours</div>
     </div>
+      <div class="go-to-order"><i class="far fa-arrow-alt-circle-right"></i>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="offer">
+  <div class="price-credits">
+    <div class="price">300 CHF</div>
+    <div class="credits">34<%= image_tag("credits-icn.svg", height: 15, width: 15) %></div>
+  </div>
     <div class="alldesc">
       <div class="desc">
-        <div class="offertitle"> Formule medium</div>
-        <div class="details">Vous bénéficiez de 22 crédits, soit l'équivalent de 8 à 15 cours</div>
-      </div>
-      <%= link_to orders_path(value: 20000), method: :post do %>
-            <div class="go-to-order"><i class="far fa-arrow-alt-circle-right"></i>
-            </div>
-            <% end %>
-
-    </div>
-  </div>
-  <div class="offer">
-    <div class="price-credits">
-      <div class="price">300 CHF</div>
-      <div class="credits">34 <%= image_tag("coin-icn.svg", height: 15, width: 15) %></div>
-    </div>
-      <div class="alldesc">
-        <div class="desc">
-          <div class="offertitle"> Formule premium</div>
-          <div class="details">Vous bénéficiez de 34 crédits, soit l'équivalent de 12 à 20 cours</div>
-        </div>
-
         <%= link_to orders_path(value: 30000), method: :post do %>
-      <div class="go-to-order"><i class="far fa-arrow-alt-circle-right"></i>
+        <div class="offertitle"> Pass premium</div>
+          <div class="details">Vous bénéficiez de <strong>34 crédits</strong>, soit l'équivalent de 12 à 20 cours</div>
       </div>
+    <div class="go-to-order"><i class="far fa-arrow-alt-circle-right"></i>
+    </div>
       <% end %>
-      </div>
+    </div>
   </div>
+</div>
+
+
+<div class="order-list"><div>Inviter mes amis</div><i class="fas fa-angle-down"></i></div>
+<div class="order-list"><div>Code promo</div><i class="fas fa-angle-down"></i></li>
+
 </div>
