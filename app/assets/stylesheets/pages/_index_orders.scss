@@ -77,8 +77,8 @@
     vertical-align: text-bottom;
 }
 
-#container{
-  margin: 10px;
+#container {
+  margin:  10px auto;
   width: 200px;
   height: 200px;
   position: relative;
@@ -107,3 +107,14 @@
   margin: 0 15px;
 }
 
+.count {
+  font-size: 20px;
+  font-weight: bolder;
+  color: $dark-grey;
+}
+
+.count-desc {
+  font-size: 18px;
+  font-weight: lighter;
+  color: #898686;
+}

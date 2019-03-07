@@ -9,7 +9,7 @@ var bar = new ProgressBar.Circle(container, {
   strokeWidth: 4,
   trailWidth: 1,
   easing: 'easeInOut',
-  duration: 1700,
+  duration: 2000,
   text: {
     autoStyleContainer: false
   },
@@ -29,22 +29,22 @@ var bar = new ProgressBar.Circle(container, {
 
   }
 });
-bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-bar.text.style.fontSize = '2rem';
+
+bar.text.style.fontSize = '20px';
 
 bar.animate(1.0);
 
-// $('.count').each(function () {
-//     $(this).prop('Counter',0).animate({
-//         Counter: $(this).text()
-//     }, {
-//         duration: 2000,
-//         easing: 'swing',
-//         step: function (now) {
-//             $(this).text(Math.ceil(now));
-//         }
-//     });
-// });
+$('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
 
 
 
