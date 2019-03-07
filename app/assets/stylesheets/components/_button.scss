@@ -15,3 +15,63 @@
 .action-button a {
   text-decoration: none;
 }
+
+.navbar-activities-show {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  background: $secondary-purple;
+  transition: all 0.3s ease;
+  height: 50px;
+  padding: 0px 10px;
+  width: 100%;
+  color: white;
+  span {
+    color: $secondary-purple;
+  }
+}
+
+/* Logo */
+.navbar-activities-show-brand img {
+  height: 30px;
+}
+
+/* Right section */
+
+/* Basic navbar-activities-show item */
+.navbar-activities-show-item {
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+/* navbar-activities-show link */
+.navbar-activities-show-link {
+  color: $primary-purple;
+  font-size: 14px;
+}
+.navbar-activities-show-link:hover {
+  color: $white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.booking-go {
+  text-align: left;
+  text-decoration: none;
+  color: white;
+}
+
+.booking-go a {
+  text-decoration: none;
+  color: white;
+}
+
+.arrow {
+  text-decoration: none;
+  color: white;
+}
+.booking-cred {
+  font-size: 13px;
+}
