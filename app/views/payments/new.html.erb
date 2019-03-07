@@ -1,19 +1,50 @@
 <div class="main-container">
   <div class="container-stripe">
-    <p>Confirmation de paiement</p>
+  <div class="confirmation-payment-back">
+    <%=  link_to "x", allorders_path %>
+  </div>
+    <div class="order-title">
+      Votre commande
+    </div>
+    <div>
+      <div class="pass">
+        <div>
+          <% if @order.amount_cents == 10000 %>
+            Pass light
+          <% elsif @order.amount_cents == 20000 %>
+            Pass medium
+          <% else %>
+            Pass premium
+          <% end %>
+        </div>
+        <div><%= @credits_val %> crédits</div>
+      </div>
+      <div class="pass-desc">
+        <div>- Entre 3 et 6 cours</div>
+        <div>- Valable 60 jours</div>
+      </div>
+    </div>
+    <div class="pass">
+      <div>
+        TOTAL
+      </div>
+      <div>
+        <%= @order.amount %> CHF
+      </div>
+    </div>
+
     <%= form_tag order_payments_path(@order) do %>
-
-
-        <label class="amount">
-          <span>Montant: <%= humanized_money_with_symbol(@order.amount) %></span>
-        </label>
+      <label class="amount">
+        <span class="hidden">Montant: <%= humanized_money_with_symbol(@order.amount) %></span>
+      </label>
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
         data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-        data-name="@order.cours"
+        data-name="<%= @credits_val %> crédits"
         data-email="<%= current_user.email %>"
-        data-description="Nombre de crédits <%= @value %>"
+        data-description="Fitness Pass"
         data-amount="<%= @order.amount_cents %>"
-        data-currency="<%= @order.amount.currency %>"></script>
+        data-currency="<%= @order.amount.currency %>">
+      </script>
     <% end %>
   </div>
 </div>

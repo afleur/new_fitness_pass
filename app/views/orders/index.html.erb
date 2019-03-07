@@ -3,6 +3,7 @@
 
 <div id="credits-user"> <div class="count"> <%= current_user.credits_amount %> </div> <div class="count-desc">crédits restants </div></div>
 
+
 <div class="order-list-purchase"><div>Acheter des crédits</div><i class="fas fa-angle-down"></i></div>
 <div class="credits-cost">
   <div class="offer">
@@ -12,10 +13,14 @@
     </div>
     <div class="alldesc">
       <div class="desc">
-        <div class="offertitle"> Pass light </div>
-        <div class="details">Vous bénéficiez de <strong>10 crédits</strong>, soit l'équivalent de 3 à 6 cours</div>
-      </div>
       <%= link_to orders_path(value: 10000), method: :post do %>
+        <div class="offertitle">
+          Pass light
+        </div>
+        <div class="details">
+          Vous bénéficiez de <strong>10 crédits</strong>, soit l'équivalent de 3 à 6 cours
+        </div>
+      </div>
         <div class="go-to-order"><i class="far fa-arrow-alt-circle-right"></i>
         </div>
       <% end %>
@@ -28,10 +33,10 @@
   </div>
   <div class="alldesc">
     <div class="desc">
-      <div class="offertitle"> Formule medium </div>
+      <%= link_to orders_path(value: 20000), method: :post do %>
+      <div class="offertitle"> Pass medium</div>
       <div class="details">Vous bénéficiez de <strong>22 crédits</strong>, soit l'équivalent de 8 à 15 cours</div>
     </div>
-    <%= link_to orders_path(value: 20000), method: :post do %>
       <div class="go-to-order"><i class="far fa-arrow-alt-circle-right"></i>
       </div>
     <% end %>
@@ -44,10 +49,10 @@
   </div>
     <div class="alldesc">
       <div class="desc">
-        <div class="offertitle"> Formule premium </div>
+        <%= link_to orders_path(value: 30000), method: :post do %>
+        <div class="offertitle"> Pass premium</div>
           <div class="details">Vous bénéficiez de <strong>34 crédits</strong>, soit l'équivalent de 12 à 20 cours</div>
       </div>
-      <%= link_to orders_path(value: 30000), method: :post do %>
     <div class="go-to-order"><i class="far fa-arrow-alt-circle-right"></i>
     </div>
       <% end %>

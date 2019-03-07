@@ -1,9 +1,8 @@
 <div class="illustration">
-  <%= image_tag "home-fitness.png", width: 400 %>
+  <%= image_tag "home-illustration.svg" %>
 </div>
 
 <div class="home-filter">
-  <p>Je recherche</p>
   <%= form_tag activities_path, method: :get do %>
     <%= select_tag(:category, options_for_select([
       ['toutes les activités', ''],
@@ -14,13 +13,19 @@
       ['de la danse', 'Danse']
     ])) %>
 
+    <%= select_tag(:city, options_for_select([
+      ['Lausanne', 'Lausanne'],
+      ['Genève', 'Genève'],
+      ['Nyon', 'Nyon'],
+      ['Morges', 'Morges'],
+      ['Rolle', 'Rolle'],
+      ['Gland', 'Gland']
+    ])) %>
+
     <%= text_field_tag 'date', nil, class: 'flatpickr-input text-center', value: l(Date.today, format: '%A %e %B', locale: 'fr') %>
 
-    <%= text_field_tag :city, nil, class: 'location-filter text-center', value: "Lausanne" %>
-
-    <div class="btn-filter fixed-bottom">
+    <div class="btn-filter">
       <%= button_tag "voir les résultats" %>
     </div>
   <% end %>
 </div>
-format: "%A %e %B", locale: 'fr'
