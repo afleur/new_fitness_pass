@@ -6,12 +6,14 @@
       <%= current_user.credits_amount %>
     </div>
     <div class="count-desc">
-      crédits restants
+      <% if current_user.credits_amount > 1 %>
+        crédits restants
+      <% else %>
+        crédit restant
+      <% end %>
     </div>
   </div>
 </div>
-
-
 
 <div class="order-list-purchase"><div>Acheter des crédits</div><i class="fas fa-angle-down"></i></div>
 <div class="credits-cost">

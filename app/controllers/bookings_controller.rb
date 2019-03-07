@@ -34,7 +34,7 @@ class BookingsController < ApplicationController
     @activity = Activity.find(params[:activity_id])
     @booking.user = current_user
     @booking.activity = @activity
-    if (current_user.credits_amount -= @activity.course.credits_cost) > 0
+    if (current_user.credits_amount -= @activity.course.credits_cost) >= 0
       if @booking.save
         Credit.create!(value: - @activity.course.credits_cost, user: @booking.user, course: @activity.course)
         current_user.save
