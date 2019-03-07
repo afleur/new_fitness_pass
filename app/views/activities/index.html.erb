@@ -1,8 +1,14 @@
-<div class="center-bookings">
-  <%= form_tag activities_path, method: :get do %>
-    <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Trouver un cours ou studio" %>
+<div class="top-filters">
+  <div class="input1">
+    <%= form_tag activities_path, method: :get do %>
+      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Trouver un cours ou studio" %>
+  </div>
+  <div class="input2">
     <%= text_field_tag :city, params[:city], class: "form-control", value: params[:city] %>
-    <%= button_tag %>
+  </div>
+  <div class="btn-index-filter">
+    <%= image_tag "refresh-btn.svg" %>
+  </div>
   <% end %>
 </div>
 
