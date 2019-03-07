@@ -1,0 +1,12 @@
+<div class="navbar-fixed-bottom navbar-activities-show">
+  <!-- Logo -->
+    <div class="booking-go">
+  <%= link_to new_activity_booking_path(@activity) do %>
+      <div class="booking-now">RESERVER MAINTENANT</div>
+      <div class="booking-cred"><%= @activity.course.credits_cost %> crédits</div>
+    </div>
+    <div class="arrow">
+    <i class="fas fa-chevron-circle-down"></i></i>
+    </div>
+  <% end %>
+</div>

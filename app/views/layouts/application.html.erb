@@ -12,7 +12,11 @@
   <body>
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <%= render 'shared/navbar' %>
+    <% if params[:controller] == "activities" &&   params[:action] == "show" %>
+      <%= render 'shared/booking_button' %>
+    <% else  %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
