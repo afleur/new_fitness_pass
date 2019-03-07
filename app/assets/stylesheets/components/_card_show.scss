@@ -14,6 +14,25 @@
   color: #606060;
 }
 
+.card-title-course {
+  margin-bottom: 20px;
+  margin-top: -15px;
+  font-size: 18px;
+}
+
+.back-activities {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: white;
+  font-size: 25px;
+}
+
+.back-activities a:hover {
+  text-decoration: none;
+  color: $primary-purple;
+}
+
 .card-course-coach{
   position: absolute;
   top: 15px;
@@ -31,6 +50,8 @@
   display:flex;
   justify-content: space-between;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+  padding-top: 8px;
   margin-bottom: 10px;
 }
 
@@ -38,7 +59,7 @@
   text-align: justify;
   background-color: #deddff;
   border-radius: 3px;
-  margin: 10px 0;
+  margin: 2px 0;
   padding: 10px 10px;
 }
 
@@ -56,8 +77,10 @@
 }
 .card-course-icon {
   display:flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  justify-content: space-around;
+  margin-top: 2px;
+  padding-top: 1px;
+  font-size: 13px;
 }
 
 .card-course-location{
