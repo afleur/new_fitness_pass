@@ -61,7 +61,7 @@ clara = User.new(
     NPA:              1003,
     city:            'Lausanne',
     birth_date:      "Mar, 28 Mar 1986",
-    credits_amount:  25,
+    credits_amount:  5,
   )
   clara.save!
 
