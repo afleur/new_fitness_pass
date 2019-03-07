@@ -16,6 +16,28 @@ $num-of-tabs: 7;
   }
 }
 
+.top-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 10px 10px;
+}
+
+.input1 {
+  width: 50%;
+  margin-right: 10px;
+  }
+
+.input2 {
+  width: 50%;
+  margin-left: 10px;
+  }
+
+.btn-index-filter {
+margin: 0 10px 0 20px;
+}
 
 label {
   color: black;
@@ -94,34 +116,17 @@ label {
     justify-content: space-around;
     position: absolute;
     top: 50px;
-    left: 0;
+    left: 0px;
+    padding: 0 21px 0 19px;
     display: none;
   }
 }
 
-@media screen and (max-width: 800px) {
-  h1 {
-    padding: 40px 0 90px 20%;
-  }
-  .indextab-wrap {
-    width: 100%;
-    margin: 0 auto;
-    top: -60px;
-    border-top: 0.5px solid rgba(0, 0, 0, 0.3);
-    // padding-top: 2px;
-  }
+.indextab-wrap {
+  width: 100%;
+  margin: 60px auto;
+  top: - 60px;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.3);
 }
 
-.center-bookings {
-  text-align: center;
-  margin-bottom: 70px;
-  padding: 10px 10px;
-}
 
-.center-bookings h1 {
-  background: $white;
-  text-align: center;
-  padding: 10px 0 40px;
-  font-size: 22px;
-  color: #555555;
-}
