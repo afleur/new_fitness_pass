@@ -1,23 +1,75 @@
+.order-title {
+  border-bottom: 0.5px solid rgba(131, 125, 255, 0.5);
+  font-size: 20px;
+  font-weight: 15px;
+  text-decoration: none;
+  color: #555555;
+}
+
+.confirmation-payment-back {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-weight: 540;
+  font-size: 20px;
+  text-decoration: none;
+  color: #555555;
+}
+
+.confirmation-payment-back a{
+  text-decoration: none;
+  color: #555555;
+}
+
+.offertitle {
+  text-decoration: none;
+  color: #555555;
+}
+
+.order-title a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.pass {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
 .main-container {
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: center;
+  color: #555555;
+  height: calc(100vh - 50px);
 }
 
-
-
-
-
-
-
 .container-stripe {
-  width: 40vh;
-  height: 50vh;
-  background-color: yellow;
+  width: 50vh;
+  height: 60vh;
+  background-color: rgba(211, 211, 211, 0.4);
   text-align:center;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   border-radius: 5px;
+  position: relative;
+}
+
+.alldesc, .price-credits {
+  height: 70px;
+}
+
+.pass-desc {
+  text-align: left;
+  margin: 10px;
+  font-size: 13px;
+}
+
+button.stripe-button-el,
+button.stripe-button-el>span {
+  background-color: $primary-purple !important;
+  background-image: none;
 }
