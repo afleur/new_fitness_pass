@@ -104,14 +104,14 @@ puts 'Creating courses...'
     npa:           "1018",
     city:          "Lausanne",
     likes:         250,
-    kcal:          600,
+    kcal:          520,
     duration:      55,
     credits_cost:  5,
   )
   course_two.remote_photo_url = url_two
   course_two.save!
 
-  url_three = "https://static1.squarespace.com/static/578a2a71bebafb8c813f4a4f/t/57aa297af7e0ab798376a44c/1470769545579/nr-69.jpg?format=1500w"
+  url_three = "http://kabuto.ch/wp-content/uploads/2016/06/kickboxing.jpg"
   course_three = Course.new(
     name:          "Kick Boxing",
     studio:        "Lausanne Wushu",
@@ -123,7 +123,7 @@ puts 'Creating courses...'
     npa:           "1007",
     city:          "Lausanne",
     likes:         50,
-    kcal:          600,
+    kcal:          610,
     duration:      75,
     credits_cost:  3,
   )
@@ -138,12 +138,12 @@ puts 'Creating courses...'
     description:   "Le seul club lausannois à combiner autant d'arts martiaux et sports de combat. Depuis 1978, le National Sporting Club est LA référence. Avec une salle de musculation en complément puissance et cardio, et un ring de 5x5m, le NSC reste le 'Fight Club' romand le plus complet. En pratique douce comme en compétition extrême.",
     coach:         "Franck",
     street:        "Rue Chaucrau 3-5",
-    infos:         "Prévoir un cadenas, location éventuelle sur place<br>- Location éventuelle de serviettes sur place<br>- Possibilité d'acheter une bouteille d'eau sur place",
+    infos:         "- Prévoir un cadenas, location éventuelle sur place<br>- Location éventuelle de serviettes sur place<br>- Possibilité d'acheter une bouteille d'eau sur place",
     npa:           "1003",
     city:          "Lausanne",
     likes:         150,
-    kcal:          500,
-    duration:      60,
+    kcal:          580,
+    duration:      75,
     credits_cost:  4,
   )
   course_four.remote_photo_url = url_four
@@ -155,7 +155,7 @@ puts 'Creating courses...'
     studio:        "Deekay Dance School",
     category:      "Danse",
     description:   "Peu importe vos envies, les professeurs s'adaptent et sauront vous pousser pour faire des concours, des battles ou tout simplement progresser personnellement. Nous sommes également très intéressés à l'histoire des danses que nous enseignons, c'est pourquoi les élèves peuvent aussi nous poser des questions s'ils veulent aller plus loin dans le développement de leur activité ou passion.",
-    infos:         "Prévoir un cadenas, location éventuelle sur place<br>- Location éventuelle de serviettes sur place<br>- Possibilité d'acheter une bouteille d'eau sur place",
+    infos:         "- Prévoir un cadenas, location éventuelle sur place<br>- Location éventuelle de serviettes sur place<br>- Possibilité d'acheter une bouteille d'eau sur place",
     coach:         "Sofia",
     street:        "Boulevard de Grancy 37",
     npa:           "1006",
@@ -168,7 +168,7 @@ puts 'Creating courses...'
   course_five.remote_photo_url = url_five
   course_five.save!
 
-  url_six = "https://lasalle-lausanne.ch/wp-content/uploads/2017/04/Capture-1-1024x449.png"
+  url_six = "https://lavieactive.com/images/dyn-cours/IMG_7013-r.jpg"
   course_six = Course.new(
     name:          "Spinning",
     studio:        "La Salle",
@@ -185,7 +185,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>- Chauss
     npa:           "1010",
     city:          "Lausanne",
     likes:         rand(50..350),
-    kcal:          650,
+    kcal:          550,
     duration:      45,
     credits_cost:  2,
   )
@@ -204,14 +204,14 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>- Chauss
     npa:           "1003",
     city:          "Lausanne",
     likes:         rand(50..350),
-    kcal:          737,
+    kcal:          560,
     duration:      55,
     credits_cost:  2,
   )
   course_seven.remote_photo_url = url_seven
   course_seven.save!
 
-  url_eight = "http://www.fitness-suisse.com/contenu/uploads/2016/07/bodycombat-1080x675.jpg"
+  url_eight = "https://storage.googleapis.com/static.brusselslife.be/media/140190/conversions/main_image.jpg"
   course_eight = Course.new(
     name:          "Pole Dance",
     studio:        "Urban Shape",
@@ -255,19 +255,19 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>- Chauss
   course_nine.remote_photo_url = url_nine
   course_nine.save!
 
-  url_ten = "https://qigongtaichicentre.ch/wp-content/uploads/2016/03/img_cat.jpg"
+  url_ten = "http://blog.awma.com/wp-content/uploads/2013/06/squating.jpg"
   course_ten = Course.new(
     name:          "Taï-Chi",
     studio:        "Centre de Qi Gong et Tai Chi",
-    category:      "Balance",
+    category:      "Souplesse",
     description:   "Dérivé des arts martiaux, le thai-chi est une discipline corporelle d’origine chinoise comportant un ensemble de mouvements continus et circulaires exécutés avec lenteur et précision dans un ordre préétabli. Il met aussi l’accent sur la maîtrise de la respiration. La pratique vise entre autres à améliorer la souplesse, à renforcer le système musculosquelettique et à maintenir une bonne santé physique, mentale et spirituelle. Grâce à son côté méditatif et à l’extrême précision des gestes, le thai-chi permet d’apaiser le mental et d’améliorer la concentration, la vivacité d’esprit et la mémoire. Il favorise aussi une meilleure prise de conscience de soi et de son environnement et contribue à harmoniser le Qi.",
-    infos:         "- Prévoir un cadenas<br>- Possibilité d'acheter une bouteille d'eau et fontaines mises à disposition",
+    infos:         "- Prévoir un cadenas <br>- Possibilité d'acheter une bouteille d'eau et fontaines mises à disposition",
     coach:         "Catherine",
     street:        "Rue du Maupas 6",
     npa:           "1004",
     city:          "Lausanne",
     likes:         rand(50..350),
-    kcal:          400,
+    kcal:          370,
     duration:      30,
     credits_cost:  2,
   )
@@ -280,7 +280,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>- Chauss
     studio:        "Green Club Romanel",
     category:      "Renforcement",
     description:   "BODYPUMP™ est le cours original avec poids qui sculpte, renforce et tonifie tout votre corps rapidement! Vos muscles ne se formeront pas tout seul! Grâce au BODYPUMP™, votre corps tout entier se renforce et se tonifie. En mettant l'accent sur l'utilisation de poids legers et sur la repetition des mouvements, vous allez brûler des calories, tonifier votre corps et augmenter votre masse musculaire.",
-    infos:         "- Prévoir un cadenas, location éventuelle sur place<br>- Location éventuelle de serviettes sur place<br>- Prévoir une pièce d'identité",
+    infos:         "- Prévoir un cadenas<br>- Location éventuelle de serviettes sur place<br>- Prévoir une pièce d'identité",
     coach:         "Thierry",
     street:        "Boulevard de Grancy 14",
     npa:           "1006",
@@ -335,7 +335,7 @@ Ludique et efficace ",
   course_thirteen.remote_photo_url = url_thirteen
   course_thirteen.save!
 
-  url_fourteen = "https://www.sp-catherine.ch/frontoffice/assets/img/what-is-stretching-postural.png"
+  url_fourteen = "http://www.eden-form.com/files/cours-stretching-bordeaux-2yGvzXy.jpg"
   course_fourteen = Course.new(
     name:          "Stretching",
     studio:        "Cabinet de stretching postural",
@@ -369,7 +369,7 @@ Créé par Joseph Pilates, et désormais méthode fitness favorite des stars, le
 Dans les cours, où l'on enchaîne une série de mouvements réfléchis, l'accent est mis sur la respiration, le contrôle et la fluidité. De quoi se dessiner une silhouette tonique et améliorer son bien-être au quotidien!",
     infos:         "Prévoir une serviette pour les machines",
     coach:         "Thierry",
-    street:        "Rue Haldimand 11",
+    street:        "Rue Neuve 2",
     npa:           "1003",
     city:          "Lausanne",
     likes:         rand(50..350),
@@ -387,97 +387,106 @@ a = Course.first.id
 b = Course.last.id
 
 array = (a..b).to_a
-sampleone = array.sample
-array = array - [sampleone]
-sampletwo = array.sample
-array = array - [sampletwo]
-samplethree = array.sample
-array = array - [samplethree]
-samplefour = array.sample
-array = array - [samplefour]
-samplefive = array.sample
-array = array - [samplefive]
-samplesix = array.sample
-array = array - [samplesix]
-sampleseven = array.sample
-array = array - [sampleseven]
-sampleeight = array.sample
-array = array - [sampleeight]
-samplenine = array.sample
-array = array - [samplenine]
-sampleten = array.sample
+samplea = array.sample
+array = array - [samplea]
+sampleb = array.sample
+array = array - [sampleb]
+samplec = array.sample
+array = array - [samplec]
+sampled = array.sample
+array = array - [sampled]
+samplef = array.sample
+array = array - [samplef]
+sampleg = array.sample
+array = array - [sampleg]
+sampleh = array.sample
+array = array - [sampleh]
+samplei = array.sample
+array = array - [samplei]
+samplej = array.sample
+array = array - [samplej]
+samplek = array.sample
+array = array - [samplek]
+samplel = array.sample
+array = array - [samplel]
+samplem = array.sample
+array = array - [samplem]
+samplen = array.sample
+array = array - [samplen]
+sampleo = array.sample
+array = array - [sampleo]
+samplep = array.sample
 
-p array
-p sampleone
-  activity_one = Activity.new(
+  Activity.create(
     start_time: DateTime.new(2019,3,8,17),
-    course_id: sampleone,
+    course_id: samplea,
   )
-  activity_one.save!
 
-p sampletwo
-  activity_two = Activity.new(
-    start_time: DateTime.new(2019,3,8,17),
-    course_id: sampletwo,
+  Activity.create(
+    start_time: DateTime.new(2019,3,8,17.5),
+    course_id: sampleb,
   )
-  activity_two.save!
 
-p samplethree
-  activity_three = Activity.new(
+  Activity.create(
     start_time: DateTime.new(2019,3,8,18),
-    course_id: samplethree,
+    course_id: samplec,
   )
-  activity_three.save!
 
-p samplefour
-  activity_four = Activity.new(
+  Activity.create(
     start_time: DateTime.new(2019,3,8,18),
-    course_id: samplefour,
+    course_id: sampled,
   )
-  activity_four.save!
 
-p samplefive
-  activity_five = Activity.new(
-    start_time: DateTime.new(2019,3,8,18),
-    course_id: samplefive,
+  Activity.create(
+    start_time: DateTime.new(2019,3,8,18.5),
+    course_id: samplef,
   )
-  activity_five.save!
 
-p samplesix
-  activity_six = Activity.new(
-    start_time: DateTime.new(2019,3,8,18),
-    course_id: samplesix,
+  Activity.create(
+    start_time: DateTime.new(2019,3,8,18.5),
+    course_id: sampleg,
   )
-  activity_six.save!
 
-p sampleseven
-  activity_seven = Activity.new(
+  Activity.create(
     start_time: DateTime.new(2019,3,8,19.5),
-    course_id: sampleseven,
+    course_id: sampleh,
   )
-  activity_seven.save!
 
-p sampleeight
-  activity_eight = Activity.new(
+  Activity.create(
+    start_time: DateTime.new(2019,3,8,19.5),
+    course_id: samplei,
+  )
+
+  Activity.create(
     start_time: DateTime.new(2019,3,8,19),
-    course_id: sampleeight,
+    course_id:  samplej,
   )
-  activity_eight.save!
 
-p samplenine
-
-  activity_nine = Activity.new(
+  Activity.create(
     start_time: DateTime.new(2019,3,8,19),
-    course_id:  samplenine,
+    course_id: samplek,
   )
-  activity_nine.save!
 
-p sampleten
-  activity_ten = Activity.new(
-    start_time: DateTime.new(2019,3,8,19),
-    course_id: sampleten,
+  Activity.create(
+    start_time: DateTime.new(2019,3,8,20),
+    course_id: samplel,
   )
-  activity_ten.save!
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,8,20),
+    course_id: samplem,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,8,20),
+    course_id: samplen,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,8,20),
+    course_id: sampleo,
+  )
+
 
 #   Activity.create!(
 #     start_time: DateTime.new(2019,3,10,17),
