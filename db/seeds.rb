@@ -836,12 +836,12 @@ samplep = array.sample
     start_time: DateTime.new(2019,3,13,20),
     course_id: sampleo,
   )
-# puts 'Creating bookings...'
+puts 'Creating bookings...'
 
-#   Booking.create!(
-#     user: User.last,
-#     activity: Activity.last,
-#   )
+  Booking.create!(
+    user: User.last,
+    activity: Activity.last,
+  )
 
 # puts 'Creating reviews...'
 
