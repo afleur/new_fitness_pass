@@ -1,36 +1,29 @@
 .home-filter {
-  height: calc(100vh - 70px);
+  height: calc(50vh - 40px);
   text-align: center;
   font-family: 'Fira Sans', 'Helvetica', sans-serif;
   font-weight: 300;
-  font-size: 25px;
+  font-size: 20px;
   background-color: transparent;
   color: $secondary-purple;
-  p {
-    color: $medium-grey;
-    margin-top:50px;
-  }
+  margin-top:50px;
 }
 
 .flatpickr-input {
-}
-
-.location-filter {
-}
-
-.time-filter {
+  margin-top: 20px;
+  height: 40px;
 }
 
 .btn-filter {
-  font-weight: 300;
   button {
-    height: 50px;
-    width: 100%;
-    margin-top: 70px;
-    font-size: 25px;
-    font-weight: 300;color: $white;
+    height: 40px;
+    width: 200px;
+    margin-top: 20px;
+    font-weight: 300;
+    color: $white;
     text-decoration: none;
     border: none;
+    border-radius: 3px;
     background-color: $secondary-purple;
   }
 }
