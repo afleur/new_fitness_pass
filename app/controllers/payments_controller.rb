@@ -2,6 +2,12 @@ class PaymentsController < ApplicationController
   before_action :set_order
 
   def new
+    credits_value = {
+    10000 => 10,
+    20000 => 22,
+    30000 => 34
+  }
+  @credits_val = credits_value[@order.amount_cents]
   end
 
   def create
