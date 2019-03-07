@@ -1,13 +1,15 @@
 <div class="top-filters">
   <div class="input1">
     <%= form_tag activities_path, method: :get do %>
-      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Trouver un cours ou studio" %>
+      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Cours ou studio"%>
   </div>
   <div class="input2">
-    <%= text_field_tag :city, params[:city], class: "form-control", value: params[:city] %>
+    <%= text_field_tag :city, params[:city], class: "form-control", value: params[:city], placeholder:"Lausanne" %>
   </div>
   <div class="btn-index-filter">
-    <%= image_tag "refresh-btn.svg" %>
+    <%= link_to activities_path do %>
+      <%= image_tag("refresh-btn.svg", height: 22, width: 22) %>
+    <% end %>
   </div>
   <% end %>
 </div>
@@ -59,7 +61,7 @@
             </div>
             <div class="wallet">
               <%= activity.course.credits_cost %>
-              <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              <%= image_tag("credits-icn.svg", height: 15, width: 15) %>
             </div>
             <div class="category">
               <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
@@ -118,7 +120,7 @@
             </div>
             <div class="wallet">
               <%= activity.course.credits_cost %>
-              <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              <%= image_tag("credits-icn.svg", height: 15, width: 15) %>
             </div>
             <div class="category">
               <div class="category-<%=((activity.course.category.downcase).delete(" "))%>" >
@@ -174,7 +176,7 @@
             </div>
             <div class="wallet">
               <%= activity.course.credits_cost %>
-              <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              <%= image_tag("credits-icn.svg", height: 15, width: 15) %>
             </div>
             <div class="category">
               <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
@@ -233,7 +235,7 @@
             </div>
             <div class="wallet">
               <%= activity.course.credits_cost %>
-              <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              <%= image_tag("credits-icn.svg", height: 15, width: 15) %>
             </div>
             <div class="category">
               <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
@@ -293,7 +295,7 @@
             </div>
             <div class="wallet">
               <%= activity.course.credits_cost %>
-              <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              <%= image_tag("credits-icn.svg", height: 15, width: 15) %>
             </div>
             <div class="category">
               <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
@@ -352,7 +354,7 @@
             </div>
             <div class="wallet">
               <%= activity.course.credits_cost %>
-              <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              <%= image_tag("credits-icn.svg", height: 15, width: 15) %>
             </div>
             <div class="category">
               <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">
@@ -411,7 +413,7 @@
             </div>
             <div class="wallet">
               <%= activity.course.credits_cost %>
-              <%= image_tag("coin-icn.svg", height: 15, width: 15) %>
+              <%= image_tag("credits-icn.svg", height: 15, width: 15) %>
             </div>
             <div class="category">
               <div class="category-<%=((activity.course.category.downcase).delete(" "))%>">

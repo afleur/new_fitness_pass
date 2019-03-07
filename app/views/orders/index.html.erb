@@ -1,7 +1,16 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
-<div id="container"></div>
 
-<div id="credits-user"> <div class="count"> <%= current_user.credits_amount %> </div> <div class="count-desc">crédits restants </div></div>
+<div id="container">
+  <div id="credits-user">
+    <div class="count">
+      <%= current_user.credits_amount %>
+    </div>
+    <div class="count-desc">
+      crédits restants
+    </div>
+  </div>
+</div>
+
 
 
 <div class="order-list-purchase"><div>Acheter des crédits</div><i class="fas fa-angle-down"></i></div>
