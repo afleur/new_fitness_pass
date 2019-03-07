@@ -487,268 +487,361 @@ samplep = array.sample
     course_id: sampleo,
   )
 
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,17),
+    course_id: samplea,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,10,17),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,17.5),
+    course_id: sampleb,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,10,17),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,18),
+    course_id: samplec,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,10,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,18),
+    course_id: sampled,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,10,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,18.5),
+    course_id: samplef,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,10,19),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,18.5),
+    course_id: sampleg,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,10,19),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,19.5),
+    course_id: sampleh,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,10,20),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,19.5),
+    course_id: samplei,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,10,20),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,19),
+    course_id:  samplej,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,10,21),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,19),
+    course_id: samplek,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,10,22),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,20),
+    course_id: samplel,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,11,17),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,20),
+    course_id: samplem,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,11,17),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,20),
+    course_id: samplen,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,11,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,9,20),
+    course_id: sampleo,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,11,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,17),
+    course_id: samplea,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,11,19),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,17.5),
+    course_id: sampleb,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,11,19),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,18),
+    course_id: samplec,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,11,20),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,18),
+    course_id: sampled,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,11,20),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,18.5),
+    course_id: samplef,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,11,21),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,18.5),
+    course_id: sampleg,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,11,22),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,19.5),
+    course_id: sampleh,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,17),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,19.5),
+    course_id: samplei,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,17),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,19),
+    course_id:  samplej,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,19),
+    course_id: samplek,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,20),
+    course_id: samplel,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,19),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,20),
+    course_id: samplem,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,19),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,20),
+    course_id: samplen,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,20),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,10,20),
+    course_id: sampleo,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,20),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,17),
+    course_id: samplea,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,21),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,17.5),
+    course_id: sampleb,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,22),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,18),
+    course_id: samplec,
+  )
 
-#     Activity.create!(
-#     start_time: DateTime.new(2019,3,12,17),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,18),
+    course_id: sampled,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,17),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,18.5),
+    course_id: samplef,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,18.5),
+    course_id: sampleg,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,19.5),
+    course_id: sampleh,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,19),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,19.5),
+    course_id: samplei,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,19),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,19),
+    course_id:  samplej,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,20),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,19),
+    course_id: samplek,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,20),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,20),
+    course_id: samplel,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,21),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,20),
+    course_id: samplem,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,12,22),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,20),
+    course_id: samplen,
+  )
 
-#  Activity.create!(
-#     start_time: DateTime.new(2019,3,9,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,11,20),
+    course_id: sampleo,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,9,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,17),
+    course_id: samplea,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,9,19),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,17.5),
+    course_id: sampleb,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,9,19),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,18),
+    course_id: samplec,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,7,20),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,18),
+    course_id: sampled,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,7,20),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,18.5),
+    course_id: samplef,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,7,21),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,18.5),
+    course_id: sampleg,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,7,22),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,19.5),
+    course_id: sampleh,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,7,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,19.5),
+    course_id: samplei,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,1,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,19),
+    course_id:  samplej,
+  )
 
-#   Activity.create!(
-#     start_time: DateTime.new(2019,3,2,18),
-#     course_id:  (Course.all.sample).id,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,19),
+    course_id: samplek,
+  )
 
-# puts 'Creating bookings...'
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,20),
+    course_id: samplel,
+  )
 
-#   Booking.create!(
-#     user: User.last,
-#     activity: Activity.last,
-#   )
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,20),
+    course_id: samplem,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,20),
+    course_id: samplen,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,12,20),
+    course_id: sampleo,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,17),
+    course_id: samplea,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,17.5),
+    course_id: sampleb,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,18),
+    course_id: samplec,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,18),
+    course_id: sampled,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,18.5),
+    course_id: samplef,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,18.5),
+    course_id: sampleg,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,19.5),
+    course_id: sampleh,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,19.5),
+    course_id: samplei,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,19),
+    course_id:  samplej,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,19),
+    course_id: samplek,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,20),
+    course_id: samplel,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,20),
+    course_id: samplem,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,20),
+    course_id: samplen,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,13,20),
+    course_id: sampleo,
+  )
+puts 'Creating bookings...'
+
+  Booking.create!(
+    user: User.last,
+    activity: Activity.last,
+  )
 
 # puts 'Creating reviews...'
 
