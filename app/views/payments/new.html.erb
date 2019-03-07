@@ -20,8 +20,22 @@
         <div><%= @credits_val %> crédits</div>
       </div>
       <div class="pass-desc">
-        <div>- Entre 3 et 6 cours</div>
-        <div>- Valable 60 jours</div>
+        <div>
+          <% if @order.amount_cents == 10000 %>
+            - Entre 3 et 6 cours
+          <% elsif @order.amount_cents == 20000 %>
+            - Entre 8 et 15 cours
+          <% else %>
+            - Entre 12 et 20 cours
+          <% end %>
+        </div>
+        <div>
+          <% if @order.amount_cents == 10000 %>
+            - Valable 60 jours
+          <% else @order.amount_cents == 20000 %>
+            - Valable 90 jours
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="pass">
@@ -43,7 +57,8 @@
         data-email="<%= current_user.email %>"
         data-description="Fitness Pass"
         data-amount="<%= @order.amount_cents %>"
-        data-currency="<%= @order.amount.currency %>">
+        data-currency="<%= @order.amount.currency %>"
+        data-label="Paiement">
       </script>
     <% end %>
   </div>

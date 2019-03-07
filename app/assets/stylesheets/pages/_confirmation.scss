@@ -11,6 +11,11 @@
   position: relative;
 }
 
+.booking-ok {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
 .confirmation-back {
   color: #ECECEC;
   position: absolute;
@@ -34,8 +39,8 @@
   margin: 20px 20px;
   display: flex;
   justify-content: space-between;
-  border-top: 0.2px solid #ECECEC;
-  border-bottom: 0.2px solid #ECECEC;
+  border-top: 0.5px solid #ECECEC;
+  border-bottom: 0.5px solid #ECECEC;
   padding: 15px 4px;
 }
 
