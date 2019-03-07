@@ -575,6 +575,60 @@ puts 'Creating activities...'
     course_id:  (Course.all.sample).id,
   )
 
+ Activity.create!(
+    start_time: DateTime.new(2019,3,9,18),
+    course_id:  (Course.all.sample).id,
+  )
+
+  Activity.create!(
+    start_time: DateTime.new(2019,3,9,18),
+    course_id:  (Course.all.sample).id,
+  )
+
+  Activity.create!(
+    start_time: DateTime.new(2019,3,9,19),
+    course_id:  (Course.all.sample).id,
+  )
+
+  Activity.create!(
+    start_time: DateTime.new(2019,3,9,19),
+    course_id:  (Course.all.sample).id,
+  )
+
+  Activity.create!(
+    start_time: DateTime.new(2019,3,7,20),
+    course_id:  (Course.all.sample).id,
+  )
+
+  Activity.create!(
+    start_time: DateTime.new(2019,3,7,20),
+    course_id:  (Course.all.sample).id,
+  )
+
+  Activity.create!(
+    start_time: DateTime.new(2019,3,7,21),
+    course_id:  (Course.all.sample).id,
+  )
+
+  Activity.create!(
+    start_time: DateTime.new(2019,3,7,22),
+    course_id:  (Course.all.sample).id,
+  )
+
+  Activity.create!(
+    start_time: DateTime.new(2019,3,7,18),
+    course_id:  (Course.all.sample).id,
+  )
+
+  Activity.create!(
+    start_time: DateTime.new(2019,3,7,18),
+    course_id:  (Course.all.sample).id,
+  )
+
+  Activity.create!(
+    start_time: DateTime.new(2019,3,7,18),
+    course_id:  (Course.all.sample).id,
+  )
 # puts 'Creating reviews...'
 
 # 20.times do
