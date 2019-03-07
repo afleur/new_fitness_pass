@@ -1,7 +1,6 @@
 /* Main navbar */
 .navbar {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background: $primary-purple;
@@ -9,29 +8,46 @@
   height: 40px;
   padding: 0px 10px;
   width: 100%;
+  p {
+    font-size: 10px;
+  }
   span {
     color: $secondary-purple;
   }
 }
 
+/* Right section */
 /* Logo */
 .navbar-brand img {
   height: 20px;
 }
 
-/* Right section */
+/* Navbar link */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  div {
+    margin-right: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  p {
+    color: $secondary-purple;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    margin: 0;
+  }
+}
 
 /* Basic navbar item */
 .navbar-item {
+  justify-content: space-between;
   cursor: pointer;
-  padding: 0 20px;
 }
 
-/* Navbar link */
-.navbar-link {
-  color: $secondary-purple;
-  font-size: 14px;
-}
 .navbar-link:hover {
   color: $white;
   text-decoration: none;

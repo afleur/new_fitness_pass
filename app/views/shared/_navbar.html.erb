@@ -12,28 +12,37 @@
       <% end %>
     <% end %>
   </div>
-
-  <!-- Right Navigation -->
-
-  <div>
+  <div class="navbar-links">
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-      <%= link_to activities_path, class: "navbar-item navbar-link" do %>
-        <%= image_tag "menu-calendar-icn.svg" %>
-      <% end %>
-      <%= link_to bookings_path, class: "navbar-item navbar-link" do %>
-        <%= image_tag "menu-bookings-icn.svg" %>
-      <% end %>
-      <%= link_to allorders_path, class: "navbar-item navbar-link" do %>
-        <%= image_tag "menu-credits-icn.svg" %>
-      <% end %>
-      <%= link_to destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" do %>
-        <%= image_tag "menu-logout.svg" %>
-      <% end %>
+      <div>
+        <%= link_to activities_path, class: "navbar-item" do %>
+          <%= image_tag "menu-calendar-icn.svg" %>
+          <p>Activités</p>
+        <% end %>
+      </div>
+      <div>
+        <%= link_to bookings_path, class: "navbar-item" do %>
+          <%= image_tag "menu-bookings-icn.svg" %>
+          <p>Résérvations</p>
+        <% end %>
+      </div>
+      <div>
+        <%= link_to allorders_path, class: "navbar-item" do %>
+          <%= image_tag "menu-credits-icn.svg" %>
+          <p>Crédits</p>
+        <% end %>
+      </div>
+      <div>
+        <%= link_to destroy_user_session_path, method: :delete, class: "navbar-item" do %>
+          <%= image_tag "menu-logout.svg" %>
+          <p>Quitter</p>
+        <% end %>
+      </div>
     <% else %>
       <!-- Login link (when logged out) -->
       <%= link_to "Login", new_user_session_path, class: "navbar-item navbar-link" %>
-      <span>|</span>
+      <span>:</span>
       <%= link_to "Sign up", new_user_registration_path, class: "navbar-item navbar-link" %>
     <% end %>
   </div>
