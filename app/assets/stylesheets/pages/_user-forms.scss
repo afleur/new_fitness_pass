@@ -1,0 +1,23 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  }
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  .form-check-input {
+    margin: 0;
+  }
+  .form-check-label {
+    text-align: none;
+    margin: 0;
+    padding: 0;
+  }
+}
