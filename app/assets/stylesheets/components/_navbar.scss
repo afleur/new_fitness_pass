@@ -10,6 +10,7 @@
   width: 100%;
   p {
     font-size: 10px;
+    text-decoration: none;
   }
   span {
     color: $secondary-purple;
@@ -28,6 +29,7 @@
   align-items: center;
   justify-content: space-between;
   align-items: flex-end;
+
   div {
     margin-right: 20px;
     flex-direction: column;
@@ -36,9 +38,11 @@
   p {
     color: $secondary-purple;
     text-align: center;
-    text-decoration: none;
     font-size: 10px;
     margin: 0;
+  }
+  a {
+    text-decoration: none;
   }
 }
 
