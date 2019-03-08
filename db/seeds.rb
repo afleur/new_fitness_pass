@@ -837,6 +837,76 @@ samplep = array.sample
     course_id: sampleo,
   )
 
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,17),
+    course_id: sampleg,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,17.5),
+    course_id: sampled,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,18),
+    course_id: samplea,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,18),
+    course_id: sampleo,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,18.5),
+    course_id: samplel,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,18.5),
+    course_id: samplek,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,19.5),
+    course_id: sampleb,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,19.5),
+    course_id: samplen,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,19),
+    course_id:  samplei,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,19),
+    course_id: samplec,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,20),
+    course_id: samplem,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,20),
+    course_id: sampleh,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,20),
+    course_id: samplej,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,20),
+    course_id: samplef,
+  )
+
   actone = Activity.create(
     start_time: DateTime.new(2019,3,1,20),
     course_id: (Course.all.sample).id,

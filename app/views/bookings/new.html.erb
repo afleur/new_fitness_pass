@@ -6,18 +6,18 @@
     Je réserve
   </div>
   <div class="confirmation-course-name">
-    un cours de <strong><%= @booking.activity.course.name %></strong></div>
+    un cours de <div class="strong-text"><%= @booking.activity.course.name %></div></div>
   <div class="confirmation-course-studio">
-     au <strong><%= @booking.activity.course.studio %></strong>
-    </div>
-    <div class="confirmation-date">
-    <strong><%= l(@booking.activity.start_time, format: "%A %e %B", locale: 'fr') %></strong>
-    </div>
-    <div class="confirmation-hour">
-    à <strong><%= @booking.activity.start_time.strftime("%H:%M") %></strong>
+    <div class="light-text">au</div><div class="strong-text"> <%= @booking.activity.course.studio %></div>
+  </div>
+  <div class="confirmation-date">
+    <div class="strong-text"><%= l(@booking.activity.start_time, format: "%A %e %B", locale: 'fr') %></div>
+  </div>
+  <div class="confirmation-hour">
+    <div class="light-text">à</div> <div class="strong-text"><%=@booking.activity.start_time.strftime("%H:%M") %></div>
   </div>
   <div class="confirmation-credits">
-    <%= image_tag("menu-credits-icn.svg", height: 15, width: 15) %> <%= @booking.activity.course.credits_cost%> crédits
+    <div class="light-text">pour</div> <div class="strong-text"> <%= @booking.activity.course.credits_cost%> crédits</div>
   </div>
   <div class="confirmation-ok action-button">
     <%= link_to "Je confirme", activity_bookings_path, method: :post %>

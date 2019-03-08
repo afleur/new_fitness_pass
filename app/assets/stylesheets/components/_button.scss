@@ -3,12 +3,12 @@
   cursor: pointer;
   text-align: center;
   justify-content: center;
-  width: 150px;
+  width: 250px;
   height: 40px;
   border-radius: 20px;
   padding: 10px 0 10px 0;
   color: $white;
-  font-weight: bold;
+  // font-weight: bold;
   padding-bottom: 5px;
 }
 
@@ -18,15 +18,14 @@
 
 .navbar-activities-show {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  background: $secondary-purple;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.7);
   transition: all 0.3s ease;
   height: 50px;
   padding: 0px 10px;
   width: 100%;
+  margin-bottom: 5px;
   color: white;
   span {
     color: $secondary-purple;

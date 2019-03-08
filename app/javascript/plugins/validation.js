@@ -5,7 +5,7 @@ const loadDynamicBannerText = () => {
   if (banner) {
     new Typed('#banner-typed-text', {
     strings: ["SESSION VALIDEE"],
-    typeSpeed: 10,
+    typeSpeed: 100,
     repeat: 1
   });
   };
