@@ -440,7 +440,7 @@ kickboxing = Course.find_by(name: "Kick Boxing")
   )
 
   Activity.create!(
-    start_time: DateTime.new(2019,3,8,17.5),
+    start_time: DateTime.new(2019,3,8,20),
     course: crossfit,
   )
 
@@ -480,7 +480,7 @@ kickboxing = Course.find_by(name: "Kick Boxing")
   )
 
   Activity.create!(
-    start_time: DateTime.new(2019,3,8,20),
+    start_time: DateTime.new(2019,3,8,17.5),
     course: aquabike,
   )
 
@@ -541,12 +541,7 @@ kickboxing = Course.find_by(name: "Kick Boxing")
 
   Activity.create!(
     start_time: DateTime.new(2019,3,9,19),
-    course:  pole_dance,
-  )
-
-  Activity.create!(
-    start_time: DateTime.new(2019,3,9,19),
-    course: aquabike,
+    course: pole_dance,
   )
 
   Activity.create!(
