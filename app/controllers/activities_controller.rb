@@ -12,13 +12,13 @@ class ActivitiesController < ApplicationController
       @activities = Activity.all
     end
     today = Date.today
-    @activitiesdayone   = @activities.where(start_time: today.beginning_of_day..today.end_of_day)
-    @activitiesdaytwo   = @activities.where(start_time: (today + 1).beginning_of_day..(today + 1).end_of_day)
-    @activitiesdaythree = @activities.where(start_time: (today + 2).beginning_of_day..(today + 2).end_of_day)
-    @activitiesdayfour  = @activities.where(start_time: (today + 3).beginning_of_day..(today + 3).end_of_day)
-    @activitiesdayfive  = @activities.where(start_time: (today + 4).beginning_of_day..(today + 4).end_of_day)
-    @activitiesdaysix   = @activities.where(start_time: (today + 5).beginning_of_day..(today + 5).end_of_day)
-    @activitiesdayseven = @activities.where(start_time: (today + 6).beginning_of_day..(today + 6).end_of_day)
+    @activitiesdayone = @activities.where(start_time: today.beginning_of_day..today.end_of_day).sort_by { |activity| activity.start_time }
+    @activitiesdaytwo = @activities.where(start_time: (today + 1).beginning_of_day..(today + 1).end_of_day).sort_by { |activity| activity.start_time }
+    @activitiesdaythree = @activities.where(start_time: (today + 2).beginning_of_day..(today + 2).end_of_day).sort_by { |activity| activity.start_time }
+    @activitiesdayfour  = @activities.where(start_time: (today + 3).beginning_of_day..(today + 3).end_of_day).sort_by { |activity| activity.start_time }
+    @activitiesdayfive  = @activities.where(start_time: (today + 4).beginning_of_day..(today + 4).end_of_day).sort_by { |activity| activity.start_time }
+    @activitiesdaysix   = @activities.where(start_time: (today + 5).beginning_of_day..(today + 5).end_of_day).sort_by { |activity| activity.start_time }
+    @activitiesdayseven = @activities.where(start_time: (today + 6).beginning_of_day..(today + 6).end_of_day).sort_by { |activity| activity.start_time }
     @markers = @activities.map do |activity|
       {
         lng: activity.course.longitude,

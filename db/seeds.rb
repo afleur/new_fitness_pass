@@ -3,8 +3,8 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create!([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create!(name: 'Luke', movie: movies.first)
 require 'faker'
 
 puts 'Cleaning tables'
@@ -151,7 +151,7 @@ puts 'Creating courses...'
 
   url_five = "http://www.deekaydanceschool.ch/site/_lib/_cache/img/thumbs/940x0-119529674638129337895069134363618431603606o.jpg"
   course_five = Course.new(
-    name:          "Hip-Hop ",
+    name:          "Hip-Hop",
     studio:        "Deekay Dance School",
     category:      "Danse",
     description:   "Peu importe vos envies, les professeurs s'adaptent et sauront vous pousser pour faire des concours, des battles ou tout simplement progresser personnellement. Nous sommes également très intéressés à l'histoire des danses que nous enseignons, c'est pourquoi les élèves peuvent aussi nous poser des questions s'ils veulent aller plus loin dans le développement de leur activité ou passion.",
@@ -385,7 +385,6 @@ puts 'Creating activities...'
 
 a = Course.first.id
 b = Course.last.id
-
 array = (a..b).to_a
 samplea = array.sample
 array = array - [samplea]
@@ -417,519 +416,517 @@ sampleo = array.sample
 array = array - [sampleo]
 samplep = array.sample
 
-  Activity.create(
+
+crossfit = Course.find_by(name: "CrossFit")
+spinning = Course.find_by(name: "Spinning")
+aquabike = Course.find_by(name: "Aquabike")
+body_combat = Course.find_by(name: "Body Combat")
+hatha_yoga = Course.find_by(name: "Hatha Yoga")
+boxe_anglaise = Course.find_by(name: "Boxe anglaise")
+spinning = Course.find_by(name: "Spinning")
+pole_dance = Course.find_by(name: "Pole Dance")
+grit_training = Course.find_by(name: "Grit Training")
+tai_chi = Course.find_by(name: "Taï-Chi")
+body_pump = Course.find_by(name: "Body Pump")
+cxworx = Course.find_by(name: "CXWORX")
+stretching = Course.find_by(name: "Stretching")
+pilates = Course.find_by(name: "Pilates")
+hiphop = Course.find_by(name: "Hip-Hop")
+kickboxing = Course.find_by(name: "Kick Boxing")
+
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,17),
-    course_id: samplea,
+    course: hatha_yoga,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,17.5),
-    course_id: sampleb,
+    course: crossfit,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,18),
-    course_id: samplec,
+    course: kickboxing,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,18),
-    course_id: sampled,
+    course: boxe_anglaise,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,18.5),
-    course_id: samplef,
+    course: body_combat,
   )
 
-  Activity.create(
-    start_time: DateTime.new(2019,3,8,18.5),
-    course_id: sampleg,
-  )
-
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,19.5),
-    course_id: sampleh,
+    course: pole_dance,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,19.5),
-    course_id: samplei,
+    course: stretching,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,19),
-    course_id:  samplej,
+    course:  body_pump,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,19),
-    course_id: samplek,
+    course: cxworx,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,20),
-    course_id: samplel,
+    course: aquabike,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,20),
-    course_id: samplem,
+    course: grit_training,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,20),
-    course_id: samplen,
+    course: pilates,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,8,20),
-    course_id: sampleo,
+    course: hiphop,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,9,17),
-    course_id: sampled,
+    course: tai_chi,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,9,17.5),
-    course_id: samplef,
+    course: boxe_anglaise,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,9,18),
-    course_id: sampleg,
+    course: body_combat,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,9,18),
-    course_id: sampleh,
+    course: spinning,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,9,18.5),
-    course_id: samplek,
+    course: hatha_yoga,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,9,18.5),
-    course_id: samplej,
+    course: cxworx,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,9,19.5),
-    course_id: samplei,
+    course: stretching,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,9,19.5),
-    course_id: samplel,
+    course: kickboxing,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,9,19),
-    course_id:  samplen,
+    course:  pole_dance,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,9,19),
-    course_id: sampleo,
+    course: aquabike,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,9,20),
-    course_id: sampleb,
+    course: grit_training,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,9,20),
-    course_id: samplem,
+    course: pilates,
   )
 
-  Activity.create(
-    start_time: DateTime.new(2019,3,9,20),
-    course_id: samplea,
-  )
-
-  Activity.create(
-    start_time: DateTime.new(2019,3,9,20),
-    course_id: samplep,
-  )
-
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,17),
-    course_id: samplei,
+    course: stretching,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,17.5),
-    course_id: samplel,
+    course: kickboxing,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,18),
-    course_id: samplek,
+    course: hatha_yoga,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,18),
-    course_id: samplej,
+    course: cxworx,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,18.5),
-    course_id: samplef,
+    course: boxe_anglaise,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,18.5),
-    course_id: sampleb,
+    course: grit_training,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,19.5),
-    course_id: samplec,
+    course: tai_chi,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,19.5),
-    course_id: sampled,
+    course: aquabike,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,19),
-    course_id:  sampleo,
+    course:  body_combat,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,19),
-    course_id: sampleg,
+    course: spinning,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,20),
-    course_id: sampleh,
+    course: pilates,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,20),
-    course_id: samplem,
+    course: pole_dance,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,10,20),
-    course_id: samplen,
+    course: crossfit,
   )
 
-  Activity.create(
-    start_time: DateTime.new(2019,3,10,20),
-    course_id: samplea,
-  )
-
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,17),
-    course_id: samplea,
+    course: crossfit,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,17.5),
-    course_id: sampleb,
+    course: grit_training,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,18),
-    course_id: samplec,
+    course: body_pump,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,18),
-    course_id: sampled,
+    course: tai_chi,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,18.5),
-    course_id: samplef,
+    course: boxe_anglaise,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,18.5),
-    course_id: sampleg,
+    course: body_combat,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,19.5),
-    course_id: sampleh,
+    course: spinning,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,19.5),
-    course_id: samplei,
+    course: stretching,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,19),
-    course_id:  samplej,
+    course:  cxworx,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,19),
-    course_id: samplek,
+    course: hatha_yoga,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,20),
-    course_id: samplel,
+    course: kickboxing,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,20),
-    course_id: samplem,
+    course: pilates,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,20),
-    course_id: samplen,
+    course: pole_dance,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,11,20),
-    course_id: sampleo,
+    course: aquabike,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,17),
-    course_id: sampleo,
+    course: aquabike,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,17.5),
-    course_id: samplen,
+    course: pole_dance,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,18),
-    course_id: samplem,
+    course: pilates,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,18),
-    course_id: samplel,
+    course: kickboxing,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,18.5),
-    course_id: samplek,
+    course: hatha_yoga,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,18.5),
-    course_id: samplej,
+    course: cxworx,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,19.5),
-    course_id: samplei,
+    course: stretching,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,19.5),
-    course_id: sampleh,
+    course: spinning,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,19),
-    course_id:  samplef,
+    course: boxe_anglaise,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,19),
-    course_id: sampled,
+    course: tai_chi,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,20),
-    course_id: samplec,
+    course: body_pump,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,20),
-    course_id: samplea,
+    course: crossfit,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,20),
-    course_id: sampleb,
+    course: grit_training,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,12,20),
-    course_id: sampleg,
+    course: body_combat,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,17),
-    course_id: samplea,
+    course: crossfit,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,17.5),
-    course_id: sampleb,
+    course: grit_training,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,18),
-    course_id: samplec,
+    course: body_pump,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,18),
-    course_id: sampled,
+    course: tai_chi,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,18.5),
-    course_id: samplef,
+    course: boxe_anglaise,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,18.5),
-    course_id: sampleg,
+    course: body_combat,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,19.5),
-    course_id: sampleh,
+    course: spinning,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,19.5),
-    course_id: samplei,
+    course: stretching,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,19),
-    course_id:  samplej,
+    course: cxworx,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,19),
-    course_id: samplek,
+    course: hatha_yoga,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,20),
-    course_id: samplel,
+    course: kickboxing,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,20),
-    course_id: samplem,
+    course: pilates,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,20),
-    course_id: samplen,
+    course: pole_dance,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,13,20),
-    course_id: sampleo,
+    course: aquabike,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,17),
-    course_id: sampleg,
+    course: body_combat,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,17.5),
-    course_id: sampled,
+    course: tai_chi,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,18),
-    course_id: samplea,
+    course: crossfit,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,18),
-    course_id: sampleo,
+    course: aquabike,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,18.5),
-    course_id: samplel,
+    course: kickboxing,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,18.5),
-    course_id: samplek,
+    course: hatha_yoga,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,19.5),
-    course_id: sampleb,
+    course: grit_training,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,19.5),
-    course_id: samplen,
+    course: pole_dance,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,19),
-    course_id:  samplei,
+    course: stretching,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,19),
-    course_id: samplec,
+    course: body_pump,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,20),
-    course_id: samplem,
+    course: pilates,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,20),
-    course_id: sampleh,
+    course: spinning,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,20),
-    course_id: samplej,
+    course: cxworx,
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,3,14,20),
-    course_id: samplef,
+    course: boxe_anglaise,
   )
 
-  actone = Activity.create(
+  actone = Activity.create!(
     start_time: DateTime.new(2019,3,1,20),
-    course_id: (Course.all.sample).id,
+    course: (Course.all.sample),
   )
 
-  acttwo = Activity.create(
+  acttwo = Activity.create!(
     start_time: DateTime.new(2019,3,3,20),
-    course_id: (Course.all.sample).id,
+    course: (Course.all.sample),
   )
 
-  actthree = Activity.create(
+  actthree = Activity.create!(
     start_time: DateTime.new(2019,3,5,20),
-    course_id: (Course.all.sample).id,
+    course: (Course.all.sample),
   )
 
-  actfour = Activity.create(
+  actfour = Activity.create!(
     start_time: DateTime.new(2019,3,6,20),
-    course_id: (Course.all.sample).id,
+    course: (Course.all.sample),
   )
 
-  Activity.create(
+  Activity.create!(
     start_time: DateTime.new(2019,2,28,20),
-    course_id: (Course.all.sample).id,
+    course: (Course.all.sample),
   )
 
 puts 'Creating past bookings...'
