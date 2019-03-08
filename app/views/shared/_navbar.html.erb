@@ -18,7 +18,7 @@
       <div>
         <%= link_to activities_path, class: "navbar-item" do %>
           <%= image_tag "menu-calendar-icn.svg" %>
-          <p>Activités</p>
+          <p class="activities-txt">Activités</p>
         <% end %>
       </div>
       <div>
@@ -36,7 +36,7 @@
       <div>
         <%= link_to destroy_user_session_path, method: :delete, class: "navbar-item" do %>
           <%= image_tag "menu-logout.svg" %>
-          <p>Quitter</p>
+          <p class="logout-txt">Quitter</p>
         <% end %>
       </div>
     <% else %>
