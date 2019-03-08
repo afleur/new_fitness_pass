@@ -163,7 +163,7 @@ puts 'Creating courses...'
     likes:         121,
     kcal:          300,
     duration:      60,
-    credits_cost:  2,
+    credits_cost:  3,
   )
   course_five.remote_photo_url = url_five
   course_five.save!
@@ -187,7 +187,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     likes:         rand(50..350),
     kcal:          550,
     duration:      45,
-    credits_cost:  2,
+    credits_cost:  3,
   )
   course_six.remote_photo_url = url_six
   course_six.save!
@@ -206,7 +206,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     likes:         rand(50..350),
     kcal:          560,
     duration:      55,
-    credits_cost:  2,
+    credits_cost:  3,
   )
   course_seven.remote_photo_url = url_seven
   course_seven.save!
@@ -250,7 +250,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     likes:         rand(50..350),
     kcal:          400,
     duration:      30,
-    credits_cost:  2,
+    credits_cost:  3,
   )
   course_nine.remote_photo_url = url_nine
   course_nine.save!
@@ -269,7 +269,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     likes:         rand(50..350),
     kcal:          370,
     duration:      30,
-    credits_cost:  2,
+    credits_cost:  3,
   )
   course_ten.remote_photo_url = url_ten
   course_ten.save!
@@ -288,7 +288,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     likes:         rand(50..350),
     kcal:          400,
     duration:      30,
-    credits_cost:  2,
+    credits_cost:  3,
   )
   course_eleven.remote_photo_url = url_eleven
   course_eleven.save!
@@ -307,7 +307,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     likes:         rand(50..350),
     kcal:          230,
     duration:      45,
-    credits_cost:  3,
+    credits_cost:  4,
   )
   course_twelve.remote_photo_url = url_twelve
   course_twelve.save!
@@ -330,7 +330,7 @@ Ludique et efficace ",
     likes:         rand(50..350),
     kcal:          200,
     duration:      45,
-    credits_cost:  2,
+    credits_cost:  3,
   )
   course_thirteen.remote_photo_url = url_thirteen
   course_thirteen.save!
@@ -352,7 +352,7 @@ Destiné aux sportifs comme à ceux qui souhaitent pratiquer une activité tout 
     likes:         rand(50..350),
     kcal:          100,
     duration:      45,
-    credits_cost:  2,
+    credits_cost:  3,
   )
   course_fourteen.remote_photo_url = url_fourteen
   course_fourteen.save!
