@@ -32,8 +32,8 @@ $slideTextColor: #3a3d55;
   background-color: $slideBgColor;
   width: 200px;
   height: 50px;
-  border: white;
   border-radius: 40px;
+  border: 1px solid black;
   @include center;
 }
 
@@ -46,6 +46,7 @@ $slideTextColor: #3a3d55;
   background-color: $slideBallColor;
   width: 50px;
   height: 50px;
+  border: 1px solid black;
   border-radius: 50%;
   @include center;
   &.locked {
