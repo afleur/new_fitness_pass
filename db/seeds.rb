@@ -99,7 +99,7 @@ puts 'Creating courses...'
     category:      "Cardio",
     description:   "CrossFit est un terme désignant une méthode de conditionnement physique, appelé ainsi parce qu’il mélange différentes activités physiques et sportives préexistantes. Son fonctionnement est axé autour de dix compétences athlétiques : endurance cardiovasculaire et respiratoire, endurance musculaire, force, souplesse, puissance, vitesse, agilité, psychomotricité, équilibre et précision. Ceci afin de répliquer des mouvements fonctionnels du quotidien. La définition du CrossFit peut se résumer en 3 points : des exercices constamment variés, des mouvement fonctionnels et pratiqué à haute intensité. Jette un coup d’oeil à la vidéo ci-dessous qui t’en dira plus, non seulement sur la manière de s’entraîner, mais également sur l’ambiance qui entoure le CrossFit.",
     coach:         "Franck",
-    infos:         "- Prévoir un cadenas, location éventuelle sur place<br>Location éventuelle de serviettes sur place<br>Possibilité d'acheter une bouteille d'eau sur place",
+    infos:         "Prévoir un cadenas, location éventuelle sur place<br>Location éventuelle de serviettes sur place<br>Possibilité d'acheter une bouteille d'eau sur place",
     street:        "Chemin d'Entre-Bois 21",
     npa:           "1018",
     city:          "Lausanne",
@@ -155,7 +155,7 @@ puts 'Creating courses...'
     studio:        "Deekay Dance School",
     category:      "Danse",
     description:   "Peu importe vos envies, les professeurs s'adaptent et sauront vous pousser pour faire des concours, des battles ou tout simplement progresser personnellement. Nous sommes également très intéressés à l'histoire des danses que nous enseignons, c'est pourquoi les élèves peuvent aussi nous poser des questions s'ils veulent aller plus loin dans le développement de leur activité ou passion.",
-    infos:         "- Prévoir un cadenas, location éventuelle sur place<br>Location éventuelle de serviettes sur place<br>Possibilité d'acheter une bouteille d'eau sur place",
+    infos:         "Prévoir un cadenas, location éventuelle sur place<br>Location éventuelle de serviettes sur place<br>Possibilité d'acheter une bouteille d'eau sur place",
     coach:         "Sofia",
     street:        "Boulevard de Grancy 37",
     npa:           "1006",
@@ -198,7 +198,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     studio:        "Black 2000",
     category:      "Cardio",
     description:   "Le BODYCOMBAT™ est un puissant cours cardio extrêmement défoulant. Ce programme hautement énergique s'inspire des arts martiaux et puise dans des disciplines aussi variées que le karaté, la boxe, le taekwondo, le tai chi et le muay thai. Rythmé par une musique entraînante et guidé par des instructeurs performants, vous brûlez des calories et améliorez votre capacité cardiovasculaire à force de frappes, de coups de poing, de coups de pied et de katas.",
-    infos:         "- Des vestiaires avec casiers et douche sont à disposition<br>Prévoir un cadenas pour son casier",
+    infos:         "Des vestiaires avec casiers et douche sont à disposition<br>Prévoir un cadenas pour son casier",
     coach:         "Baptiste",
     street:        "Place Saint-François 1",
     npa:           "1003",
@@ -242,7 +242,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     studio:        "Performa Training",
     category:      "Cardio",
     description:   "GRIT est un cours qui vous poussera jusqu'à l'extrême. Profitez d'une attention personnalisée dans un small group ou team training. Votre instructeur sera à vos côtés tout au long de l'entraînement afin de vous motiver, vous et votre équipe. Vous n'imaginez pas jusqu'où vous pourrez aller ! Obtenez enfin les résultats que vous cherchez ! Trois programmes uniques pour être en forme et perdre du poids rapidement. Un challenge intense de 30 minutes · Une musique explosive pour pousser votre énergie jusqu'à l'extrême · Des instructeurs inspirants qui vont motiver chaque individu, de manière individuelle tout en exploitant la force du travail en équipe.",
-    infos:         "- Prévoir un cadenas<br>Possibilité d'acheter une bouteille d'eau et fontaines mises à disposition",
+    infos:         "Prévoir un cadenas<br>Possibilité d'acheter une bouteille d'eau et fontaines mises à disposition",
     coach:         "David",
     street:        "Rue de Genève 33",
     npa:           "1003",
@@ -261,7 +261,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     studio:        "Centre de Qi Gong et Tai Chi",
     category:      "Souplesse",
     description:   "Dérivé des arts martiaux, le thai-chi est une discipline corporelle d’origine chinoise comportant un ensemble de mouvements continus et circulaires exécutés avec lenteur et précision dans un ordre préétabli. Il met aussi l’accent sur la maîtrise de la respiration. La pratique vise entre autres à améliorer la souplesse, à renforcer le système musculosquelettique et à maintenir une bonne santé physique, mentale et spirituelle. Grâce à son côté méditatif et à l’extrême précision des gestes, le thai-chi permet d’apaiser le mental et d’améliorer la concentration, la vivacité d’esprit et la mémoire. Il favorise aussi une meilleure prise de conscience de soi et de son environnement et contribue à harmoniser le Qi.",
-    infos:         "- Prévoir un cadenas <br>Possibilité d'acheter une bouteille d'eau et fontaines mises à disposition",
+    infos:         "Prévoir un cadenas <br>Possibilité d'acheter une bouteille d'eau et fontaines mises à disposition",
     coach:         "Catherine",
     street:        "Rue du Maupas 6",
     npa:           "1004",
@@ -280,7 +280,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     studio:        "Green Club Romanel",
     category:      "Renforcement",
     description:   "BODYPUMP™ est le cours original avec poids qui sculpte, renforce et tonifie tout votre corps rapidement! Vos muscles ne se formeront pas tout seul! Grâce au BODYPUMP™, votre corps tout entier se renforce et se tonifie. En mettant l'accent sur l'utilisation de poids legers et sur la repetition des mouvements, vous allez brûler des calories, tonifier votre corps et augmenter votre masse musculaire.",
-    infos:         "- Prévoir un cadenas<br>Location éventuelle de serviettes sur place<br>Prévoir une pièce d'identité",
+    infos:         "Prévoir un cadenas<br>Location éventuelle de serviettes sur place<br>Prévoir une pièce d'identité",
     coach:         "Thierry",
     street:        "Boulevard de Grancy 14",
     npa:           "1006",
@@ -299,7 +299,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     studio:        "Holmes Place",
     category:      "Renforcement",
     description:   "CXWORX™, c'est tout ce dont vous avez besoin pour offrir à votre corps un entraînement intense qui va le tonifier, améliorer votre force fonctionnelle et donc votre mobilité, votre équilibre et prévenir les blessures.",
-    infos:         "- Prévoir un cadenas, location éventuelle sur place<br>Location éventuelle de serviettes sur place<br>Prévoir une pièce d'identité",
+    infos:         "Prévoir un cadenas, location éventuelle sur place<br>Location éventuelle de serviettes sur place<br>Prévoir une pièce d'identité",
     coach:         "Thierry",
     street:        "Boulevard de Grancy 14",
     npa:           "1006",
@@ -322,7 +322,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
 Retrouvez le plaisir de l'eau grâce à une séance mobilisant de multiples accessoires : gants palmés, frites en mousse, ballons, flotteurs, planches... pour vous tonifier en musique, renforcer l’ensemble du corps et vous procurer une grande sensation de bien-être.
 
 Ludique et efficace ",
-    infos:         "- Prévoir un bonnet de bain <br>Vente de serviettes",
+    infos:         "Prévoir un bonnet de bain <br>Vente de serviettes",
     coach:         "Florent",
     street:        "Chemin du Martinet 28",
     npa:           "1007",
@@ -342,7 +342,7 @@ Ludique et efficace ",
     category:      "Souplesse",
     description:   "Un cours souplesse et détente pour se relaxer, respirer et améliorer son bien-être physique.
 Destiné aux sportifs comme à ceux qui souhaitent pratiquer une activité tout en douceur, le stretching permet de relâcher les chaînes musculaires et d'améliorer l'état des articulations.",
-    infos:         "- Location éventuelle de serviettes sur place
+    infos:         "Location éventuelle de serviettes sur place
     <br>Possibilité d’acheter une bouteille d’eau sur place
     <br>Prévoir une pièce d’identité",
     coach:         "Catherine",
@@ -838,21 +838,91 @@ samplep = array.sample
   )
 
   Activity.create(
+    start_time: DateTime.new(2019,3,14,17),
+    course_id: sampleg,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,17.5),
+    course_id: sampled,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,18),
+    course_id: samplea,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,18),
+    course_id: sampleo,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,18.5),
+    course_id: samplel,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,18.5),
+    course_id: samplek,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,19.5),
+    course_id: sampleb,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,19.5),
+    course_id: samplen,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,19),
+    course_id:  samplei,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,19),
+    course_id: samplec,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,20),
+    course_id: samplem,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,20),
+    course_id: sampleh,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,20),
+    course_id: samplej,
+  )
+
+  Activity.create(
+    start_time: DateTime.new(2019,3,14,20),
+    course_id: samplef,
+  )
+
+  actone = Activity.create(
     start_time: DateTime.new(2019,3,1,20),
     course_id: (Course.all.sample).id,
   )
 
-  Activity.create(
+  acttwo = Activity.create(
     start_time: DateTime.new(2019,3,3,20),
     course_id: (Course.all.sample).id,
   )
 
-  Activity.create(
+  actthree = Activity.create(
     start_time: DateTime.new(2019,3,5,20),
     course_id: (Course.all.sample).id,
   )
 
-  Activity.create(
+  actfour = Activity.create(
     start_time: DateTime.new(2019,3,6,20),
     course_id: (Course.all.sample).id,
   )
@@ -869,6 +939,25 @@ puts 'Creating past bookings...'
     activity: Activity.last,
   )
 
+  Booking.create!(
+    user: User.last,
+    activity: actone,
+  )
+
+  Booking.create!(
+    user: User.last,
+    activity: acttwo,
+  )
+
+  Booking.create!(
+    user: User.last,
+    activity: actthree,
+  )
+
+  Booking.create!(
+    user: User.last,
+    activity: actfour,
+  )
 
 # puts 'Creating reviews...'
 
