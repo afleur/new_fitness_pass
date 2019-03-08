@@ -42,11 +42,17 @@
           <p>Quitter</p>
         <% end %>
       </div>
-    <% else %>
       <!-- Login link (when logged out) -->
+    <% else %>
+    <div>
       <%= link_to "Login", new_user_session_path, class: "navbar-item navbar-link" %>
-      <span>:</span>
+    </div>
+      <div>
+        <span>:</span>
+      </div>
+      <div>
       <%= link_to "Sign up", new_user_registration_path, class: "navbar-item navbar-link" %>
+      </div>
     <% end %>
   </div>
 </div>

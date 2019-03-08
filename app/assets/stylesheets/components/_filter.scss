@@ -1,17 +1,89 @@
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: center;
+}
+
 .home-filter {
-  height: calc(50vh - 40px);
+  height: calc(40vh - 40px);
   text-align: center;
   font-family: 'Fira Sans', 'Helvetica', sans-serif;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   background-color: transparent;
   color: $secondary-purple;
   margin-top:50px;
+  max-width: 70vw;
+  p {
+    color: $dark-grey;
+  }
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: $white;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: $secondary-purple;
+  padding: 8px 16px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: $white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .flatpickr-input {
-  margin-top: 20px;
-  height: 40px;
+  border: none;
+}
+
+.dateform {
+  margin: 7px 0 0 30px;
+  height: 38px;
 }
 
 .btn-filter {
