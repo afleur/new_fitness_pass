@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
         @bookingscount = @comingbookings.count
       end
     end
+    @bookingscount ||= 0
     return @bookingscount
   end
 
