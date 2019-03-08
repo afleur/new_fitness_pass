@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
         @comingbookings = @comingbookings.sort_by { |booking| booking.activity.start_time }
       else
         @pastbookings << booking
-         @pastbookings = (@pastbookings.sort_by { |booking| booking.activity.start_time }).reverse
+        @pastbookings = (@pastbookings.sort_by { |booking| booking.activity.start_time }).reverse
       end
     end
   end

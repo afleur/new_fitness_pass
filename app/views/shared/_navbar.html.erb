@@ -25,6 +25,9 @@
         <%= link_to bookings_path, class: "navbar-item" do %>
           <%= image_tag "menu-bookings-icn.svg" %>
           <p>Réservations</p>
+          <% if @bookingscount > 0 %>
+          <div class="notification-box-booking notification-count-booking"> <%= @bookingscount %> </div>
+          <% end %>
         <% end %>
       </div>
       <div>
