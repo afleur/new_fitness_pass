@@ -529,7 +529,7 @@ samplep = array.sample
 
   Activity.create(
     start_time: DateTime.new(2019,3,9,19),
-    course_id:  sampleh,
+    course_id:  samplen,
   )
 
   Activity.create(
@@ -609,7 +609,7 @@ samplep = array.sample
 
   Activity.create(
     start_time: DateTime.new(2019,3,10,20),
-    course_id: samplel,
+    course_id: sampleh,
   )
 
   Activity.create(
