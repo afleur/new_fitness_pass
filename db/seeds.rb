@@ -312,7 +312,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
   course_twelve.remote_photo_url = url_twelve
   course_twelve.save!
 
-  url_thirteen = "http://www.o-zone.fr/upl/website/aquabike-bordeaux/PIXX_srcset-large.jpg"
+  url_thirteen = "http://www.sowai-aquasports.fr/wp-content/uploads/2014/05/aquabike.jpg"
   course_thirteen = Course.new(
     name:          "Aquabike",
     studio:        "AquaMed",
