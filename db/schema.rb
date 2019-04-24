@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_24_140459) do
+ActiveRecord::Schema.define(version: 2019_04_24_141128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(version: 2019_04_24_140459) do
     t.float "latitude"
     t.float "longitude"
     t.string "infos"
+    t.bigint "coach_id"
+    t.index ["coach_id"], name: "index_courses_on_coach_id"
   end
 
   create_table "credits", force: :cascade do |t|
@@ -137,6 +139,7 @@ ActiveRecord::Schema.define(version: 2019_04_24_140459) do
   add_foreign_key "activities", "courses"
   add_foreign_key "bookings", "activities"
   add_foreign_key "bookings", "users"
+  add_foreign_key "courses", "coaches"
   add_foreign_key "credits", "orders"
   add_foreign_key "invitations", "bookings"
   add_foreign_key "invitations", "users"
