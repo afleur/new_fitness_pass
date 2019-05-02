@@ -42,7 +42,54 @@
           <p class="logout-txt">Quitter</p>
         <% end %>
       </div>
+        <% elsif coach_signed_in? %>
+      <div>
+        <%= link_to activities_path, class: "navbar-item" do %>
+          <%= image_tag "menu-calendar-icn.svg" %>
+          <p class="activities-txt">Activités</p>
+        <% end %>
+      </div>
+      <div>
+        <%= link_to bookings_path, class: "navbar-item" do %>
+          <%= image_tag "menu-bookings-icn.svg" %>
+          <p>Mes cours</p>
+          <% if @bookingscount > 0 %>
+          <div class="notification-box-booking notification-count-booking"> <%= @bookingscount %> </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div>
+        <%= link_to allorders_path, class: "navbar-item" do %>
+          <%= image_tag "menu-credits-icn.svg" %>
+          <p>Mes revenus</p>
+        <% end %>
+      </div>
+      <!-- Links when logged in -->
+      <div>
+        <%= link_to destroy_user_session_path, method: :delete, class: "navbar-item" do %>
+          <%= image_tag "menu-logout.svg" %>
+          <p class="logout-txt">Quitter</p>
+        <% end %>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
       <!-- Login link (when logged out) -->
+
+
+
+
+
+
+
     <% else %>
     <div>
       <%= link_to "Login", login_path, class: "navbar-item navbar-link" %>

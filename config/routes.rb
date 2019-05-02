@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :coaches
+  root to: 'pages#coach_home'
   post '/orders/:value', to: 'orders#create', as: :orders
   get '/orders', to: 'orders#index', as: :allorders
   get '/coach', to: 'pages#coach_home', as: :coach_home

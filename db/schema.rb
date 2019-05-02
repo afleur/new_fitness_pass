@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_25_135649) do
+ActiveRecord::Schema.define(version: 2019_04_28_125044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 2019_04_25_135649) do
     t.string "name"
     t.string "category"
     t.text "description"
-    t.string "coach"
     t.string "city"
     t.integer "likes"
     t.integer "kcal"
