@@ -1,5 +1,13 @@
 <div> Welcome back coach</div>
 
+<%= console %>
+
+<p> Vos cours à venir </p>
+
+  <% @classes = current_coach.courses %>
+  <% @classes.each do |course|%>
+    <li><%= course.name %> à <%= course.id %></li>
+  <% end %>
 
 <%= link_to 'Voir', activities_path, class:'btn btn-primary'  %>
 
