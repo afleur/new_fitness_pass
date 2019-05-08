@@ -1,14 +1,63 @@
-<div> Welcome back coach</div>
+<div> Welcome back coach </div>
 
 <%= console %>
 
-<p> Vos cours à venir </p>
+<br>
+<br>
+<br>
 
-  <% @classes = current_coach.courses %>
-  <% @classes.each do |course|%>
-    <li><%= course.name %> à <%= course.id %></li>
-  <% end %>
+<p> Vous avez <%= @comingactivities.length %> cours à venir: </p>
+
+<br>
+<br>
+
+<div class="tab-content">
+              <div class="container-booking">
+                <div class="row">
+                  <% @comingactivities.each do |activity|%>
+                    <div class="col-xs-12">
+                      <div class="card-booking-coming">
+                        <div class="card-hour-booking-coming">
+                           <div class="start-activity-booking">
+                          <%= activity.start_time.strftime("%H:%M")%>
+                         </div>
+                          <div class="end-activity-booking">
+                          <%= (activity.start_time + (activity.course.duration * 60)).strftime("%H:%M") %>
+                          </div>
+                        </div>
+                        <div class="card-body-booking">
+                          <div class="course-name">
+                            <%= activity.course.name.upcase %>
+                          </div>
+                          <div class="course-studio-booking">
+                            <%= activity.course.studio %>
+                          </div>
+                          <div class="course-address-booking-coming">
+                            <i class="fas fa-map-marker-alt"></i> <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
+                          </div>
+                        </div>
+                        <div class="card-booking-validation">
+                          <% if @nb_of_bookings.size > 0 %>
+                            <%= link_to activities_path do %>
+                              <div class='btn btn-primary'> <%= @nb_of_bookings.size %> réservation </div>
+                            <% end %>
+                          <% else  %>
+                            <p>Aucune réservation</p>
+                          <% end %>
+                        <div class="card-date-booking-coming">
+                          <%= l(activity.start_time, format: "%A %e %B %Y", locale: 'fr') %>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+
+
+
+
 
 <%= link_to 'Voir', activities_path, class:'btn btn-primary'  %>
 
-<%= link_to 'Créer un cours', activities_path, class:'btn btn-primary'  %>
+<%= link_to 'Ajouter un cours', activities_path, class:'btn btn-primary'  %>

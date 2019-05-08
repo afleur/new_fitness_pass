@@ -484,6 +484,11 @@ year_of_dayseven = (Date.current+6).strftime("%Y").to_i
   )
 
   Activity.create!(
+    start_time: DateTime.new(year_of_today,month_of_today,day_of_today,17),
+    course: hiphop,
+  )
+
+  Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,20),
     course: crossfit,
   )
