@@ -7,11 +7,20 @@ class PagesController < ApplicationController
   end
 
   def coach_home
+    @courses_of_current_coach = []
+    @activities_of_current_coach = []
     @coach = current_coach
-    courses = Course.all
-    @coach.nil? ? "": @courses_of_current_coach =  courses.select { |course| course.coach_id == @coach.id }
+    @courses = Course.all
+    @courses_of_current_coach << @courses.select { |course| course.coach_id == current_coach.id }
     @activities = Activity.all
-    @activities.select {|activity| activity.course_id == @courses_of_current_coach.id}
+    @activities.each do |activity|
+      @courses_of_current_coach.each do |course|
+        course.each do |x|
+          if x.id == activity.course_id
+            @activities_of_current_coach << activity
+          end
+        end
+      end
+    end
   end
 end
-
