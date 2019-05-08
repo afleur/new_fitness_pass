@@ -12,6 +12,9 @@ clickDateTab();
 import { loadDynamicBannerText } from '../plugins/validation';
 loadDynamicBannerText();
 
+import { bookingsListDrop } from '../plugins/bookings_list';
+bookingsListDrop();
+
 import {  } from '../plugins/circle-progress';
 
 

@@ -69,7 +69,24 @@ clara = User.new(
   )
   clara.save!
 
-puts 'Creating Mickael...'
+puts 'Creating Francis...'
+
+francis = User.new(
+    email:           'francis@gmail.com',
+    password:        'francis123',
+    first_name:      'Francis',
+    last_name:       'Cardi',
+    street:          'Rue Pichard 20',
+    NPA:              1003,
+    city:            'Lausanne',
+    birth_date:      "Mar, 28 Mar 1986",
+    credits_amount:  10,
+  )
+  francis.save!
+
+
+
+puts 'Creating coach Mickael...'
 
 mickael = Coach.new(
     email:           'mike@gmail.com',
