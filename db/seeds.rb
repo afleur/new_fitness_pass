@@ -481,471 +481,565 @@ year_of_dayseven = (Date.current+6).strftime("%Y").to_i
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,17),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,17),
     course: hiphop,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,20),
     course: crossfit,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,18),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,18),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,18.5),
     course: body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,19.5),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,19.5),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,19),
     course:  body_pump,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,19),
     course: cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,17.5),
     course: aquabike,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,20),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,20),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,20),
     course: hiphop,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,17),
     course: tai_chi,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,17.5),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,18),
     course: body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,18),
     course: spinning,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,18.5),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,18.5),
     course: cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,19.5),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,19.5),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,19),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,20),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,20),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,17),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,17.5),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,18),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,18),
     course: cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,18.5),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,18.5),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,19.5),
     course: tai_chi,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,19.5),
     course: aquabike,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,19),
     course:  body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,19),
     course: spinning,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,20),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,20),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,20),
     course: crossfit,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,17),
     course: crossfit,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,17.5),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,18),
     course: body_pump,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,18),
     course: tai_chi,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,18.5),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,18.5),
     course: body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,19.5),
     course: spinning,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,19.5),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,19),
     course:  cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,19),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,20),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,20),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,20),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,20),
     course: aquabike,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,17),
     course: aquabike,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,17.5),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,18),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,18),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,18.5),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,18.5),
     course: cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,19.5),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,19.5),
     course: spinning,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,19),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,19),
     course: tai_chi,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,20),
     course: body_pump,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,20),
     course: crossfit,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,20),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,20),
     course: body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,17),
     course: crossfit,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,17.5),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,18),
     course: body_pump,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,18),
     course: tai_chi,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,18.5),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,18.5),
     course: body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,19.5),
     course: spinning,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,19.5),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,19),
     course: cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,19),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,20),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,20),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,20),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,20),
     course: aquabike,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,17),
     course: body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,17.5),
     course: tai_chi,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,18),
     course: crossfit,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,18),
     course: aquabike,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,18.5),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,18.5),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,19.5),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,19.5),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,19),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,19),
     course: body_pump,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,20),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,20),
     course: spinning,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,20),
     course: cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,20),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   actone = Activity.create!(
