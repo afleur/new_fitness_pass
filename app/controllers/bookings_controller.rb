@@ -38,7 +38,7 @@ class BookingsController < ApplicationController
       if @booking.save
         Credit.create!(value: - @activity.course.credits_cost, user: @booking.user, course: @activity.course)
         current_user.save
-        @activity.capacity -= 1
+        @activity.capacity = @activity.capacity - 1
         redirect_to confirmation_path(@booking)
       else
         render :new

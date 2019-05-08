@@ -38,19 +38,22 @@
                         </div>
                         <div class="card-booking-validation">
                           <div class="bookings-nb">
-                          <%= activity.capacity %> places restantes
+                          <%= activity.capacity - @nb_of_bookings.size %> places restantes
                           <% if @nb_of_bookings.size > 0 %>
                               <div class='btn btn-primary', id='bookings-list-drop'> <%= @nb_of_bookings.size %> réservation </div>
                           <% else  %>
                             <p>Aucune réservation</p>
                           <% end %>
-                          <div class="bookings-names-list">
-                            <%= @nb_of_bookings.first.user.first_name %>
-                          </div>
                           </div>
                           </div>
                         <div class="card-date-booking-coming">
                           <%= l(activity.start_time, format: "%A %e %B %Y", locale: 'fr') %>
+                        </div>
+                      </div>
+                      <div class="bookings-names-list">
+                        <% @nb_of_bookings.each do |booking| %>
+                        <div><%= booking.user.first_name %> <%= booking.user.last_name %> - nb de passages: 3 </div>
+                        <% end %>
                         </div>
                       </div>
                     </div>
