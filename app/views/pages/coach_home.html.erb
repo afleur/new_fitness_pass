@@ -52,7 +52,7 @@
                       </div>
                       <div class="bookings-names-list">
                         <% @nb_of_bookings.each do |booking| %>
-                        <div><%= booking.user.first_name %> <%= booking.user.last_name %> <%= booking.status %>  </div>
+                        <div> <%= cl_image_tag(booking.user.photo , height: 300, width: 400, crop: :fill) %><%= booking.user.first_name %> <%= booking.user.last_name %> <%= booking.status %>  </div>
                         <% end %>
                         </div>
                       </div>

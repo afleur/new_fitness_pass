@@ -67,6 +67,9 @@ clara = User.new(
     birth_date:      "Mar, 28 Mar 1986",
     credits_amount:  5,
   )
+  url_clara = "https://static1.squarespace.com/static/578a2a71bebafb8c813f4a4f/t/57aa297af7e0ab798376a44c/1470769545579/nr-69.jpg?format=1500w"
+  # "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/413701/item/goods_69_413701.jpg?width=734"
+  clara.remote_photo_url = url_clara
   clara.save!
 
 puts 'Creating Francis...'
@@ -82,6 +85,8 @@ francis = User.new(
     birth_date:      "Mar, 28 Mar 1986",
     credits_amount:  10,
   )
+  url_francis = "https://media.licdn.com/dms/image/C4D03AQF2oeWnJ0qvwQ/profile-displayphoto-shrink_800_800/0?e=1562803200&v=beta&t=IUIfw8YwRtyQ71vkKR3pgvK7G6atIyX9t7Naqp_1r8s"
+  francis.remote_photo_url = url_francis
   francis.save!
 
 

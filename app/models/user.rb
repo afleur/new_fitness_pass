@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :invitations
   has_many :orders
   has_many :credits, through: :bookings
+  mount_uploader :photo, PhotoUploader
 end
