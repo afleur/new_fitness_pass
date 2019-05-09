@@ -52,7 +52,7 @@
                       </div>
                       <div class="bookings-names-list">
                         <% @nb_of_bookings.each do |booking| %>
-                        <div><%= booking.user.first_name %> <%= booking.user.last_name %> - nb de passages: 3 </div>
+                        <div><%= booking.user.first_name %> <%= booking.user.last_name %> <%= booking.status %>  </div>
                         <% end %>
                         </div>
                       </div>
