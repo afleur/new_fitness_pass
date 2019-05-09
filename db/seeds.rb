@@ -67,8 +67,7 @@ clara = User.new(
     birth_date:      "Mar, 28 Mar 1986",
     credits_amount:  5,
   )
-  url_clara = "https://static1.squarespace.com/static/578a2a71bebafb8c813f4a4f/t/57aa297af7e0ab798376a44c/1470769545579/nr-69.jpg?format=1500w"
-  # "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/413701/item/goods_69_413701.jpg?width=734"
+  url_clara = "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/413701/item/goods_69_413701.jpg?width=734"
   clara.remote_photo_url = url_clara
   clara.save!
 
@@ -506,7 +505,7 @@ year_of_dayseven = (Date.current+6).strftime("%Y").to_i
     capacity: 5,
   )
 
-  Activity.create!(
+  acthiphop = Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,17),
     course: hiphop,
     capacity: 5,
@@ -578,7 +577,7 @@ year_of_dayseven = (Date.current+6).strftime("%Y").to_i
     capacity: 5,
   )
 
-  Activity.create!(
+  acthiphop2 = Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,20),
     course: hiphop,
     capacity: 5,
@@ -1087,6 +1086,28 @@ year_of_dayseven = (Date.current+6).strftime("%Y").to_i
   Activity.create!(
     start_time: DateTime.new(2019,3,17,20),
     course: (Course.all.sample),
+  )
+
+puts 'Creating two bookings...'
+
+  Booking.create!(
+    user: clara,
+    activity: acthiphop,
+  )
+
+    Booking.create!(
+    user: clara,
+    activity: acthiphop2,
+  )
+
+  Booking.create!(
+    user: francis,
+    activity: acthiphop,
+  )
+
+    Booking.create!(
+    user: francis,
+    activity: acthiphop2,
   )
 
 puts 'Creating past bookings...'

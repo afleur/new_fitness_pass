@@ -50,9 +50,9 @@
                           <%= l(activity.start_time, format: "%A %e %B %Y", locale: 'fr') %>
                         </div>
                       </div>
-                      <div class="bookings-names-list">
+                      <div class="bookings-names-list course-studio-booking">
                         <% @nb_of_bookings.each do |booking| %>
-                        <div> <%= cl_image_tag(booking.user.photo , height: 300, width: 400, crop: :fill) %><%= booking.user.first_name %> <%= booking.user.last_name %> <%= booking.status %>  </div>
+                        <div> <%= cl_image_tag(booking.user.photo , height: 50, width: 50, crop: :fill, radius: 50) %> <%= booking.user.first_name %> <%= booking.user.last_name %> <%= booking.status %>  </div>
                         <% end %>
                         </div>
                       </div>
