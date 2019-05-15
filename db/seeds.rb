@@ -1095,11 +1095,6 @@ puts 'Creating two bookings...'
     activity: acthiphop,
   )
 
-    Booking.create!(
-    user: clara,
-    activity: acthiphop2,
-  )
-
   Booking.create!(
     user: francis,
     activity: acthiphop,

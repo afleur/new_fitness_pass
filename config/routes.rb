@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
   devise_for :coaches
-  root to: 'pages#coach_home'
+  root to: 'pages#home'
   post '/orders/:value', to: 'orders#create', as: :orders
   get '/orders', to: 'orders#index', as: :allorders
-  get '/coach', to: 'pages#coach_home', as: :coach_home
   get '/authentification', to: 'pages#authentification', as: :login
   devise_for :users
   root to: 'pages#home'
@@ -13,6 +12,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
   resources :bookings, only: [:index, :show]
+    get 'index_coach', to: 'bookings#index_coach', as: :cbookings
   resources :orders, only: [:show, :new,] do
     resources :payments, only: [:new, :create]
   end

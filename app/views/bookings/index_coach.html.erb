@@ -37,14 +37,19 @@
                           </div>
                         </div>
                         <div class="card-booking-validation">
-                          <div class="bookings-nb">
-                          <%= activity.capacity - @nb_of_bookings.size %> places restantes
-                          <% if @nb_of_bookings.size > 0 %>
-                              <div class='btn btn-primary', id='bookings-list-drop'> <%= @nb_of_bookings.size %> inscrits </div>
+                            <% @nb_of_bookings.each do |booking| %>
+                              <% if booking.activity_id == activity.id  %>
+                                <% @counter << booking %>
+                              <% end %>
+                            <% end %>
+                          <% if @counter.size > 0 %>
+                                 <div class='btn btn-primary', id='bookings-list-drop'> <%= @counter.size %> inscrits </div>
                           <% else  %>
                             <p>Aucune réservation</p>
                           <% end %>
                           </div>
+                          <div class="bookings-nb">
+                          <%= activity.capacity - @counter.size  %> places restantes
                           </div>
                         <div class="card-date-booking-coming">
                           <%= l(activity.start_time, format: "%A %e %B %Y", locale: 'fr') %>
@@ -52,7 +57,10 @@
                       </div>
                       <div class="bookings-names-list course-studio-booking">
                         <% @nb_of_bookings.each do |booking| %>
-                        <div> <%= cl_image_tag(booking.user.photo , height: 50, width: 50, crop: :fill, radius: 50) %> <%= booking.user.first_name %> <%= booking.user.last_name %> <%= booking.status %>  </div>
+                        <% if booking.activity_id == activity.id  %>
+                          <div> <%= cl_image_tag(booking.user.photo , height: 50, width: 50, crop: :fill, radius: 50) %> <%= booking.user.first_name %> <%= booking.user.last_name %> <%= booking.status %>  </div>
+                          <% end %>
+                          <%= booking.activity_id.user %>
                         <% end %>
                         </div>
                       </div>

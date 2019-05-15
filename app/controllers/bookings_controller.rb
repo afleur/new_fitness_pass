@@ -4,19 +4,64 @@ class BookingsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @pastbookings = []
-    @comingbookings = []
-    @bookings = Booking.all
-    @bookings.each do |booking|
-      if booking.activity.start_time > Time.now
-        @comingbookings << booking
-        @comingbookings = @comingbookings.sort_by { |booking| booking.activity.start_time }
-      else
-        @pastbookings << booking
-        @pastbookings = (@pastbookings.sort_by { |booking| booking.activity.start_time }).reverse
+    if current_coach.nil?
+      render 'index'
+    else
+      render 'bookings/index_coach'
+    end
+      @pastbookings = []
+      @comingbookings = []
+      @bookings = Booking.all
+      @bookings.each do |booking|
+        if booking.activity.start_time > Time.now
+          @comingbookings << booking
+          @comingbookings = @comingbookings.sort_by { |booking| booking.activity.start_time }
+        else
+          @pastbookings << booking
+          @pastbookings = (@pastbookings.sort_by { |booking| booking.activity.start_time }).reverse
+        end
       end
     end
-  end
+
+      def index_coach
+      @courses_of_current_coach = []
+      @activities_of_current_coach = []
+      @comingactivities = []
+      @pastactivities = []
+      @nb_of_bookings = []
+      @counter = []
+      @coach = current_coach
+      @courses = Course.all
+      @bookings = Booking.all
+      if @coach.nil?
+        return nil
+      else
+        @courses_of_current_coach << @courses.select { |course| course.coach_id == current_coach.id }
+        @activities = Activity.all
+        @activities.each do |activity|
+          @courses_of_current_coach.each do |course|
+            course.each do |x|
+              if x.id == activity.course_id
+                @activities_of_current_coach << activity
+              end
+            end
+          end
+        end
+        @activities_of_current_coach.each do |activity|
+          if activity.start_time > Time.now
+            @comingactivities << activity
+          else
+            @pastactivities << activity
+          end
+      end
+        @nb_of_bookings = @bookings.select do |booking|
+          @comingactivities.each do |x|
+            booking.activity_id == x.id
+          end
+        end
+      end
+    end
+
 
   def show
     @booking = Booking.find(params[:id])
@@ -61,3 +106,4 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:booking_id])
   end
 end
+
