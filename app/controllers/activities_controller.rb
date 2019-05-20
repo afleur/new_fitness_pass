@@ -38,9 +38,18 @@ class ActivitiesController < ApplicationController
   end
 
   def create
+    @courses = Course.all
+    @activity = Activity.new(params_activity)
+    if @activity.save
+      redirect_to activities_path, notice: 'Votre séance a bien été ajoutée'
+    else
+      render :new
+    end
   end
 
   def new
+    @activity = Activity.new
+    @courses = Course.all
   end
 
   def destroy
@@ -50,5 +59,11 @@ class ActivitiesController < ApplicationController
   end
 
   def edit
+  end
+
+  private
+
+  def params_activity
+    params.require(:activity).permit(:start_time, :course_id)
   end
 end

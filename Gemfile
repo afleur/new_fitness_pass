@@ -13,6 +13,7 @@ gem 'flatpickr'
 gem 'money-rails'
 gem 'stripe'
 gem 'pundit'
+gem 'bootstrap-datepicker-rails'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'

@@ -21,3 +21,4 @@ import {  } from '../plugins/circle-progress';
 
 import { } from './swipebooking';
 
+import "../plugins/flatpickr";

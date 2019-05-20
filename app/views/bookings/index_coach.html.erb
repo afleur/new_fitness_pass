@@ -60,7 +60,6 @@
                         <% if booking.activity_id == activity.id  %>
                           <div> <%= cl_image_tag(booking.user.photo , height: 50, width: 50, crop: :fill, radius: 50) %> <%= booking.user.first_name %> <%= booking.user.last_name %> <%= booking.status %>  </div>
                           <% end %>
-                          <%= booking.activity_id.user %>
                         <% end %>
                         </div>
                       </div>
@@ -72,8 +71,6 @@
 
 
 
-
-
 <%= link_to 'Voir', activities_path, class:'btn btn-primary'  %>
 
-<%= link_to 'Ajouter un cours', activities_path, class:'btn btn-primary'  %>
+<%= link_to 'Ajouter une séance', new_activity_path, class:'btn btn-primary' %>

@@ -4,11 +4,6 @@ class BookingsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    if current_coach.nil?
-      render 'index'
-    else
-      render 'bookings/index_coach'
-    end
       @pastbookings = []
       @comingbookings = []
       @bookings = Booking.all

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :courses, only: [:show, :create]
-  resources :activities, only: [:show, :index] do
+  resources :activities, only: [:show, :index, :create, :new] do
     resources :bookings, only: [:new, :create]
   end
   resources :bookings, only: [:index, :show]
