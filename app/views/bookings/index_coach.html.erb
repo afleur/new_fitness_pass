@@ -5,8 +5,7 @@
 <br>
 <br>
 <br>
-
-<p> Vous avez <%= @comingactivities.length %> cours à venir: </p>
+<p> Vous avez <%= @coming_activities.length %> cours à venir: </p>
 
 <br>
 <br>
@@ -14,7 +13,7 @@
 <div class="tab-content">
   <div class="container-booking">
     <div class="row">
-      <% @comingactivities.each do |activity|%>
+      <% @coming_activities.each do |activity|%>
         <div class="col-xs-12">
           <div class="card-booking-coming">
             <div class="card-hour-booking-coming">
@@ -38,7 +37,8 @@
             </div>
               <div class="coach-bookings">
                 <div class="card-booking-validation">
-                  <% @nb_of_bookings.each do |booking| %>
+                  <% @counter = [] %>
+                  <% @registered_people.each do |booking| %>
                     <% if booking.activity_id == activity.id  %>
                       <% @counter << booking %>
                     <% end %>
@@ -60,7 +60,7 @@
               </div>
           </div>
             <div class="bookings-names-list course-studio-booking">
-              <% @nb_of_bookings.each do |booking| %>
+              <% @registered_people.each do |booking| %>
                 <% if booking.activity_id == activity.id  %>
                 <div class="registered-members">
                   <div class="name-pic-registered-members">
