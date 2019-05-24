@@ -1,13 +1,14 @@
-<h1>Activities#new</h1>
-<p>Find me in app/views/activities/new.html.erb</p>
-
+<h1>Ajouter une nouvelle séance</h1>
+<br>
+<br>
 <% console %>
-<%= choice = @courses.select { |course| course.coach_id == current_coach.id }%>
+<% choice = @courses.select { |course| course.coach_id == current_coach.id }%>
 
 <%= simple_form_for(@activity) do |f| %>
 
   <%= f.input :course_id, :collection => choice  %>
   <%= f.input :start_time, class:'datepicker' %>
+  <%= f.input :capacity %>
 
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>

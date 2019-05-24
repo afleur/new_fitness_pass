@@ -8,6 +8,9 @@
 <p> Vous avez <%= @coming_activities.length %> cours à venir: </p>
 
 <br>
+<%= link_to new_activity_path, class:"add-activity" do %>
+<i class="fas fa-plus-circle"></i>
+<% end %>
 <br>
 
 <div class="tab-content">
@@ -44,8 +47,11 @@
                     <% end %>
                   <% end %>
                   <% if @counter.size > 0 %>
-                    <div class="btn btn-primary" id='bookings-list-drop'>
-                      <%= @counter.size %> inscrits
+                    <div class="btn btn-primary bookings-list-drop">
+                      <%= @counter.size %>
+                      <% if @counter.size > 1 %>inscrits
+                      <% else @counter.size > 1 %> inscrit
+                      <% end %>
                     </div>
                   <% else  %>
                     <p>Aucune réservation</p>
@@ -91,9 +97,6 @@
   </div>
 </div>
 
+<br>
+<br>
 
-
-
-<%= link_to 'Voir', activities_path, class:'btn btn-primary'  %>
-
-<%= link_to 'Ajouter une séance', new_activity_path, class:'btn btn-primary' %>
