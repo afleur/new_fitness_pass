@@ -1,0 +1,45 @@
+.bookings-names-list{
+  // margin: 0 auto;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.3);
+  color: $dark-grey;
+}
+
+.bookings-nb {
+  padding-top: 12px;
+  font-size: 12px;
+}
+
+.registered-members {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  padding: 5px 40px 1px 10px;
+}
+
+.status-registered-members{
+}
+
+.name-pic-registered-members {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pic-registered-members {
+  padding-right: 10px;
+}
+
+.cancel-status-registered-members {
+  color: rgb(164, 16, 16);
+}
+
+.valid-status-registered-members {
+  color: rgb(28, 111, 87);
+}
+
+.pending-status-registered-members {
+  color: rgb(229, 158, 50);
+}

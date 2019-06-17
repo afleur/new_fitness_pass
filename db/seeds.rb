@@ -21,6 +21,8 @@ puts "Destroy review"
 Review.destroy_all
 puts "Destroy User"
 User.destroy_all
+puts "Destroy Coach"
+Coach.destroy_all
 
 puts 'Creating orders...'
 
@@ -65,7 +67,40 @@ clara = User.new(
     birth_date:      "Mar, 28 Mar 1986",
     credits_amount:  5,
   )
+  url_clara = "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/413701/item/goods_69_413701.jpg?width=734"
+  clara.remote_photo_url = url_clara
   clara.save!
+
+puts 'Creating Francis...'
+
+francis = User.new(
+    email:           'francis@gmail.com',
+    password:        'francis123',
+    first_name:      'Francis',
+    last_name:       'Cardi',
+    street:          'Rue Pichard 20',
+    NPA:              1003,
+    city:            'Lausanne',
+    birth_date:      "Mar, 28 Mar 1986",
+    credits_amount:  10,
+  )
+  url_francis = "https://media.licdn.com/dms/image/C4D03AQF2oeWnJ0qvwQ/profile-displayphoto-shrink_800_800/0?e=1562803200&v=beta&t=IUIfw8YwRtyQ71vkKR3pgvK7G6atIyX9t7Naqp_1r8s"
+  francis.remote_photo_url = url_francis
+  francis.save!
+
+
+
+puts 'Creating coach Mickael...'
+
+mickael = Coach.new(
+    email:           'mike@gmail.com',
+    password:        'mike123',
+    first_name:      'Mickael',
+    last_name:       'Democles',
+    birth_date:      'Mar, 28 Mar 1986',
+    category:        'Dance',
+  )
+  mickael.save!
 
 
 puts 'Creating courses...'
@@ -80,7 +115,7 @@ puts 'Creating courses...'
     category:      "Souplesse",
     description:   "Cours facilitant instantanément la détente mentale et musculaire. A moyen terme, il développe la souplesse et favorise une meilleure santé générale de chacun.",
     infos:         "Code de l'immeuble: 78654 avant 8h et après 19h30",
-    coach:         "Sophie",
+    # coach:         "Sophie",
     street:        "Rue Chaucrau 3-5",
     npa:           "1003",
     city:          "Lausanne",
@@ -98,7 +133,7 @@ puts 'Creating courses...'
     studio:        "CrossFit Lausanne",
     category:      "Cardio",
     description:   "CrossFit est un terme désignant une méthode de conditionnement physique, appelé ainsi parce qu’il mélange différentes activités physiques et sportives préexistantes. Son fonctionnement est axé autour de dix compétences athlétiques : endurance cardiovasculaire et respiratoire, endurance musculaire, force, souplesse, puissance, vitesse, agilité, psychomotricité, équilibre et précision. Ceci afin de répliquer des mouvements fonctionnels du quotidien. La définition du CrossFit peut se résumer en 3 points : des exercices constamment variés, des mouvement fonctionnels et pratiqué à haute intensité. Jette un coup d’oeil à la vidéo ci-dessous qui t’en dira plus, non seulement sur la manière de s’entraîner, mais également sur l’ambiance qui entoure le CrossFit.",
-    coach:         "Franck",
+    # coach:         "Franck",
     infos:         "Prévoir un cadenas, location éventuelle sur place<br>Location éventuelle de serviettes sur place<br>Possibilité d'acheter une bouteille d'eau sur place",
     street:        "Chemin d'Entre-Bois 21",
     npa:           "1018",
@@ -118,7 +153,7 @@ puts 'Creating courses...'
     category:      "Arts Martiaux",
     description:   "Le seul club lausannois à combiner autant d'arts martiaux et sports de combat. Depuis 1978, le National Sporting Club est LA référence. Avec une salle de musculation en complément puissance et cardio, et un ring de 5x5m, le NSC reste le 'Fight Club' romand le plus complet. En pratique douce comme en compétition extrême.",
     infos:         "Prévoir un cadenas pour les casiers<br>Douches et vestiaires",
-    coach:         "David",
+    # coach:         "David",
     street:        "Rue du Grand Pré 4",
     npa:           "1007",
     city:          "Lausanne",
@@ -136,7 +171,7 @@ puts 'Creating courses...'
     studio:        "NSC Warriors",
     category:      "Arts Martiaux",
     description:   "Le seul club lausannois à combiner autant d'arts martiaux et sports de combat. Depuis 1978, le National Sporting Club est LA référence. Avec une salle de musculation en complément puissance et cardio, et un ring de 5x5m, le NSC reste le 'Fight Club' romand le plus complet. En pratique douce comme en compétition extrême.",
-    coach:         "Franck",
+    # coach:         "Franck",
     street:        "Rue Chaucrau 3-5",
     infos:         "Prévoir un cadenas, location éventuelle sur place<br>Location éventuelle de serviettes sur place<br>Possibilité d'acheter une bouteille d'eau sur place",
     npa:           "1003",
@@ -156,7 +191,7 @@ puts 'Creating courses...'
     category:      "Danse",
     description:   "Peu importe vos envies, les professeurs s'adaptent et sauront vous pousser pour faire des concours, des battles ou tout simplement progresser personnellement. Nous sommes également très intéressés à l'histoire des danses que nous enseignons, c'est pourquoi les élèves peuvent aussi nous poser des questions s'ils veulent aller plus loin dans le développement de leur activité ou passion.",
     infos:         "Prévoir un cadenas, location éventuelle sur place<br>Location éventuelle de serviettes sur place<br>Possibilité d'acheter une bouteille d'eau sur place",
-    coach:         "Sofia",
+    coach_id:       mickael.id,
     street:        "Boulevard de Grancy 37",
     npa:           "1006",
     city:          "Lausanne",
@@ -180,7 +215,7 @@ Vous travaillez à la fois le bas et le haut du corps à l'aide d'accessoires, e
 Dépassement de soi et expérience unique !",
     infos:         "IMPORTANT les portes de la salle ferment 5 minutes avant
 Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussures de spinning fournies<br>Bouteilles d'eau à 1.-",
-    coach:         "Marc",
+    # coach:         "Marc",
     street:        "Place de la Sallaz 35",
     npa:           "1010",
     city:          "Lausanne",
@@ -199,7 +234,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     category:      "Cardio",
     description:   "Le BODYCOMBAT™ est un puissant cours cardio extrêmement défoulant. Ce programme hautement énergique s'inspire des arts martiaux et puise dans des disciplines aussi variées que le karaté, la boxe, le taekwondo, le tai chi et le muay thai. Rythmé par une musique entraînante et guidé par des instructeurs performants, vous brûlez des calories et améliorez votre capacité cardiovasculaire à force de frappes, de coups de poing, de coups de pied et de katas.",
     infos:         "Des vestiaires avec casiers et douche sont à disposition<br>Prévoir un cadenas pour son casier",
-    coach:         "Baptiste",
+    # coach:         "Baptiste",
     street:        "Place Saint-François 1",
     npa:           "1003",
     city:          "Lausanne",
@@ -224,7 +259,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
 <br>Prévoir un short et un top pour avoir les bras et jambes dégagées
 <br>Une paire de chaussure à talon est recommandé
 <br>Le port de bijoux est interdit",
-    coach:         "Denitsa",
+    # coach:         "Denitsa",
     street:        "Avenue d'Echallens 70",
     npa:           "1004",
     city:          "Lausanne",
@@ -243,7 +278,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     category:      "Cardio",
     description:   "GRIT est un cours qui vous poussera jusqu'à l'extrême. Profitez d'une attention personnalisée dans un small group ou team training. Votre instructeur sera à vos côtés tout au long de l'entraînement afin de vous motiver, vous et votre équipe. Vous n'imaginez pas jusqu'où vous pourrez aller ! Obtenez enfin les résultats que vous cherchez ! Trois programmes uniques pour être en forme et perdre du poids rapidement. Un challenge intense de 30 minutes · Une musique explosive pour pousser votre énergie jusqu'à l'extrême · Des instructeurs inspirants qui vont motiver chaque individu, de manière individuelle tout en exploitant la force du travail en équipe.",
     infos:         "Prévoir un cadenas<br>Possibilité d'acheter une bouteille d'eau et fontaines mises à disposition",
-    coach:         "David",
+    # coach:         "David",
     street:        "Rue de Genève 33",
     npa:           "1003",
     city:          "Lausanne",
@@ -262,7 +297,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     category:      "Souplesse",
     description:   "Dérivé des arts martiaux, le thai-chi est une discipline corporelle d’origine chinoise comportant un ensemble de mouvements continus et circulaires exécutés avec lenteur et précision dans un ordre préétabli. Il met aussi l’accent sur la maîtrise de la respiration. La pratique vise entre autres à améliorer la souplesse, à renforcer le système musculosquelettique et à maintenir une bonne santé physique, mentale et spirituelle. Grâce à son côté méditatif et à l’extrême précision des gestes, le thai-chi permet d’apaiser le mental et d’améliorer la concentration, la vivacité d’esprit et la mémoire. Il favorise aussi une meilleure prise de conscience de soi et de son environnement et contribue à harmoniser le Qi.",
     infos:         "Prévoir un cadenas <br>Possibilité d'acheter une bouteille d'eau et fontaines mises à disposition",
-    coach:         "Catherine",
+    # coach:         "Catherine",
     street:        "Rue du Maupas 6",
     npa:           "1004",
     city:          "Lausanne",
@@ -281,7 +316,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     category:      "Renforcement",
     description:   "BODYPUMP™ est le cours original avec poids qui sculpte, renforce et tonifie tout votre corps rapidement! Vos muscles ne se formeront pas tout seul! Grâce au BODYPUMP™, votre corps tout entier se renforce et se tonifie. En mettant l'accent sur l'utilisation de poids legers et sur la repetition des mouvements, vous allez brûler des calories, tonifier votre corps et augmenter votre masse musculaire.",
     infos:         "Prévoir un cadenas<br>Location éventuelle de serviettes sur place<br>Prévoir une pièce d'identité",
-    coach:         "Thierry",
+    # coach:         "Thierry",
     street:        "Boulevard de Grancy 14",
     npa:           "1006",
     city:          "Lausanne",
@@ -300,7 +335,7 @@ Tout le nécessaire pour la douche et le soin est mis à disposition<br>Chaussur
     category:      "Renforcement",
     description:   "CXWORX™, c'est tout ce dont vous avez besoin pour offrir à votre corps un entraînement intense qui va le tonifier, améliorer votre force fonctionnelle et donc votre mobilité, votre équilibre et prévenir les blessures.",
     infos:         "Prévoir un cadenas, location éventuelle sur place<br>Location éventuelle de serviettes sur place<br>Prévoir une pièce d'identité",
-    coach:         "Thierry",
+    # coach:         "Thierry",
     street:        "Boulevard de Grancy 14",
     npa:           "1006",
     city:          "Lausanne",
@@ -323,7 +358,7 @@ Retrouvez le plaisir de l'eau grâce à une séance mobilisant de multiples acce
 
 Ludique et efficace ",
     infos:         "Prévoir un bonnet de bain <br>Vente de serviettes",
-    coach:         "Florent",
+    # coach:         "Florent",
     street:        "Chemin du Martinet 28",
     npa:           "1007",
     city:          "Lausanne",
@@ -345,7 +380,7 @@ Destiné aux sportifs comme à ceux qui souhaitent pratiquer une activité tout 
     infos:         "Location éventuelle de serviettes sur place
     <br>Possibilité d’acheter une bouteille d’eau sur place
     <br>Prévoir une pièce d’identité",
-    coach:         "Catherine",
+    # coach:         "Catherine",
     street:        "Rue Saint-Martin 9",
     npa:           "1003",
     city:          "Lausanne",
@@ -368,7 +403,7 @@ Créé par Joseph Pilates, et désormais méthode fitness favorite des stars, le
 
 Dans les cours, où l'on enchaîne une série de mouvements réfléchis, l'accent est mis sur la respiration, le contrôle et la fluidité. De quoi se dessiner une silhouette tonique et améliorer son bien-être au quotidien!",
     infos:         "Prévoir une serviette pour les machines",
-    coach:         "Thierry",
+    # coach:         "Thierry",
     street:        "Rue Neuve 2",
     npa:           "1003",
     city:          "Lausanne",
@@ -467,466 +502,565 @@ year_of_dayseven = (Date.current+6).strftime("%Y").to_i
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,17),
     course: hatha_yoga,
+    capacity: 5,
+  )
+
+  acthiphop = Activity.create!(
+    start_time: DateTime.new(year_of_today,month_of_today,day_of_today,17),
+    course: hiphop,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,20),
     course: crossfit,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,18),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,18),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,18.5),
     course: body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,19.5),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,19.5),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,19),
     course:  body_pump,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,19),
     course: cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,17.5),
     course: aquabike,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_today,month_of_today,day_of_today,20),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,20),
     course: pilates,
+    capacity: 5,
   )
 
-  Activity.create!(
+  acthiphop2 = Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,20),
     course: hiphop,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,17),
     course: tai_chi,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,17.5),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,18),
     course: body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,18),
     course: spinning,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,18.5),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,18.5),
     course: cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,19.5),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,19.5),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,19),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,20),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daytwo,month_of_daytwo,daytwo,20),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,17),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,17.5),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,18),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,18),
     course: cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,18.5),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,18.5),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,19.5),
     course: tai_chi,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,19.5),
     course: aquabike,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,19),
     course:  body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,19),
     course: spinning,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,20),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,20),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daythree,month_of_daythree,daythree,20),
     course: crossfit,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,17),
     course: crossfit,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,17.5),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,18),
     course: body_pump,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,18),
     course: tai_chi,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,18.5),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,18.5),
     course: body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,19.5),
     course: spinning,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,19.5),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,19),
     course:  cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,19),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,20),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,20),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,20),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfour,month_of_dayfour,dayfour,20),
     course: aquabike,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,17),
     course: aquabike,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,17.5),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,18),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,18),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,18.5),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,18.5),
     course: cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,19.5),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,19.5),
     course: spinning,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,19),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,19),
     course: tai_chi,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,20),
     course: body_pump,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,20),
     course: crossfit,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,20),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayfive,month_of_dayfive,dayfive,20),
     course: body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,17),
     course: crossfit,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,17.5),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,18),
     course: body_pump,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,18),
     course: tai_chi,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,18.5),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,18.5),
     course: body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,19.5),
     course: spinning,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,19.5),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,19),
     course: cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,19),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,20),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,20),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,20),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_daysix,month_of_daysix,daysix,20),
     course: aquabike,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,17),
     course: body_combat,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,17.5),
     course: tai_chi,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,18),
     course: crossfit,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,18),
     course: aquabike,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,18.5),
     course: kickboxing,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,18.5),
     course: hatha_yoga,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,19.5),
     course: grit_training,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,19.5),
     course: pole_dance,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,19),
     course: stretching,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,19),
     course: body_pump,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,20),
     course: pilates,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,20),
     course: spinning,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,20),
     course: cxworx,
+    capacity: 5,
   )
 
   Activity.create!(
     start_time: DateTime.new(year_of_dayseven,month_of_dayseven,dayseven,20),
     course: boxe_anglaise,
+    capacity: 5,
   )
 
   actone = Activity.create!(
@@ -952,6 +1086,23 @@ year_of_dayseven = (Date.current+6).strftime("%Y").to_i
   Activity.create!(
     start_time: DateTime.new(2019,3,17,20),
     course: (Course.all.sample),
+  )
+
+puts 'Creating two bookings...'
+
+  Booking.create!(
+    user: clara,
+    activity: acthiphop,
+  )
+
+  Booking.create!(
+    user: francis,
+    activity: acthiphop,
+  )
+
+    Booking.create!(
+    user: francis,
+    activity: acthiphop2,
   )
 
 puts 'Creating past bookings...'

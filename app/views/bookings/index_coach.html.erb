@@ -1,0 +1,102 @@
+<div> Welcome back coach </div>
+
+<%= console %>
+
+<br>
+<br>
+<br>
+<p> Vous avez <%= @coming_activities.length %> cours à venir: </p>
+
+<br>
+<%= link_to new_activity_path, class:"add-activity" do %>
+<i class="fas fa-plus-circle"></i>
+<% end %>
+<br>
+
+<div class="tab-content">
+  <div class="container-booking">
+    <div class="row">
+      <% @coming_activities.each do |activity|%>
+        <div class="col-xs-12">
+          <div class="card-booking-coming">
+            <div class="card-hour-booking-coming">
+              <div class="start-activity-booking">
+                <%= activity.start_time.strftime("%H:%M")%>
+              </div>
+              <div class="end-activity-booking">
+                <%= (activity.start_time + (activity.course.duration * 60)).strftime("%H:%M") %>
+              </div>
+            </div>
+            <div class="card-body-booking">
+              <div class="course-name">
+                <%= activity.course.name.upcase %>
+              </div>
+              <div class="course-studio-booking">
+                <%= activity.course.studio %>
+              </div>
+              <div class="course-address-booking-coming">
+                <i class="fas fa-map-marker-alt"></i> <%= activity.course.street %>, <%= activity.course.npa %> <%= activity.course.city %>
+              </div>
+            </div>
+              <div class="coach-bookings">
+                <div class="card-booking-validation">
+                  <% @counter = [] %>
+                  <% @registered_people.each do |booking| %>
+                    <% if booking.activity_id == activity.id  %>
+                      <% @counter << booking %>
+                    <% end %>
+                  <% end %>
+                  <% if @counter.size > 0 %>
+                    <div class="btn btn-primary bookings-list-drop">
+                      <%= @counter.size %>
+                      <% if @counter.size > 1 %>inscrits
+                      <% else @counter.size > 1 %> inscrit
+                      <% end %>
+                    </div>
+                  <% else  %>
+                    <p>Aucune réservation</p>
+                  <% end %>
+                </div>
+                <div class="bookings-nb">
+                  <%= activity.capacity - @counter.size  %> places restantes
+                </div>
+              </div>
+              <div class="card-date-booking-coming">
+                <%= l(activity.start_time, format: "%A %e %B %Y", locale: 'fr') %>
+              </div>
+          </div>
+            <div class="bookings-names-list course-studio-booking">
+              <% @registered_people.each do |booking| %>
+                <% if booking.activity_id == activity.id  %>
+                <div class="registered-members">
+                  <div class="name-pic-registered-members">
+                    <div class="pic-registered-members">
+                    <%= cl_image_tag(booking.user.photo , height: 50, width: 50, crop: :fill, radius: 50) %>
+                    </div>
+                    <div class="pic-registered-members">
+                    <%= booking.user.first_name %> <%= booking.user.last_name %>
+                    </div>
+                  </div>
+                  <div>
+                    <% if booking.status == 'en attente'  %>
+                      <div class="pending-status-registered-members"><%= booking.status %>
+                      </div>
+                    <% elsif booking.status == 'validé' %>
+                      <div class="valid-status-registered-members"><%= booking.status %></div>
+                    <% else %>
+                      <div class="cancel-status-registered-members"><%= booking.status %></div>
+                    <% end %>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+

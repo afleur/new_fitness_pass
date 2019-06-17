@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_05_134527) do
+ActiveRecord::Schema.define(version: 2019_05_20_091539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_134527) do
     t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "capacity", default: 5
     t.index ["course_id"], name: "index_activities_on_course_id"
   end
 
@@ -28,15 +29,33 @@ ActiveRecord::Schema.define(version: 2019_03_05_134527) do
     t.bigint "activity_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status", default: "en attente"
     t.index ["activity_id"], name: "index_bookings_on_activity_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "coaches", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "category"
+    t.datetime "birth_date"
+    t.string "photo_url"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_coaches_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_coaches_on_reset_password_token", unique: true
   end
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.string "category"
     t.text "description"
-    t.string "coach"
     t.string "city"
     t.integer "likes"
     t.integer "kcal"
@@ -51,6 +70,8 @@ ActiveRecord::Schema.define(version: 2019_03_05_134527) do
     t.float "latitude"
     t.float "longitude"
     t.string "infos"
+    t.bigint "coach_id"
+    t.index ["coach_id"], name: "index_courses_on_coach_id"
   end
 
   create_table "credits", force: :cascade do |t|
@@ -118,6 +139,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_134527) do
     t.string "city"
     t.date "birth_date"
     t.integer "credits_amount"
+    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -125,6 +147,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_134527) do
   add_foreign_key "activities", "courses"
   add_foreign_key "bookings", "activities"
   add_foreign_key "bookings", "users"
+  add_foreign_key "courses", "coaches"
   add_foreign_key "credits", "orders"
   add_foreign_key "invitations", "bookings"
   add_foreign_key "invitations", "users"
